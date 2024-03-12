@@ -197,11 +197,12 @@ font-size:20px;
     <strong>Automatic specialization of the Java Runtime (JRE)</strong><br />
     <strong>Systematic decompilation in the CI to mitigate supply chain attacks</strong><br />
     <strong>Detecting superfluous conflicts in Java projects</strong><br />
-    <strong>Docker slimming in practice</strong><br />
     <strong>API specialization in Kotlin</strong><br />
-<strong>The software supply chain of creative coding</strong><br />
+<p>    <!-- 
+     <strong>Docker slimming in practice</strong><br />
 <strong>The natural diversity of fake generation</strong></p>
-<p>    <!-- <strong>Visually exploring data structure choices</strong>
+   
+    <strong>Visually exploring data structure choices</strong>
      <strong>Computing the actual software dependency grip</strong> --></p>
 <p>    <a href="#testing"></p>
 <h2>Software testing</h2>
@@ -242,7 +243,10 @@ font-size:20px;
 <p>    <a href="#off"></p>
 <h2>Off the beaten track</h2>
 <p>    </a></p>
-<p>    <strong>Code by singing in eso-lang</strong><br />
+
+<p>
+    <strong>The software supply chain of creative coding</strong><br />
+        <strong>Code by singing in eso-lang</strong><br />
     <strong>Github repositories with literary references</strong><br />
     <strong>The anatomy of the most Enterprise email client</strong><br />
     <strong>Easter egg VM flag</strong><br />
@@ -360,6 +364,22 @@ GraalVM compiles Java code to native, boosting deployment and runtime performanc
 <li>[2] <a href="https://linuxfoundation.org/en/blog/preventing-supply-chain-attacks-like-solarwinds/">Preventing Supply Chain Attacks like SolarWinds</a> </li>
 <li>[3] <a href="https://www.usenix.org/system/files/conference/usenixsecurity16/sec16_paper_andriesse.pdf">An in-depth analysis of disassembly on full-scale x86/x64 binaries</a></li>
 </ul>
+<p>    <strong>API specialization in Kotlin</strong><br />
+    Supervisors: Benoit Baudry, Cesar Soto-Valero, KTH Royal Institute of Technology</p>
+<p>    Software applications rely on numerous third-party APIs to reuse existing features (e.g., data processing, security, network, etc.).<br />
+    Yet, applications use only a small part of the APIs.<br />
+    The unused parts represent unecessary risks for the security and reliability of the applciation.</p>
+<p>    In this project, we investigate API specialization to mitigate these risks [1].<br />
+    This technique first determinines what are the legitimate usages of an API, to build a sense of self [3] for the application API usage.<br />
+    Then, the specialization consists and in building a proxy that blocks all other API usages at runtime.<br />
+    This project focuses on specialization for Kotlin APIs [2]. </p>
+<ul>
+<li>[1] <a href="https://www3.cs.stonybrook.edu/~mikepo/papers/shredder.acsac18.pdf">Shredder: Breaking Exploits through API Specialization</a></li>
+<li>[2] <a href="https://hal.archives-ouvertes.fr/hal-03396017/">Why did developers migrate Android Applications from Java to Kotlin</a></li>
+<li>[3] <a href="http://iar.cs.unm.edu/~forrest/publications/ieee-sp-96-unix.pdf">A sense of self for Unix processes</a></li>
+</ul>
+<p>https://github.com/topics/fake</p>
+<p>    <!--START COMMENT HARDENING
 <p>    <strong>Detecting superfluous conflicts in Java projects</strong><br />
     Build systems and package manager encourage and support reuse of third-party libraries through a clean declaration of third-party dependencies and an automated build process. Such systems include npm, Maven, Cargo. While reuse and automation are strong software engineering principles, the current use of build systems has introduced some new challenges. One of them is that some developers do not remove dependency declarations from the declaration file, resulting in unnecessary libraries being packaged in the built binary. This can account for up to 40% of libraries [1,2].</p>
 <p>    In this project we study the relationship between these unnecessary dependencies and the presence of conflicts in third-party library versions. If a conflict is due to unnecessary dependency, we call it a superfluous conflict. The goal here is to quantify superfluous conflicts over the whole Maven central repository.</p>
@@ -378,39 +398,12 @@ GraalVM compiles Java code to native, boosting deployment and runtime performanc
 <li>[2] <a href="https://medium.com/swlh/alpine-slim-stretch-buster-jessie-bullseye-bookworm-what-are-the-differences-in-docker-62171ed4531d">What are the Differences in Docker Images?</a></li>
 <li>[3] <a href="https://arxiv.org/pdf/2105.14226">A Longitudinal Analysis of Bloated Java Dependencies</a></li>
 </ul>
-<p>    <strong>API specialization in Kotlin</strong><br />
-    Supervisors: Benoit Baudry, Cesar Soto-Valero, KTH Royal Institute of Technology</p>
-<p>    Software applications rely on numerous third-party APIs to reuse existing features (e.g., data processing, security, network, etc.).<br />
-    Yet, applications use only a small part of the APIs.<br />
-    The unused parts represent unecessary risks for the security and reliability of the applciation.</p>
-<p>    In this project, we investigate API specialization to mitigate these risks [1].<br />
-    This technique first determinines what are the legitimate usages of an API, to build a sense of self [3] for the application API usage.<br />
-    Then, the specialization consists and in building a proxy that blocks all other API usages at runtime.<br />
-    This project focuses on specialization for Kotlin APIs [2]. </p>
-<ul>
-<li>[1] <a href="https://www3.cs.stonybrook.edu/~mikepo/papers/shredder.acsac18.pdf">Shredder: Breaking Exploits through API Specialization</a></li>
-<li>[2] <a href="https://hal.archives-ouvertes.fr/hal-03396017/">Why did developers migrate Android Applications from Java to Kotlin</a></li>
-<li>[3] <a href="http://iar.cs.unm.edu/~forrest/publications/ieee-sp-96-unix.pdf">A sense of self for Unix processes</a></li>
-</ul>
 <p><strong>The natural diversity of fake generation</strong></p>
 <p>The automatic synthesis of fakes is a powerful technique for cybersecurity and cyber decoys [1]. The key challenge for this approach is to generate fakes that look-alike real, legitimate artefacts. This is essential so that malicious actors believe that they are collecting real documents. Yet, this is hard, as it requires an automated oracle to determine the &#8216;realism&#8217; of the fake. In this project, we explore the natural diversity of software technology to synthesize different kinds of fake data and documents [2].</p>
 <ul>
 <li>[1] <a href="https://www.berkshireeagle.com/archives/hackers-came-but-the-french-were-prepared/article_a0b7d3e8-e408-5e77-b9c2-169f6d7ffcc2.html">Hackers came, but the French were prepared</a></li>
 <li>[2] <a href="https://github.com/topics/fake">https://github.com/topics/fake</a></li>
 </ul>
-<p><strong>The software supply chain of creative coding</strong></p>
-<p>Artists use adavanced software technology to produce, distribute and even generate artworks. Such software technology includes libraries for sound synthesis [1], visual art[2,3], augmented reality [4], as well as platforms to distribute artworks [5,6]. In this work, we dive deep in this software ecosystem to draw a systematic landscape of the software supply chain [7] for creative coding.</p>
-<ul>
-<li>[1] <a href="https://supercollider.github.io/>Supercollider</a></li>
-<li>[2] <a href="https://openframeworks.cc">OpenFrameworks</a></li>
-<li>[3] <a href="https://processing.org/">Processing</a></li>
-<li>[4] <a href="https://www.programmableweb.com/news/10-popular-augmented-reality-apis/brief/2022/02/08">Augmented Reality APIs</a></li>
-<li>[5] <a href="https://www.artblocks.io">artblocks</a></li>
-<li>[6] <a href="https://www.fxhash.xyz/">fxhash</a></li>
-<li>[7] <a href="https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.715.455&#038;rep=rep1&#038;type=pdf">The Evolution of Project Inter-dependencies in a Software Ecosystem: The Case of Apache</a></li>
-</ul>
-<p>https://github.com/topics/fake</p>
-<p>    <!--START COMMENT HARDENING
     
     <strong>Visually exploring data structure choices</strong>
     
@@ -664,7 +657,7 @@ enhance substitutablity of components in software supply chains.</p>
 <p>    Dependency confusion is a growing threat for software supply chain [1]. This attack consists in uploading malicious packages on public repositories, which will eventually be packaged in applications, through dependency resolution mechanisms. In this work, we will explore the automatic randomization of instructions [3] in private npm registries to mitigate dependency confusion [2]. The student will deploy a local npm registry and a instruction randomization scheme, along with the adaptation of the javascript engine to correctly execute the randomized packages.</p>
 <ul>
 <li>[1] <a href="https://www.schneier.com/blog/archives/2021/02/dependency-confusion-another-supply-chain-vulnerability.html">Dependency Confusion: Another Supply-Chain Vulnerability</a></li>
-<li>[2] <a href="https://polyverse.com/blog/npm-node-js-code-injection-attack/?utm_medium=email&#038;_hsmi=119882548&#038;_hsenc=p2ANqtz-_CbZTrM2G8yaQJIqiYGRwi8fSM5bMvSeSc0Rj3QStxsctNe7rdxnlW2f3_VHUx7Dh5rlj75wrU5l_SN-z8piwIKfsoSQ&#038;utm_content=119882548&#038;utm_source=hs_email">Polyscripting to mitigate dependency confusion</a></li>
+<li>[2] <a href="https://web.archive.org/web/20220125055207/https://polyverse.com/blog/npm-node-js-code-injection-attack/">Polyscripting to mitigate dependency confusion</a></li>
 <li>[3] <a href="http://www.sis.pitt.edu/jjoshi/courses/IS2620/Spring09/Kc.pdf">Countering code-injection attacks with instruction-set randomization</a></li>
 <li>[4] <a href="https://dl.acm.org/doi/abs/10.1145/3136825.3136900">Internal interface diversification with multiple fake interfaces</a></li>
 </ul>
@@ -783,6 +776,18 @@ enhance substitutablity of components in software supply chains.</p>
 
     END COMMENTED DIVERSIFICATION TOPICS --></p>
 <h2 id="off">Off the beaten track</h2>
+<p><strong>The software supply chain of creative coding</strong></p>
+<p>Artists use advanced software technology to produce, distribute and generate artworks. Such software technology includes libraries for sound synthesis [1], visual art[2,3], augmented reality [4], as well as platforms to distribute artworks [5,6]. In this work, we dive deep in this software ecosystem to draw a systematic landscape of the software supply chain [7] for creative coding.</p>
+<ul>
+<li>[1] <a href="https://supercollider.github.io/">Supercollider</a></li>
+<li>[2] <a href="https://openframeworks.cc">OpenFrameworks</a></li>
+<li>[3] <a href="https://processing.org/">Processing</a></li>
+<li>[4] <a href="https://www.programmableweb.com/news/10-popular-augmented-reality-apis/brief/2022/02/08">Augmented Reality APIs</a></li>
+<li>[5] <a href="https://www.artblocks.io">artblocks</a></li>
+<li>[6] <a href="https://www.fxhash.xyz/">fxhash</a></li>
+<li>[7] <a href="https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.715.455&#038;rep=rep1&#038;type=pdf">The Evolution of Project Inter-dependencies in a Software Ecosystem: The Case of Apache</a></li>
+</ul>
+
 <p>    <strong>Code by singing for eso-lang</strong></p>
 <p>The progress of voice recognition and speech-to-text technology is fabulous. It opens the way towards, coding by voice, a very promising advance to open the world of programming to a wider population [1].<br />
 In this thesis, we will explore the possibilities of writing code by singing. This master thesis at the intersection of software technology, signal processing and rickrolling will be disseminated as part of a growing eso-lang [2].</p>
@@ -904,30 +909,6 @@ In this thesis, we will explore the possibilities of writing code by singing. Th
     
     	
     
-<div id="sidebar1" class="sidebar col-md-4">
-
-	
-    		<div id="recent-posts-2" class="sidebar-wrap clearfix widget_recent_entries">		<h3>News</h3>		<ul>
-											<li>
-					<a href="https://softwarediversity.eu/open-phd-position-at-kth/">Open PhD position at KTH</a>
-									</li>
-											<li>
-					<a href="https://softwarediversity.eu/long-live-software-easter-eggs/">Long Live Software Easter Eggs!</a>
-									</li>
-											<li>
-					<a href="https://softwarediversity.eu/sigbovik22/">SIGBOVIK&#8217;22</a>
-									</li>
-											<li>
-					<a href="https://softwarediversity.eu/production-queries-to-test-graphql/">Production queries to test GraphQL</a>
-									</li>
-											<li>
-					<a href="https://softwarediversity.eu/the-core-of-popular-java-apis/">The core of popular Java APIs</a>
-									</li>
-					</ul>
-		</div>    
-        
-    
-</div><!-- #sidebar1 -->    
     
 </div><!-- #content -->
 
