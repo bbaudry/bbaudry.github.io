@@ -19,3 +19,25 @@ We will investigate the Interplanetary File System (IPFS) to store Maven package
 * [Towards build verifiability for java-based systems](https://scholar.google.com/scholar?output=instlink&q=info:kmZWQCZhzlkJ:scholar.google.com/&hl=en&as_sdt=0,5&scillfp=5978299261416155234&oi=lle)
 * [Reproducible builds with Maven](https://maven.apache.org/guides/mini/guide-reproducible-builds.html)
 * [An Experience Report on Producing Verifiable Builds for Large-Scale Commercial Systems](https://ieeexplore.ieee.org/iel7/32/4359463/09465650.pdf)
+
+# Automatic renovation of generative art works
+
+technology evolves, art works need to migrated, 
+here we explore LLMs for this translation
+
+* [Exploring and Unleashing the Power of Large Language Models in Automated Code Translation]()
+* [dataset of CODeDOC artworks ported to p5](); [codedoc](https://whitney.org/exhibitions/codedoc)
+* []()
+
+# Keeping it old: backporting updates to legacy artworks
+
+interactive art runs in an environment that evolves (OS patches, drivers for interaction, etc.)
+here we explore backporting practices to let legacy art benefit from the latest advances
+
+* [Recommending code changes for automatic backporting of Linux device drivers]()
+* [Transforming C++11 Code to C++03 to Support Legacy Compilation Environments]()
+
+# State of reproducibility of fx(hash) artworks
+
+* [Reading between the lines: Source code documentation as a conservation strategy for software-based art](https://www.tandfonline.com/doi/pdf/10.1179/2047058413Y.0000000115)
+* [Do NFTs’ Owners Really Possess their Assets? A First Look at the NFT-to-Asset Connection Fragility](https://dl.acm.org/doi/10.1145/3543507.3583281)
