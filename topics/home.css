@@ -1,0 +1,49 @@
+body {
+    background-color: black;
+    color: white;
+    margin-left: 10px;
+    text-align: justify;
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+li {
+    color: white;
+}
+
+a {
+    color: fuchsia;
+}
+a:hover {
+    color: white;
+}
+a:visited{
+    color: violet;
+}
+a:visited:hover{
+    color: white;
+}
+
+h1 {
+    color: white;
+    margin-left: 10px;
+    text-align: none;
+    font-size: 27px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
