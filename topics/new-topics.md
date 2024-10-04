@@ -68,3 +68,15 @@ here we explore backporting practices to let legacy art benefit from the latest 
 
 * [Reading between the lines: Source code documentation as a conservation strategy for software-based art](https://www.tandfonline.com/doi/pdf/10.1179/2047058413Y.0000000115)
 * [Do NFTs’ Owners Really Possess their Assets? A First Look at the NFT-to-Asset Connection Fragility](https://dl.acm.org/doi/pdf/10.1145/3543507.3583281?casa_token=KaKXxXGRw50AAAAA:L88EzZbNI2UpC-yi4quVvAgQNDlPC-u6SHQMKPbBMyw8cwHTPe-uY-2whVoYKe02o6bj3MftRQgC)
+
+
+# Reproducible generative artworks
+
+# Streaming art to plotter
+
+# Exploring the intersection of bandcamp and github
+
+# Energy harvesting for pocket-size pen plotter
+
+# Live pen plotting
+
