@@ -78,5 +78,7 @@ here we explore backporting practices to let legacy art benefit from the latest 
 
 # Energy harvesting for pocket-size pen plotter
 
+* [Programmable Analogue Drawing Machines, 1952–2023](https://muse.jhu.edu/article/929863)
+
 # Live pen plotting
 
