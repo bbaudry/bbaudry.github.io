@@ -52,6 +52,27 @@
         and to design novel techniques to migrate art code to recent architectures or package it into isolated, reproducible containers (e.g., with Webassembly).
     </p>
     <p>
+        Examples of relevant, state of the art computer science concepts to support digital art include:
+        <ul>
+            <li><b>Code transformation</b>. Many artworks rely on third-party libraries 
+                (e.g. <a href="https://p5js.org/">p5.js</a>>) or APIs (e.g. <a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">canvas</a>), 
+                which evolve fast. In this project we aim at designing sound source-to-source transformations that 
+                support the co-evolution of artworks and their runtime environment.</li>
+            <li><b>Containers</b>. A key challenge of digital artworks is to thoroughly document all its runtime dependencies. 
+                Recent work explore container-based solution to bundle artworks and their dependencies, make them 
+                more reproducible. In this project we study Webassembly to revive old artworks, 
+                e.g. <a href="https://whitney.org/exhibitions/codedoc">pieces based on Java applets</a>, and to bundle contemporary browser-based artworks.</li>
+            <li><b>Unikernels</b>. When they rely on large sets of dependencies and drivers, a complete setup for an artwork can grow very large.
+                Yet, once the artwork is delivered in a gallery, it can live in a close world. This is an opportunity to tailor 
+                the artwork's environment to its exact needs and remove large portions of code bloat. In this project, 
+                we explore the opportunity of building <a href="https://dl.acm.org/doi/pdf/10.1145/2490301.2451167">unikernels</a> for low-resources artworks.</li>
+            <li><b>Energy harvesting</b>. Several artists explore low-fi technology to build robust and sustainable artworks, 
+                which can be exhibited outside gallery spaces, e.g. in public outdoor spaces or in natural spaces. 
+                In this project, we explore <a href="https://scholar.google.com/scholar?output=instlink&q=info:t-eQmwZqGnAJ:scholar.google.com/&hl=en&as_sdt=0,5&scillfp=12560273987587521836&oi=lle">energy harvesting</a> 
+                techniques, for the construction of low-power digital artworks.</li>
+        </ul>
+    </p>
+    <p>
         The research work will be performed at the <a href="">Université de Montréal</a>, under the supervision of <a href="https://softwarediversity.eu/">Benoit Baudry</a>, 
         and in collaboration with artists and museums in Montreal. It can be a Master's or PhD thesis position.
     </p>
