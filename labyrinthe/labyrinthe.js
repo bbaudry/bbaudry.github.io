@@ -6,7 +6,7 @@ var stack = [];
 var current;
 
 function preload() {
-    font = loadFont("../p5-experiments/fonts/FreeMono.otf");
+    font = loadFont("./FreeMono.otf");
 }
 
 
