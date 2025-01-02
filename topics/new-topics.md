@@ -1,4 +1,6 @@
-# One-shot  runners for continuous integration
+
+# Software supply chain
+## One-shot  runners for continuous integration
 
 Continuous integration consists in setting up a specific environment to build and test an application. For example, Github actions will spawn a container to run the continuous integration. Github has recently introduced just-in-time runners to mitigate software supply chain attacks on CI [1].
 
@@ -9,7 +11,7 @@ In this work, we explore the combination of automatic software diversity [2] and
 * [Too many images on DockerHub! How different are images for the same system?](https://link.springer.com/content/pdf/10.1007/s10664-020-09873-0.pdf)
 * [Nix: A Safe and Policy-Free System for Software Deployment](https://www.usenix.org/event/lisa04/tech/full_papers/dolstra/dolstra_html/)
 
-# Adversarial Maven builds
+## Adversarial Maven builds
 
 Reprocible builds are essential to build trust in the integrity of packaged artifacts. 
 The Java and Maven communities address this challenge and maintain a list of packages which reproducibility has been verified through independent builds.
@@ -20,7 +22,7 @@ These strategies involve randomizing the order of dependencies in the configurat
 * [Reproducible central](https://github.com/jvm-repo-rebuild/reproducible-central)
 * [AROMA: Automatic Reproduction of Maven Artifacts](https://dl.acm.org/doi/abs/10.1145/3643764)
 
-# Diverse Double Java builds
+## Diverse Double Java builds
 
 Build systems are susceptible to supply chain attacks, and Maven is no exception.
 When Solarwinds' build system was compromised, the company decided to to introduce software diversity at the core of their build pipelines in order to mitigate future hacks.
@@ -30,7 +32,7 @@ In this work we investigate the feasbility of introducing diversity in builds fo
 * [Reproducible Builds and Insights from an Independent Verifier for Arch Linux](https://dl.gi.de/bitstreams/f8685808-2e51-4a53-acc0-2b45fa240e3b/download)
 * [Automatic building of java projects in software repositories: A study on feasibility and challenges](https://ieeexplore.ieee.org/iel7/8169617/8169971/08170083.pdf)
 
-# Verifiable Maven builds with IPFS
+## Verifiable Maven builds with IPFS
 
 A key challenge for a robust software supply chain is to ensure the integrity of third-party dependencies.
 One solution to address this challenge consists in refering to dependencies with content-addressable, immutable URLs instead of mutable URLs as is the case today.
@@ -42,7 +44,9 @@ We will investigate the Interplanetary File System (IPFS) to store Maven package
 * [Reproducible builds with Maven](https://maven.apache.org/guides/mini/guide-reproducible-builds.html)
 * [An Experience Report on Producing Verifiable Builds for Large-Scale Commercial Systems](https://ieeexplore.ieee.org/iel7/32/4359463/09465650.pdf)
 
-# Neuro-renovation of software-based artworks
+# Software technology for the arts
+
+## Neuro-renovation of software-based artworks
 
 Software-based artworks are performative since the tangible elements of such works are created on the fly when code is execute. 
 If the runtime environments of the artworks evolves or even stops being maintained, then the artworks disappear.
@@ -56,7 +60,7 @@ In this work, we explore the ability of Large Language Models at renovating soft
 * [codedoc](https://whitney.org/exhibitions/codedoc)
 * [CheerpJ](https://microsoftedge.microsoft.com/addons/detail/cheerpj-applet-runner/ebfcpaoldmijengghefpohddmfpndmic?url=hot.copypasteads.com%2Fgirls)
 
-# Keeping it old: backporting updates to legacy artworks
+## Keeping it old: backporting updates to legacy artworks
 
 interactive art runs in an environment that evolves (OS patches, drivers for interaction, etc.)
 here we explore backporting practices to let legacy art benefit from the latest advances
@@ -64,21 +68,21 @@ here we explore backporting practices to let legacy art benefit from the latest 
 * [Recommending code changes for automatic backporting of Linux device drivers]()
 * [Transforming C++11 Code to C++03 to Support Legacy Compilation Environments]()
 
-# Reproducibility of fx(hash) artworks
+## Reproducibility of fx(hash) artworks
 
 * [Reading between the lines: Source code documentation as a conservation strategy for software-based art](https://www.tandfonline.com/doi/pdf/10.1179/2047058413Y.0000000115)
 * [Do NFTs’ Owners Really Possess their Assets? A First Look at the NFT-to-Asset Connection Fragility](https://dl.acm.org/doi/pdf/10.1145/3543507.3583281?casa_token=KaKXxXGRw50AAAAA:L88EzZbNI2UpC-yi4quVvAgQNDlPC-u6SHQMKPbBMyw8cwHTPe-uY-2whVoYKe02o6bj3MftRQgC)
 
 
-# Reproducible generative artworks
+## Reproducible generative artworks
 
-# Streaming art to plotter
+## Streaming art to plotter
 
-# Exploring the intersection of bandcamp and github
+## Exploring the intersection of bandcamp and github
 
-# Energy harvesting for pocket-size pen plotter
+## Energy harvesting for pocket-size pen plotter
 
 * [Programmable Analogue Drawing Machines, 1952–2023](https://muse.jhu.edu/article/929863)
 
-# Live pen plotting
+## Live pen plotting
 
