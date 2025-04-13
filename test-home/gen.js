@@ -15,15 +15,13 @@ function setup(){
 }
 
 function draw(){
-    background(0,0,0)
-    console.log("draw")
-    fill(0,0,100)
     vera()
     noLoop()
 }
 
 function vera(){
     var size,hsize,off,res,blanc
+    background(0,0,0)
     res=Math.floor(random(2,5))
     off=random(0.01,0.05)*w
     blanc=true
@@ -40,4 +38,14 @@ function vera(){
         hsize -= size * 0.05
 
     }
+}
+
+function windowResized() {
+    var element = document.getElementById("left-side");
+    var positionInfo = element.getBoundingClientRect();
+    var divh = positionInfo.height;
+    var divw = positionInfo.width;
+    w=divw
+    h=divh
+    resizeCanvas(w, h);
 }
