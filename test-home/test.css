@@ -87,9 +87,15 @@ h3 {
 
 }
 
+a{
+    text-decoration: none;
+}
 a:hover{
     color: orangered;
     cursor: default
+}
+a:visited{
+    color: black;
 }
 
 
@@ -98,10 +104,6 @@ a:hover{
 */
 .split-left:hover {
     background-color: #313532;
-}
-
-.split-right:hover {
-    /*background-color: #e7a7ea;*/
 }
 
 @media (max-width: 768px) {
