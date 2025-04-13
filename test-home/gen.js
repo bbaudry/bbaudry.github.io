@@ -49,3 +49,7 @@ function windowResized() {
     h=divh
     resizeCanvas(w, h);
 }
+
+document.getElementById('hover-link').addEventListener('mouseenter', function() {
+    draw();
+});

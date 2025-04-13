@@ -16,13 +16,30 @@
         <div class="split-left", id="left-side">
         </div>
         <div class="split-right">
-            <h3>Home</h3>
-            <h3>Group</h3>
-            <h3><a>Research</a></h3>
-            <h3>Outreach</h3>
-            <h3>Contact</h3>
+            <h3><a id="hover-link-h">Home</a></h3>
+            <h3><a id="hover-link-g">Group</a></h3>
+            <h3><a id="hover-link-r">Research</a></h3>
+            <h3><a id="hover-link-o">Outreach</a></h3>
+            <h3><a id="hover-link-c">Contact</a></h3>
         </div>
     </div>
+    <script>
+        document.getElementById('hover-link-h').addEventListener('mouseenter', function() {
+    draw();
+});
+document.getElementById('hover-link-g').addEventListener('mouseenter', function() {
+    draw();
+});
+document.getElementById('hover-link-r').addEventListener('mouseenter', function() {
+    draw();
+});
+document.getElementById('hover-link-o').addEventListener('mouseenter', function() {
+    draw();
+});
+document.getElementById('hover-link-c').addEventListener('mouseenter', function() {
+    draw();
+});
+    </script>
 </body>
 
 </html>
