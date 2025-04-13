@@ -1,9 +1,28 @@
+/*
+resources used to design this site:
+- https://kyraweb.ca/trigger-link-click-on-hover-guide/
+- for a potential easter egg: use the emoji cursor for a few seconds: https://codepen.io/tholman/pen/rxJpdQ
+- 
+*/
+
 body {
     margin: 20px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     height: 100vh;
 }
+
+#circularcursor {
+    background-color: transparent;
+    border:1px solid black;    
+    height:20px;
+    width:20px;
+    border-radius:50%;
+    -moz-border-radius:50%;
+    -webkit-border-radius:50%;
+    position: absolute;
+    z-index: 1;
+  }
 
 .split-container {
     display: flex;
@@ -35,10 +54,25 @@ body {
 }
 
 p {
-    line-height: 33pt;
-    font-size: 33pt;
+    line-height: 21pt;
+    font-size:xx-large;
+    font-family: monospace;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: justify;
 }
 
+h1 {
+    font-family: sans-serif;
+    line-height: 1pt;
+    font-size: 42pt;
+    font-weight: bold;
+}
+
+h1:hover{
+    color: #f6f7fa;
+    cursor: default
+}
 h3 {
     font-family: sans-serif;
     line-height: 1pt;
@@ -55,6 +89,7 @@ h3 {
 
 a:hover{
     color: orangered;
+    cursor: default
 }
 
 
