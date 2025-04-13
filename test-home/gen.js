@@ -40,34 +40,42 @@ function vera() {
 }
 
 function seORart() {
-    var x, y, res, cellw, cellh, left, style, c
+    var x, y, res, cellw, cellh, left, style, c, red
     background(0, 0, 0)
     res = random([6, 12, 18])
     cellw = w / res
     cellh = h / res
     //t=à draw art else draw se
     style = random([0, 1, 2])
-    switch(style){
+    red = false
+    switch (style) {
         case 0:
             c = 1
             for (var i = 0; i < res; i++) {
                 y = i * cellh
                 for (var j = 0; j < res; j++) {
+                    if (!red && random() < 0.07) {
+                        red = true
+                        fill(0, 100, 100)
+                        stroke(0, 100, 100)
+                    }
+                    else {
+                        fill(0, 0, 100)
+                        stroke(0, 0, 100)
+                    }
                     x = j * cellw
-                    fill(0, 0, 100)
-                    //            rect(x,y,10*i,10*j)
                     switch (c) {
-                        case 1: 
+                        case 1:
                             drawAnA(x, y, cellw, cellh, 0.11)
-                            c=2
+                            c = 2
                             break;
                         case 2:
                             drawAnR(x, y, cellw, cellh, 0.11)
-                            c=3
+                            c = 3
                             break;
                         case 3:
                             drawAnT(x, y, cellw, cellh, 0.11)
-                            c=1
+                            c = 1
                             break;
                     }
                 }
@@ -79,7 +87,15 @@ function seORart() {
                 y = i * cellh
                 for (var j = 0; j < res; j++) {
                     x = j * cellw
-                    fill(0, 0, 100)
+                    if (!red && random() < 0.07) {
+                        red = true
+                        fill(0, 100, 100)
+                        stroke(0, 100, 100)
+                    }
+                    else {
+                        fill(0, 0, 100)
+                        stroke(0, 0, 100)
+                    }
                     if (left) {
                         drawAnS(x, y, cellw, cellh, 0.11)
                     }
@@ -88,7 +104,7 @@ function seORart() {
                     }
                     left = !left
                 }
-            }    
+            }
             break;
         case 2:
             left = true
@@ -96,17 +112,24 @@ function seORart() {
                 y = i * cellh
                 for (var j = 0; j < res; j++) {
                     x = j * cellw
-                    fill(0, 0, 100)
-                    rect(x,y,(cellw/res)*i,(cellh/res)*j)
+                    if (!red && random() < 0.03) {
+                        red = true
+                        fill(0, 100, 100)
+                        stroke(0, 100, 100)
+                    }
+                    else {
+                        fill(0, 0, 100)
+                        stroke(0, 0, 100)
+                    }
+                    rect(x, y, (cellw / res) * i, (cellh / res) * j)
                 }
-            }    
+            }
             break;
     }
 }
 
 function drawAnS(x, y, cellw, cellh, off) {
     var cw, cellh, res, splitw, splith, off
-    stroke(0, 0, 100)
     cw = (1 - off) * cellw
     ch = (1 - off) * cellh
     x += off * cellw
@@ -128,7 +151,6 @@ function drawAnS(x, y, cellw, cellh, off) {
 function drawAnE(x, y, cellw, cellh, off) {
     var cw, cellh, res, splitw, splith, off
     off = 0.11
-    stroke(0, 0, 100)
     cw = (1 - off) * cellw
     ch = (1 - off) * cellh
     x += off * cellw
@@ -150,7 +172,6 @@ function drawAnE(x, y, cellw, cellh, off) {
 function drawAnA(x, y, cellw, cellh, off) {
     var cw, cellh, res, splitw, splith, off
     off = 0.11
-    stroke(0, 0, 100)
     cw = (1 - off) * cellw
     ch = (1 - off) * cellh
     x += off * cellw
@@ -169,7 +190,6 @@ function drawAnA(x, y, cellw, cellh, off) {
 function drawAnR(x, y, cellw, cellh, off) {
     var cw, cellh, res, splitw, splith, off
     off = 0.11
-    stroke(0, 0, 100)
     cw = (1 - off) * cellw
     ch = (1 - off) * cellh
     x += off * cellw
@@ -189,7 +209,6 @@ function drawAnR(x, y, cellw, cellh, off) {
 function drawAnT(x, y, cellw, cellh, off) {
     var cw, cellh, res, splitw, splith, off
     off = 0.11
-    stroke(0, 0, 100)
     cw = (1 - off) * cellw
     ch = (1 - off) * cellh
     x += off * cellw
