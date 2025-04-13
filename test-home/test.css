@@ -12,17 +12,6 @@ body {
     height: 100vh;
 }
 
-#circularcursor {
-    background-color: transparent;
-    border:1px solid black;    
-    height:20px;
-    width:20px;
-    border-radius:50%;
-    -moz-border-radius:50%;
-    -webkit-border-radius:50%;
-    position: absolute;
-    z-index: 1;
-  }
 
 .split-container {
     display: flex;
@@ -78,7 +67,9 @@ h3 {
     line-height: 1pt;
     font-size: 33pt;
     font-weight: bold;
+    cursor: default
 }
+
 
 .split-right {
     background-color: #f6f7fa;
@@ -88,17 +79,25 @@ h3 {
 }
 
 a{
-    text-decoration: none;
+    color:black;
+    text-decoration: underline; 
+    cursor: default;
+    &:hover, &:visited, &:active { color: orangered;}
 }
-a:hover{
-    color: orangered;
-    cursor: default
-}
+
 a:visited{
     color: black;
 }
 
-
+h3 a{
+    text-decoration: none;
+    cursor: default;
+    &:hover, &:active { color: orangered; };
+}
+h3 a:visited{
+    color: black;
+    &:hover, &:active { color: orangered; };
+}
 /*    transform: scale(1.05);
     border: 3px solid rgb(87, 128, 87);
 */
