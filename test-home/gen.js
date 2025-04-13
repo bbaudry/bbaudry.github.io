@@ -40,30 +40,22 @@ function vera() {
 }
 
 function seORart() {
-    var x, y, res, cellw, cellh, left, style, c, red
+    var x, y, res, cellw, cellh, left, style, c, colorie
     background(0, 0, 0)
     res = random([6, 12, 18])
     cellw = w / res
     cellh = h / res
     //t=à draw art else draw se
-    style = random([0, 1, 2])
-    red = false
+    style = random([0, 1, 2, 3])
+    colorie = false
     switch (style) {
         case 0:
             c = 1
             for (var i = 0; i < res; i++) {
                 y = i * cellh
                 for (var j = 0; j < res; j++) {
-                    if (!red && random() < 0.07) {
-                        red = true
-                        fill(0, 100, 100)
-                        stroke(0, 100, 100)
-                    }
-                    else {
-                        fill(0, 0, 100)
-                        stroke(0, 0, 100)
-                    }
                     x = j * cellw
+                    colorie = colorieOUpas(colorie)
                     switch (c) {
                         case 1:
                             drawAnA(x, y, cellw, cellh, 0.11)
@@ -87,15 +79,7 @@ function seORart() {
                 y = i * cellh
                 for (var j = 0; j < res; j++) {
                     x = j * cellw
-                    if (!red && random() < 0.07) {
-                        red = true
-                        fill(0, 100, 100)
-                        stroke(0, 100, 100)
-                    }
-                    else {
-                        fill(0, 0, 100)
-                        stroke(0, 0, 100)
-                    }
+                    colorie = colorieOUpas(colorie)
                     if (left) {
                         drawAnS(x, y, cellw, cellh, 0.11)
                     }
@@ -110,22 +94,38 @@ function seORart() {
             left = true
             for (var i = 0; i < res; i++) {
                 y = i * cellh
+                colorie = colorieOUpas(colorie)
                 for (var j = 0; j < res; j++) {
                     x = j * cellw
-                    if (!red && random() < 0.03) {
-                        red = true
-                        fill(0, 100, 100)
-                        stroke(0, 100, 100)
-                    }
-                    else {
-                        fill(0, 0, 100)
-                        stroke(0, 0, 100)
-                    }
+                    rect(x, y, (cellw / res) * i, (cellh / res) * j)
+                }
+            }
+            break;
+        case 3:
+            left = true
+            for (var i = 0; i < res; i++) {
+                y = (res-i) * cellh
+                colorie = colorieOUpas(colorie)
+                for (var j = 0; j < res; j++) {
+                    x = (res-j) * cellw
                     rect(x, y, (cellw / res) * i, (cellh / res) * j)
                 }
             }
             break;
     }
+}
+
+function colorieOUpas(colorie) {
+    if (!colorie && random() < 0.03) {
+        colorie = true
+        fill(110, 100, 80)
+        stroke(110, 100, 80)
+    }
+    else {
+        fill(0, 0, 100)
+        stroke(0, 0, 100)
+    }
+    return colorie
 }
 
 function drawAnS(x, y, cellw, cellh, off) {
