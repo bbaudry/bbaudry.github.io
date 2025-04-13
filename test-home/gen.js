@@ -46,10 +46,10 @@ function seORart() {
     cellw = w / res
     cellh = h / res
     //t=à draw art else draw se
-    style = random([0, 1, 2, 3])
+    style = random([0, 1, 2, 3, 4])
     colorie = false
     switch (style) {
-        case 0:
+        case 0://draw ART
             c = 1
             for (var i = 0; i < res; i++) {
                 y = i * cellh
@@ -73,7 +73,7 @@ function seORart() {
                 }
             }
             break;
-        case 1:
+        case 1://draw SE
             left = true
             for (var i = 0; i < res; i++) {
                 y = i * cellh
@@ -90,7 +90,7 @@ function seORart() {
                 }
             }
             break;
-        case 2:
+        case 2://opart rectangles
             left = true
             for (var i = 0; i < res; i++) {
                 y = i * cellh
@@ -101,14 +101,55 @@ function seORart() {
                 }
             }
             break;
-        case 3:
+        case 3://opart rectangles miroir
             left = true
             for (var i = 0; i < res; i++) {
-                y = (res-i) * cellh
+                y = (res - i) * cellh
                 colorie = colorieOUpas(colorie)
                 for (var j = 0; j < res; j++) {
-                    x = (res-j) * cellw
+                    x = (res - j) * cellw
                     rect(x, y, (cellw / res) * i, (cellh / res) * j)
+                }
+            }
+            break;
+        case 4://draw ART
+            c = 1
+            for (var i = 0; i < res; i++) {
+                y = i * cellh
+                for (var j = 0; j < res; j++) {
+                    x = j * cellw
+                    colorie = colorieOUpas(colorie)
+                    switch (c) {
+                        case 1:
+                            drawAnT(x, y, cellw, cellh, 0.11)
+                            c = 2
+                            break;
+                        case 2:
+                            drawAnRmiroir(x, y, cellw, cellh, 0.11)
+                            c = 3
+                            break;
+                        case 3:
+                            drawAnA(x, y, cellw, cellh, 0.11)
+                            c = 1
+                            break;
+                    }
+                }
+            }
+            break;
+        case 5://draw SE miroir
+            left = true
+            for (var i = 0; i < res; i++) {
+                y = i * cellh
+                for (var j = 0; j < res; j++) {
+                    x = j * cellw
+                    colorie = colorieOUpas(colorie)
+                    if (left) {
+                        drawAnEmiroir(x, y, cellw, cellh, 0.11)
+                    }
+                    else {
+                        drawAnSmiroir(x, y, cellw, cellh, 0.11)
+                    }
+                    left = !left
                 }
             }
             break;
@@ -148,6 +189,26 @@ function drawAnS(x, y, cellw, cellh, off) {
     rect(x, y, cw, splith)
 }
 
+function drawAnSmiroir(x, y, cellw, cellh, off) {
+    var cw, cellh, res, splitw, splith, off
+    cw = (1 - off) * cellw
+    ch = (1 - off) * cellh
+    x += off * cellw
+    y += off * cellh
+    res = 5
+    splitw = cw / res
+    splith = ch / res
+    rect(x, y, cw, splith)
+    y += splith
+    rect(x + cw - splitw, y, splitw, splith)
+    y += splith
+    rect(x, y, cw, splith)
+    y += splith
+    rect(x, y, splitw, splith)
+    y += splith
+    rect(x, y, cw, splith)
+}
+
 function drawAnE(x, y, cellw, cellh, off) {
     var cw, cellh, res, splitw, splith, off
     off = 0.11
@@ -165,6 +226,28 @@ function drawAnE(x, y, cellw, cellh, off) {
     rect(x, y, cw, splith)
     y += splith
     rect(x, y, splitw, splith)
+    y += splith
+    rect(x, y, cw, splith)
+}
+
+
+function drawAnEmiroir(x, y, cellw, cellh, off) {
+    var cw, cellh, res, splitw, splith, off
+    off = 0.11
+    cw = (1 - off) * cellw
+    ch = (1 - off) * cellh
+    x += off * cellw
+    y += off * cellh
+    res = 5
+    splitw = cw / res
+    splith = ch / res
+    rect(x, y, cw, splith)
+    y += splith
+    rect(x + cw - splitw, y, splitw, splith)
+    y += splith
+    rect(x, y, cw, splith)
+    y += splith
+    rect(x + cw - splitw, y, splitw, splith)
     y += splith
     rect(x, y, cw, splith)
 }
@@ -204,6 +287,25 @@ function drawAnR(x, y, cellw, cellh, off) {
     y += splith
     rect(x, y, cw, splith)
     quad(x + 3 * splitw, y, x + 4 * splitw, y, x + 5 * splitw, y + 3 * splith, x + 4 * splitw, y + 3 * splith)
+}
+
+function drawAnRmiroir(x, y, cellw, cellh, off) {
+    var cw, cellh, res, splitw, splith, off
+    off = 0.11
+    cw = (1 - off) * cellw
+    ch = (1 - off) * cellh
+    x += off * cellw
+    y += off * cellh
+    res = 5
+    splitw = cw / res
+    splith = ch / res
+    rect(x, y, cw, splith)
+    y += splith
+    rect(x + cw - splitw, y, splitw, splith * 4)
+    rect(x, y, splitw, splith)
+    y += splith
+    rect(x, y, cw, splith)
+    quad(x + 1 * splitw, y, x + 2 * splitw, y, x + 1 * splitw, y + 3 * splith, x + 0 * splitw, y + 3 * splith)
 }
 
 function drawAnT(x, y, cellw, cellh, off) {

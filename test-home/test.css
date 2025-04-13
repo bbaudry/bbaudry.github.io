@@ -25,7 +25,6 @@ body {
 .split-right {
     flex: 1;
     overflow: hidden;
-    text-align: center;
     transition: all 0.3s;
     border-radius: 10px;
     display: flex;
@@ -48,11 +47,13 @@ p {
     font-family: monospace;
     margin-left: 10%;
     margin-right: 10%;
-    text-align: justify;
+    text-align: left;
+
 }
 
 h1 {
     font-family: sans-serif;
+    text-align: center;
     line-height: 1pt;
     font-size: 42pt;
     font-weight: bold;
@@ -64,6 +65,8 @@ h1:hover{
 }
 h3 {
     font-family: sans-serif;
+    text-align: center;
+
     line-height: 1pt;
     font-size: 33pt;
     font-weight: bold;
@@ -88,6 +91,17 @@ a{
 a:visited{
     color: black;
 }
+
+p a{
+    text-decoration: underline;
+    cursor: default;
+    &:hover, &:active { color: orangered; };
+}
+p a:visited{
+    color: black;
+    &:hover, &:active { color: orangered; };
+}
+
 
 h3 a{
     text-decoration: none;
