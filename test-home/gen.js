@@ -2,20 +2,40 @@
 var cnv, w, h
 
 function setup() {
+    /*var element = document.getElementById("left-side");
+    var positionInfo = element.getBoundingClientRect();
+    var divh = positionInfo.height;
+    var divw = positionInfo.width;
+    w = divw
+    h = divh*/
+    cnv = createCanvas(w, h);
+    cnv.parent("left-side");
+    setCanvasSize()
+    console.log("w: " + w + "; h: " + h)
+
+    colorMode(HSB, 360, 100, 100, 250);
+}
+
+function setCanvasSize() {
     var element = document.getElementById("left-side");
     var positionInfo = element.getBoundingClientRect();
     var divh = positionInfo.height;
     var divw = positionInfo.width;
     w = divw
     h = divh
-    cnv = createCanvas(w, h);
-    cnv.parent("left-side");
-
-    colorMode(HSB, 360, 100, 100, 250);
+    resizeCanvas(w, h)
 }
 
 function draw() {
-    seORart()
+    // add 1% chance hommage a vera molnar
+    // add 1% chance hommage a lillian schwartz
+    // add 1% chance hommage a ryoji ikeda
+    if (random < 0.042) {
+        lillianschwartz()
+    }
+    else {
+        SEorART()
+    }
     noLoop()
 }
 
@@ -39,7 +59,7 @@ function vera() {
     }
 }
 
-function seORart() {
+function SEorART() {
     var x, y, res, cellw, cellh, left, style, c, colorie
     background(0, 0, 0)
     res = random([6, 12, 18])
@@ -324,13 +344,95 @@ function drawAnT(x, y, cellw, cellh, off) {
     rect(x, y, splitw, splith * 4)
 }
 
+var grid = [];
+var gridresolution = 8;
+
+function lillianschwartz() {
+    background(0, 0, 100)
+    fill(300, 100, 100)
+    stroke(300, 100, 100)
+    initgrid()
+    drawgrid()
+}
+
+function initgrid() {
+    var cellwidth = Math.floor(w / gridresolution)
+    var cellheight = Math.floor(h / gridresolution)
+    var x, y
+    var xcoords = []
+    var ycoords = []
+    var xoffset = cellwidth * 0.42
+    var yoffset = cellheight * 0.42
+    for (var i = 0; i < gridresolution + 1; i++) {
+        x = 0 + i * cellwidth
+        if (i > 0 && i < gridresolution) { x += random(-xoffset, xoffset) }
+        xcoords.push(x)
+    }
+    for (var j = 0; j < gridresolution + 1; j++) {
+        y = 0 + j * cellheight
+        if (j > 0 && j < gridresolution) { y += random(-yoffset, yoffset) }
+        ycoords.push(y)
+    }
+    for (var i = 0; i < gridresolution + 1; i++) {
+        x = xcoords[i]
+        for (var j = 0; j < gridresolution + 1; j++) {
+            y = ycoords[j]
+            grid.push({ x: x, y: y })
+        }
+    }
+}
+
+function drawgrid() {
+    for (var i = 0; i < gridresolution; i++) {
+        for (var j = 0; j < gridresolution; j++) {
+            tile(
+                grid[i * (gridresolution + 1) + j].x, grid[i * (gridresolution + 1) + j].y,
+                grid[(i + 1) * (gridresolution + 1) + j].x, grid[(i + 1) * (gridresolution + 1) + j].y,
+                grid[(i + 1) * (gridresolution + 1) + j + 1].x, grid[(i + 1) * (gridresolution + 1) + j + 1].y,
+                grid[i * (gridresolution + 1) + j + 1].x, grid[i * (gridresolution + 1) + j + 1].y,
+            )
+        }
+    }
+}
+
+function tile(x1, y1, x2, y2, x3, y3, x4, y4) {
+    var dice = Math.floor(random(4))
+    switch (dice) {
+        // don't draw the quad
+        case 0:
+            break;
+        // draw complete quad
+        case 1:
+            quad(x1, y1, x2, y2, x3, y3, x4, y4)
+            break;
+        // split the quad horizontal
+        case 2:
+            var ratio = Math.floor(random(2, 5))
+            var yoff = (y4 - y1) / ratio
+            for (var i = 0; i < ratio; i += 2) {
+                quad(x1, y1 + i * yoff, x2, y2 + i * yoff, x3, y2 + (i + 1) * yoff, x4, y1 + (i + 1) * yoff)
+            }
+            break;
+        // split the quad horizontal
+        case 3:
+            var ratio = Math.floor(random(2, 4))
+            var xoff = (x2 - x1) / ratio
+            for (var i = 0; i < ratio; i += 2) {
+                quad(x1 + i * xoff, y1, x1 + (i + 1) * xoff, y2, x4 + (i + 1) * xoff, y3, x4 + i * xoff, y4)
+            }
+            break;
+    }
+}
+;
+
 function windowResized() {
-    var element = document.getElementById("left-side");
+    /*var element = document.getElementById("left-side");
     var positionInfo = element.getBoundingClientRect();
     var divh = positionInfo.height;
     var divw = positionInfo.width;
     w = divw
     h = divh
-    resizeCanvas(w, h);
+    resizeCanvas(w, h);*/
+    setCanvasSize()
 }
 
