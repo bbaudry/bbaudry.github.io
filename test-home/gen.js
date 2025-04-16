@@ -30,7 +30,7 @@ function draw() {
     // add 1% chance hommage a vera molnar
     // add 1% chance hommage a lillian schwartz
     // add 1% chance hommage a ryoji ikeda
-    if (random < 0.042) {
+    if (random() < 0.042) {
         lillianschwartz()
     }
     else {
