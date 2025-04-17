@@ -3,5 +3,5 @@ it seems that we can use nocite with pandoc and citeproc: https://tex.stackexcha
 
 the following command works well, but requires to cite the reference. Hence, not possible to have only the list of references
 ```
-pandoc -s --metadata title="publications" --bibliography test.bib --citeproc test.md -o test.html
+pandoc -s --metadata title="publications" --bibliography test.bib --citeproc test.md -o test-biblio.html
 ```
