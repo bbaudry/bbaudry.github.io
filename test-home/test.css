@@ -83,12 +83,12 @@ h3 {
     font-weight: bold;
     cursor: default
 }
-h2 a{
+h3 a{
     text-decoration: none;
     cursor: default;
     &:hover, &:active { color: orangered; };
 }
-h2 a:visited{
+h3 a:visited{
     color: black;
     &:hover, &:active { color: orangered; };
 }
