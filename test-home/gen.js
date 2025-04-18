@@ -27,9 +27,9 @@ function setCanvasSize() {
 }
 
 function draw() {
-    // add 1% chance hommage a vera molnar
+    // add 1% chance hommage a vera molnar: randomly positioned squares in different shades of red
     // add 1% chance hommage a lillian schwartz
-    // add 1% chance hommage a ryoji ikeda
+    // add 1% chance hommage a ryoji ikeda: a grid, cell randomly filled with white or white particles bursting from center on black background 
     if (random() < 0.042) {
         lillianschwartz()
     }
@@ -349,8 +349,8 @@ var gridresolution = 8;
 
 function lillianschwartz() {
     background(0, 0, 100)
-    fill(300, 100, 100)
-    stroke(300, 100, 100)
+    fill(0, 0, 0)
+    stroke(0, 0, 0)
     initgrid()
     drawgrid()
 }
