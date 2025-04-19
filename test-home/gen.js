@@ -16,8 +16,8 @@ function setup() {
     colorMode(HSB, 360, 100, 100, 250);
 }
 
-function setCanvasSize() {
-    var element = document.getElementById("left-side");
+async function setCanvasSize() {
+    var element = await document.getElementById("left-side");
     var positionInfo = element.getBoundingClientRect();
     var divh = positionInfo.height;
     var divw = positionInfo.width;
