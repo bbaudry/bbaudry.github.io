@@ -52,9 +52,9 @@ body {
 }
 
 .split-left {
-    background-color: #3b3a41;
+    background-color: black;
     color: #ffffff;
-    border: 2px solid rgb(95, 156, 180);
+    
 
 }
 
@@ -189,7 +189,7 @@ p a:visited{
 
     .split-left,
     .split-right {
-        margin: 5px;
+        margin: 0px;
         width: 95%;
         height: 48vh;
     }

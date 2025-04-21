@@ -2,12 +2,8 @@
 var cnv, w, h
 
 function setup() {
-    /*var element = document.getElementById("left-side");
-    var positionInfo = element.getBoundingClientRect();
-    var divh = positionInfo.height;
-    var divw = positionInfo.width;
-    w = divw
-    h = divh*/
+    w=42
+    h=42
     cnv = createCanvas(w, h);
     cnv.parent("left-side");
     setCanvasSize()
@@ -29,7 +25,7 @@ async function setCanvasSize() {
 function draw() {
     // add 1% chance hommage a vera molnar: randomly positioned squares in different shades of red
     // add 1% chance hommage a lillian schwartz
-    // add 1% chance hommage a ryoji ikeda: a grid, cell randomly filled with white or white particles bursting from center on black background 
+    // add 1% chance hommage a ryoji ikeda: a grid, cell randomly filled with white or white particles bursting from center on black background or black particles bursting from center on white background 
     if (random() < 0.042) {
         lillianschwartz()
     }
