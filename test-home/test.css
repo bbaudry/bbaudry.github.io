@@ -108,10 +108,10 @@ h1:hover{
 h2 {
     font-family: sans-serif;
     text-align: center;
-
-    line-height: 1pt;
     font-size: 33pt;
     font-weight: bold;
+    padding-top: 11pt;
+    padding-bottom: 33pt;
     cursor: default
 }
 h2 a{
