@@ -13,7 +13,7 @@ resources used to design this site:
 */
 
 body {
-    margin: 20px;
+    margin: 0px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     height: 100vh;
@@ -69,13 +69,13 @@ body {
   }
 /* Links inside the navbar */
 .navbar a {
-    font-size: 21;
+    font-size: 21pt;
     font-family: monospace;
     float: left;
     display: block;
     color: #f2f2f2;
     text-align: center;
-    padding: 21px 42px;/*first param is height of the navbar, second is padding between a elements*/
+    padding: 21px 42px;/*first param is height of the navbar, second is padding between anchor elements*/
     text-decoration: none;
     &:hover, &:active { color: orangered; };
   }
