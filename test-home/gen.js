@@ -422,13 +422,6 @@ function tile(x1, y1, x2, y2, x3, y3, x4, y4) {
 ;
 
 function windowResized() {
-    /*var element = document.getElementById("left-side");
-    var positionInfo = element.getBoundingClientRect();
-    var divh = positionInfo.height;
-    var divw = positionInfo.width;
-    w = divw
-    h = divh
-    resizeCanvas(w, h);*/
     setCanvasSize()
 }
 

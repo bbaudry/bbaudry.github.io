@@ -49,22 +49,31 @@ function draw() {
   }
 }
 
+function windowResized() {
+  w = windowWidth
+  h = windowHeight
+  resizeCanvas(w, h)
+}
+
 class Pix {
   constructor(x, y, w, h) {
     this.x = x
     this.y = y
     this.w = w
     this.h = h
-    this.r = w*0.3
+    this.r = w * 0.3
+    this.done = false
   }
 
   show() {
     var lx, ly
-    lx = mouseX
-    ly = mouseY
-    if (lx > this.x && lx < this.x + this.w && ly > this.y && ly < this.y + this.h) {
-      rect(lx, ly,this.r,this.r)
-      console.log("paint at x: "+lx+", y: "+ly)
+    if (!this.done) {
+      lx = mouseX
+      ly = mouseY
+      if (lx > this.x && lx < this.x + this.w && ly > this.y && ly < this.y + this.h) {
+        rect(this.x, this.y, this.w, this.h)
+        this.done=true
+      }
     }
   }
 }
