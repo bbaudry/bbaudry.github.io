@@ -5,3 +5,5 @@ the following command works well, but requires to cite the reference. Hence, not
 ```
 pandoc -s --metadata title="publications" --bibliography test.bib --citeproc test.md -o test-biblio.html
 ```
+
+pandoc -s --toc=true  -c arty.css --metadata title="Open research topics" new-topics.md -o test.html

@@ -1,4 +1,5 @@
 
+// generative page on the left side of personal website
 var cnv, w, h
 
 function setup() {
