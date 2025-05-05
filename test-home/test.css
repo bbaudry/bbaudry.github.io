@@ -154,6 +154,16 @@ p {
 
 }
 
+li {
+    line-height: 21pt;
+    font-size:xx-large;
+    font-family: monospace;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: justify;
+
+}
+
 a{
     color:black;
     text-decoration: underline; 
