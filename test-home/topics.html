@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="test.css">
+    <title>Testing gen homepage</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.3/p5.min.js"></script>
+    <script src="gen.js"></script>
+</head>
+
+<body>
+    <div class="split-container">
+        <div class="split-left" , id="left-side">
+        </div>
+        <div class="split-right">
+            <div class="navbar">
+                <a href="./test.html">trench</a>
+                <a href="./crew.html">crew</a>
+                <a href="./research.html">research</a>
+                <a href="./showcase.html">showcase</a>
+                <a href="./contact.html">contact</a>
+            </div>
+            <div class="main">
+                                <nav id="TOC" role="doc-toc">
+                                        <ul>
+                                        <li><a
+                                        href="#software-supply-chain"
+                                        id="toc-software-supply-chain">Software
+                                        supply chain</a>
+                                        <ul>
+                                        <li><a
+                                        href="#one-shot-runners-for-continuous-integration"
+                                        id="toc-one-shot-runners-for-continuous-integration">One-shot
+                                        runners for continuous
+                                        integration</a></li>
+                                        <li><a
+                                        href="#adversarial-maven-builds"
+                                        id="toc-adversarial-maven-builds">Adversarial
+                                        Maven builds</a></li>
+                                        <li><a
+                                        href="#diverse-double-java-builds"
+                                        id="toc-diverse-double-java-builds">Diverse
+                                        Double Java builds</a></li>
+                                        <li><a
+                                        href="#verifiable-maven-builds-with-ipfs"
+                                        id="toc-verifiable-maven-builds-with-ipfs">Verifiable
+                                        Maven builds with IPFS</a></li>
+                                        </ul></li>
+                                        <li><a
+                                        href="#software-technology-for-the-arts"
+                                        id="toc-software-technology-for-the-arts">Software
+                                        technology for the arts</a>
+                                        <ul>
+                                        <li><a
+                                        href="#neuro-renovation-of-software-based-artworks"
+                                        id="toc-neuro-renovation-of-software-based-artworks">Neuro-renovation
+                                        of software-based
+                                        artworks</a></li>
+                                        <li><a
+                                        href="#keeping-it-old-backporting-updates-to-legacy-artworks"
+                                        id="toc-keeping-it-old-backporting-updates-to-legacy-artworks">Keeping
+                                        it old: backporting updates to
+                                        legacy artworks</a></li>
+                                        <li><a
+                                        href="#reproducibility-of-fxhash-artworks"
+                                        id="toc-reproducibility-of-fxhash-artworks">Reproducibility
+                                        of fx(hash) artworks</a></li>
+                                        <li><a
+                                        href="#reproducible-generative-artworks"
+                                        id="toc-reproducible-generative-artworks">Reproducible
+                                        generative artworks</a></li>
+                                        <li><a
+                                        href="#streaming-art-to-plotter"
+                                        id="toc-streaming-art-to-plotter">Streaming
+                                        art to plotter</a></li>
+                                        <li><a
+                                        href="#exploring-the-intersection-of-bandcamp-and-github"
+                                        id="toc-exploring-the-intersection-of-bandcamp-and-github">Exploring
+                                        the intersection of bandcamp and
+                                        github</a></li>
+                                        <li><a
+                                        href="#energy-harvesting-for-pocket-size-pen-plotter"
+                                        id="toc-energy-harvesting-for-pocket-size-pen-plotter">Energy
+                                        harvesting for pocket-size pen
+                                        plotter</a></li>
+                                        <li><a href="#live-pen-plotting"
+                                        id="toc-live-pen-plotting">Live
+                                        pen plotting</a></li>
+                                        </ul></li>
+                                        </ul>
+                </nav>
+                                <h1 id="software-supply-chain">Software
+                                supply chain</h1>
+                                <h2
+                                id="one-shot-runners-for-continuous-integration">One-shot
+                                runners for continuous integration</h2>
+                                <p>Continuous integration consists in
+                                setting up a specific environment to
+                                build and test an application. For
+                                example, Github actions will spawn a
+                                container to run the continuous
+                                integration. Github has recently
+                                introduced just-in-time runners to
+                                mitigate software supply chain attacks
+                                on CI [1].</p>
+                                <p>In this work, we explore the
+                                combination of automatic software
+                                diversity [2] and just-in-time runners,
+                                to build one-shot unique versions of
+                                runners for CI. We will first look at
+                                the opportunity of reusing the natural
+                                diversity of containers [3], then we
+                                will investigate transformations to
+                                automatically increase the diversity of
+                                runners. The student will explore both
+                                github actions and Nix [4] for automatic
+                                build.</p>
+                                <ul>
+                                <li><a
+                                href="https://docs.github.com/en/actions/security-guides/security-hardening-for-github-actions#using-just-in-time-runners">Using
+                                just-in-time runners</a></li>
+                                <li><a
+                                href="https://citeseerx.ist.psu.edu/document?repid=rep1&amp;type=pdf&amp;doi=2f53c44ba52ebd8c3083a485a48b72c8fdc8e79d">Building
+                                diverse computer systems</a></li>
+                                <li><a
+                                href="https://link.springer.com/content/pdf/10.1007/s10664-020-09873-0.pdf">Too
+                                many images on DockerHub! How different
+                                are images for the same system?</a></li>
+                                <li><a
+                                href="https://www.usenix.org/event/lisa04/tech/full_papers/dolstra/dolstra_html/">Nix:
+                                A Safe and Policy-Free System for
+                                Software Deployment</a></li>
+                                </ul>
+                                <h2
+                                id="adversarial-maven-builds">Adversarial
+                                Maven builds</h2>
+                                <p>Reprocible builds are essential to
+                                build trust in the integrity of packaged
+                                artifacts. The Java and Maven
+                                communities address this challenge and
+                                maintain a list of packages which
+                                reproducibility has been verified
+                                through independent builds. In this
+                                work, we design several strategies to
+                                perturb the build to determine the
+                                actual robustness of these reproducble
+                                builds. These strategies involve
+                                randomizing the order of dependencies in
+                                the configuration file and perturbing
+                                the build environment, such as setting
+                                time in the future or changing the
+                                system’s language or host name.</p>
+                                <ul>
+                                <li><a
+                                href="https://ieeexplore.ieee.org/iel7/52/9713899/09403390.pdf">Reproducible
+                                builds: Increasing the integrity of
+                                software supply chains</a></li>
+                                <li><a
+                                href="https://github.com/jvm-repo-rebuild/reproducible-central">Reproducible
+                                central</a></li>
+                                <li><a
+                                href="https://dl.acm.org/doi/abs/10.1145/3643764">AROMA:
+                                Automatic Reproduction of Maven
+                                Artifacts</a></li>
+                                </ul>
+                                <h2
+                                id="diverse-double-java-builds">Diverse
+                                Double Java builds</h2>
+                                <p>Build systems are susceptible to
+                                supply chain attacks, and Maven is no
+                                exception. When Solarwinds’ build system
+                                was compromised, the company decided to
+                                to introduce software diversity at the
+                                core of their build pipelines in order
+                                to mitigate future hacks. In this work
+                                we investigate the feasbility of
+                                introducing diversity in builds for Java
+                                project. We study the automatic
+                                migration of Maven builds into Gradle
+                                builds and then compare the diversity it
+                                provides at each build step and what
+                                impact this has on the output
+                                artifact.</p>
+                                <ul>
+                                <li><a
+                                href="https://dl.acm.org/doi/abs/10.1145/3643764">AROMA:
+                                Automatic Reproduction of Maven
+                                Artifacts</a></li>
+                                <li><a
+                                href="https://dl.gi.de/bitstreams/f8685808-2e51-4a53-acc0-2b45fa240e3b/download">Reproducible
+                                Builds and Insights from an Independent
+                                Verifier for Arch Linux</a></li>
+                                <li><a
+                                href="https://ieeexplore.ieee.org/iel7/8169617/8169971/08170083.pdf">Automatic
+                                building of java projects in software
+                                repositories: A study on feasibility and
+                                challenges</a></li>
+                                </ul>
+                                <h2
+                                id="verifiable-maven-builds-with-ipfs">Verifiable
+                                Maven builds with IPFS</h2>
+                                <p>A key challenge for a robust software
+                                supply chain is to ensure the integrity
+                                of third-party dependencies. One
+                                solution to address this challenge
+                                consists in refering to dependencies
+                                with content-addressable, immutable URLs
+                                instead of mutable URLs as is the case
+                                today. We will investigate the
+                                Interplanetary File System (IPFS) to
+                                store Maven packages and improve the
+                                reproducibility and integrity of Maven
+                                builds.</p>
+                                <ul>
+                                <li><a
+                                href="https://ieeexplore.ieee.org/iel7/52/9713899/09403390.pdf">Reproducible
+                                builds: Increasing the integrity of
+                                software supply chains</a></li>
+                                <li><a
+                                href="https://arxiv.org/pdf/1407.3561">Ipfs-content
+                                addressed, versioned, p2p file
+                                system</a></li>
+                                <li><a
+                                href="https://scholar.google.com/scholar?output=instlink&amp;q=info:kmZWQCZhzlkJ:scholar.google.com/&amp;hl=en&amp;as_sdt=0,5&amp;scillfp=5978299261416155234&amp;oi=lle">Towards
+                                build verifiability for java-based
+                                systems</a></li>
+                                <li><a
+                                href="https://maven.apache.org/guides/mini/guide-reproducible-builds.html">Reproducible
+                                builds with Maven</a></li>
+                                <li><a
+                                href="https://ieeexplore.ieee.org/iel7/32/4359463/09465650.pdf">An
+                                Experience Report on Producing
+                                Verifiable Builds for Large-Scale
+                                Commercial Systems</a></li>
+                                </ul>
+                                <h1
+                                id="software-technology-for-the-arts">Software
+                                technology for the arts</h1>
+                                <h2
+                                id="neuro-renovation-of-software-based-artworks">Neuro-renovation
+                                of software-based artworks</h2>
+                                <p>Software-based artworks are
+                                performative since the tangible elements
+                                of such works are created on the fly
+                                when code is execute. If the runtime
+                                environments of the artworks evolves or
+                                even stops being maintained, then the
+                                artworks disappear. For example, many
+                                artworks from the 2000’s relied on Java
+                                applets as a runtime, and now need to be
+                                ported to a new environment. The Whitney
+                                museum ported its CODeDOC artworks from
+                                applets to p5.js. In this work, we
+                                explore the ability of Large Language
+                                Models at renovating software-based
+                                artworks, starting with Java applets
+                                artworks to be renovated into pieces
+                                that can perform in modern web
+                                browsers.</p>
+                                <ul>
+                                <li><a
+                                href="https://resources.culturalheritage.org/emg-review/volume-5-2017-2018/ensom/">Revealing
+                                Hidden Processes: Instrumentation and
+                                Reverse Engineering in the Conservation
+                                of Software-based Art</a></li>
+                                <li><a
+                                href="https://arxiv.org/pdf/2404.14646">Exploring
+                                and Unleashing the Power of Large
+                                Language Models in Automated Code
+                                Translation</a></li>
+                                <li><a href="">dataset of CODeDOC
+                                artworks ported to p5</a>;</li>
+                                <li><a
+                                href="https://whitney.org/exhibitions/codedoc">codedoc</a></li>
+                                <li><a
+                                href="https://microsoftedge.microsoft.com/addons/detail/cheerpj-applet-runner/ebfcpaoldmijengghefpohddmfpndmic?url=hot.copypasteads.com%2Fgirls">CheerpJ</a></li>
+                                </ul>
+                                <h2
+                                id="keeping-it-old-backporting-updates-to-legacy-artworks">Keeping
+                                it old: backporting updates to legacy
+                                artworks</h2>
+                                <p>interactive art runs in an
+                                environment that evolves (OS patches,
+                                drivers for interaction, etc.) here we
+                                explore backporting practices to let
+                                legacy art benefit from the latest
+                                advances</p>
+                                <ul>
+                                <li><a href="">Recommending code changes
+                                for automatic backporting of Linux
+                                device drivers</a></li>
+                                <li><a href="">Transforming C++11 Code
+                                to C++03 to Support Legacy Compilation
+                                Environments</a></li>
+                                </ul>
+                                <h2
+                                id="reproducibility-of-fxhash-artworks">Reproducibility
+                                of fx(hash) artworks</h2>
+                                <ul>
+                                <li><a
+                                href="https://www.tandfonline.com/doi/pdf/10.1179/2047058413Y.0000000115">Reading
+                                between the lines: Source code
+                                documentation as a conservation strategy
+                                for software-based art</a></li>
+                                <li><a
+                                href="https://dl.acm.org/doi/pdf/10.1145/3543507.3583281?casa_token=KaKXxXGRw50AAAAA:L88EzZbNI2UpC-yi4quVvAgQNDlPC-u6SHQMKPbBMyw8cwHTPe-uY-2whVoYKe02o6bj3MftRQgC">Do
+                                NFTs’ Owners Really Possess their
+                                Assets? A First Look at the NFT-to-Asset
+                                Connection Fragility</a></li>
+                                </ul>
+                                <h2
+                                id="reproducible-generative-artworks">Reproducible
+                                generative artworks</h2>
+                                <h2
+                                id="streaming-art-to-plotter">Streaming
+                                art to plotter</h2>
+                                <h2
+                                id="exploring-the-intersection-of-bandcamp-and-github">Exploring
+                                the intersection of bandcamp and
+                                github</h2>
+                                <h2
+                                id="energy-harvesting-for-pocket-size-pen-plotter">Energy
+                                harvesting for pocket-size pen
+                                plotter</h2>
+                                <ul>
+                                <li><a
+                                href="https://muse.jhu.edu/article/929863">Programmable
+                                Analogue Drawing Machines,
+                                1952–2023</a></li>
+                                </ul>
+                                <h2 id="live-pen-plotting">Live pen
+                                plotting</h2>
+            </div>
+        </div>
+    </div>
+</body>
