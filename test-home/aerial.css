@@ -104,8 +104,8 @@ h1 {
     text-align: center;
     font-size: 42pt;
     font-weight: bold;
-    padding-top: 11pt;
-    padding-bottom: 42pt;
+    padding-top: 42pt;
+    padding-bottom: 2pt;
 }
 
 h1:hover{
@@ -117,8 +117,6 @@ h2 {
     text-align: center;
     font-size: 33pt;
     font-weight: bold;
-    padding-top: 11pt;
-    padding-bottom: 33pt;
     cursor: default
 }
 h2 a{
@@ -188,6 +186,15 @@ p a{
     &:hover, &:active { color: orangered; };
 }
 p a:visited{
+    color: black;
+    &:hover, &:active { color: orangered; };
+}
+li a{
+    text-decoration: underline;
+    cursor: default;
+    &:hover, &:active { color: orangered; };
+}
+li a:visited{
     color: black;
     &:hover, &:active { color: orangered; };
 }
