@@ -192,6 +192,17 @@ p a:visited{
     &:hover, &:active { color: orangered; };
 }
 
+.csl-entry{
+    
+    font-size:xx-large;
+    font-family: monospace;
+        margin-left: 10%;
+    margin-right: 10%;
+    text-align: justify;
+
+
+}
+
 /*    transform: scale(1.05);
     border: 3px solid rgb(87, 128, 87);
 */
