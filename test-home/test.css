@@ -193,16 +193,25 @@ p a:visited{
 }
 
 .csl-entry{
-    
     font-size:xx-large;
     font-family: monospace;
-        margin-left: 10%;
+    margin-left: 10%;
     margin-right: 10%;
     text-align: justify;
-
-
+    padding: 1%;
 }
-
+.csl-entry a{
+    text-decoration: underline;
+    cursor: default;
+    &:hover, &:active { color: orangered; };
+}
+.csl-entry a:visited{
+    color: black;
+    &:hover, &:active { color: orangered; };
+}
+.csl-right-inline span{
+    font-weight: bold;
+}
 /*    transform: scale(1.05);
     border: 3px solid rgb(87, 128, 87);
 */
