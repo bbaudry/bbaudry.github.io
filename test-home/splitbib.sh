@@ -8,3 +8,5 @@ pandoc selectedpublications.bib -s --template=selectedpublications-template.html
 
 bibtool -- 'select{keywords "test"}' publis.bib -o testpublications.bib
 pandoc selectedpublications.bib -s --template=testpublications-template.html --metadata link-bibliography --csl ieee.csl --metadata title="Testing Publications" --citeproc -o testpublications.html
+
+pandoc -s --toc=true  --template=topics-template.html  topics.md -o topics.html
