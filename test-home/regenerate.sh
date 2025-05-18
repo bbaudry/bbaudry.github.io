@@ -4,7 +4,7 @@ bibtool -- 'select{@article}' publis.bib -o journalpublications.bib
 pandoc journalpublications.bib -s --template=journalpublications-template.html --metadata link-bibliography --csl ieee.csl --citeproc -o journalpublications.html
 
 bibtool -- 'select{@inproceedings}' publis.bib -o conferencepublications.bib
-pandoc journalpublications.bib -s --template=conferencepublications-template.html --metadata link-bibliography --csl ieee.csl --citeproc -o conferencepublications.html
+pandoc conferencepublications.bib -s --template=conferencepublications-template.html --metadata link-bibliography --csl ieee.csl --citeproc -o conferencepublications.html
 
 bibtool -- 'select{keywords "selected"}' publis.bib -o selectedpublications.bib
 pandoc selectedpublications.bib -s --template=selectedpublications-template.html --metadata link-bibliography --csl ieee.csl --citeproc -o selectedpublications.html
