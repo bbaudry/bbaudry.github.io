@@ -18,7 +18,7 @@ In this work, we explore the combination of automatic software diversity [2] and
 
 Reprocible builds are essential to build trust in the integrity of packaged artifacts. 
 The Java and Maven communities address this challenge and maintain a list of packages which reproducibility has been verified through independent builds.
-In this work, we design several strategies to perturb the build to determine the actual robustness of these reproducble builds. 
+In this work, we design several strategies to perturb the build to determine the actual robustness of these reproducible builds. 
 These strategies involve randomizing the order of dependencies in the configuration file and perturbing the build environment, such as setting time in the future or changing the system's language or host name.
 
 * [Reproducible builds: Increasing the integrity of software supply chains](https://ieeexplore.ieee.org/iel7/52/9713899/09403390.pdf)
