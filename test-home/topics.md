@@ -69,7 +69,7 @@ In this work, we explore the ability of Large Language Models at renovating soft
 
 ## Reproducibility of fx(hash) artworks
 
-Many generative artists distribute their work online, as NFTs. [fx(hash)](https://www.fxhash.xyz) is a large platform where artists can publish their NFTs, either on Tezos or Ethereum. To do so, they publish the source code as well as various metadata for their artwork. The source code is stored on IPFS and is executed each time someone wants to view the piece. When a buyer acquires one specific instance of the pieces all the parameters to rerun this exact instance are stored on chain. This software architecture is prone to different risks: the link between onchain data and IPFS can be lost, the javascript enviroment of the buyer can evolve. In this project, we investigate different techniques to mitigate these risks and improve the reproducibility and preservation of artworks.
+Many generative artists distribute their work online, as NFTs. [fx(hash)](https://www.fxhash.xyz) is a large platform where artists can publish their NFTs, either on Tezos or Ethereum. To do so, they publish the source code as well as various metadata for their artwork. The source code is stored on IPFS and is executed each time someone wants to view the piece. When a buyer acquires one specific instance of the pieces all the parameters to rerun this exact instance are stored on chain. This software architecture is prone to different risks: the link between onchain data and IPFS can be lost, the javascript environment of the buyer can evolve. In this project, we investigate different techniques to mitigate these risks and improve the reproducibility and preservation of artworks.
 
 * [Reading between the lines: Source code documentation as a conservation strategy for software-based art](https://www.tandfonline.com/doi/pdf/10.1179/2047058413Y.0000000115)
 * [Do NFTs’ Owners Really Possess their Assets? A First Look at the NFT-to-Asset Connection Fragility](https://dl.acm.org/doi/pdf/10.1145/3543507.3583281?casa_token=KaKXxXGRw50AAAAA:L88EzZbNI2UpC-yi4quVvAgQNDlPC-u6SHQMKPbBMyw8cwHTPe-uY-2whVoYKe02o6bj3MftRQgC)
@@ -104,4 +104,3 @@ Digital art is made to perform in an environment that evolves: OS patches, drive
 * [Recommending code changes for automatic backporting of Linux device drivers](https://inria.hal.science/hal-01355859/file/icsme_hal.pdf)
 * [Transforming C++11 Code to C++03 to Support Legacy Compilation Environments](https://core.ac.uk/download/pdf/84774749.pdf)
 
-## Reproducible generative artworks

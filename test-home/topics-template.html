@@ -23,7 +23,7 @@
                 <a href="./contact.html">contact</a>
             </div>
             <div class="main">
-                <h1>Research topics</h1>
+                <h1 id='top-title'>Research topics</h1>
                 $if(toc)$
                 <nav id="$idprefix$TOC" role="doc-toc">
                     $if(toc-title)$
@@ -36,4 +36,16 @@
             </div>
         </div>
     </div>
+        <script>
+        document.getElementById('top-title').addEventListener('mouseenter', function() {
+    draw();
+});
+        document.getElementById('toc-software-supply-chain').addEventListener('mouseenter', function() {
+    draw();
+});
+        document.getElementById('toc-software-technology-for-the-arts').addEventListener('mouseenter', function() {
+    draw();
+});
+
+    </script>
 </body>
