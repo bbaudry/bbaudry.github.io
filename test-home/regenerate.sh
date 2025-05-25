@@ -42,6 +42,12 @@ echo "Generate supply chain publications list"
 bibtool -- 'select{keywords "supplychain"}' publis.bib -o $filebib
 pandoc $filebib -s --template=publications-template.html --metadata link-bibliography --metadata title="Supply chain publications" --csl ieee.csl --citeproc -o $filehtm
 
+filename="awardpublications"
+filebib=$filename".bib"
+filehtm=$filename".html"
+echo "Generate awarded publications list"
+bibtool -- 'select{keywords "award"}' publis.bib -o $filebib
+pandoc $filebib -s --template=publications-template.html --metadata link-bibliography --metadata title="Awarded publications" --csl ieee.csl --citeproc -o $filehtm
 
 echo "Generate list of topics"
 pandoc -s --toc=true  --template=topics-template.html  topics.md -o topics.html
