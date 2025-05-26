@@ -198,7 +198,15 @@ li a:visited{
     color: black;
     &:hover, &:active { color: orangered; };
 }
+.emphasis {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+    justify-content:center;
+  position: fixed;
 
+}
 .csl-entry{
     font-size:xx-large;
     font-family: monospace;

@@ -30,13 +30,23 @@ These strategies involve randomizing the order of dependencies in the configurat
 
 Build systems are susceptible to supply chain attacks, and Maven is no exception.
 When Solarwinds' build system was compromised, the company decided to to introduce software diversity at the core of their build pipelines in order to mitigate future hacks.
-In this work we investigate the feasbility of introducing diversity in builds for Java project. We study the automatic migration of Maven builds into Gradle builds and then compare the diversity it provides at each build step and what impact this has on the output artifact.
+In this work we investigate the feasibility of introducing diversity in builds for Java project. We study the automatic migration of Maven builds into Gradle builds and then compare the diversity it provides at each build step and what impact this has on the output artifact.
 
 * [AROMA: Automatic Reproduction of Maven Artifacts](https://dl.acm.org/doi/abs/10.1145/3643764)
 * [Reproducible Builds and Insights from an Independent Verifier for Arch Linux](https://dl.gi.de/bitstreams/f8685808-2e51-4a53-acc0-2b45fa240e3b/download)
 * [Automatic building of java projects in software repositories: A study on feasibility and challenges](https://ieeexplore.ieee.org/iel7/8169617/8169971/08170083.pdf)
+* [Beyong Solarwinds: Principles for Securing Software Supply Chains](https://apps.dtic.mil/sti/trecms/pdf/AD1148956.pdf)
 
-## Airgapped builds
+## Airgapped reproducible builds
+
+An air-gapped computer is one that is not connected  to any outside networks. This is used as security measure to protect sensitive data or machines. 
+With the growth of software supply chains, third-party dependencies and continuous integration workflows have become the targets of malicious actors.
+In this project, we investigate the feasibility of building an environment that supports airgap software builds. In particular, we study to what extent current lockfiles support airgap builds and propose novel solutions to enhance package managers towards better support for airgap security. 
+
+* [Reproducible builds: Increasing the integrity of software supply chains](https://ieeexplore.ieee.org/iel7/52/9713899/09403390.pdf)
+* [Auditing the CI/CD Platform: Reproducible Builds vs. Hardware-Attested Build Environments, Which is Right for You?](https://dl.acm.org/doi/abs/10.1145/3689944.3696351)
+* [Software development challenges with air-gap isolation](https://dl.acm.org/doi/pdf/10.1145/3236024.3275526)
+* [From Blueprint to Reality: Evaluating the Feasibility of Air-gapped Maven Builds](https://www.diva-portal.org/smash/get/diva2:1932196/FULLTEXT02)
 
 ## Verifiable Maven builds with IPFS
 
@@ -93,9 +103,19 @@ Pen plotters are programmable machines that can draw and that are currently most
 * [Programming Art With Drawing Machines](https://ieeexplore.ieee.org/document/10574501)
 * [Energy harvesting systems](https://link.springer.com/content/pdf/10.1007/978-1-4419-7566-9.pdf)
 * [Generate Power, Generate Art](https://kth.diva-portal.org/smash/get/diva2:1710475/FULLTEXT01.pdf)
-* [Programmable Analogue Drawing Machines, 1952–2023](https://muse.jhu.edu/article/929863)
+* [Automatic Miniature CNC Plotter Machine](https://ieeexplore.ieee.org/iel8/10624685/10624738/10625005.pdf)
+* [Design of an Arduino-Based Pen Plotter System](https://futajeet.ng/manager/papers/paper_18_1721307460.pdf)
 
 ## Live pen plotting
+
+The practice of generative art is performative: an artist develops a program, and only when the program executes, i.e., performs, the artwork exists. Consequently, the artwork never exists on a physical memory and one instance can never be seen again. 
+In the current practice of penplotting and generative art, it is usually necessary to save the generated image on disk before it is passed to the pen plotter. This storage of the performed artwork is not elegant in the realm of generative art.
+In this project, we design and build a system where an image that is performed as part of a generative artwork is streamed live to the plotter, avoiding the generation of the image file and preserving the performing mindset of generative art.
+
+* [Live coding in laptop performance](https://www.cambridge.org/core/services/aop-cambridge-core/content/view/08F42B84BBCA427C345030481A3DDA0D/S135577180300030Xa.pdf/div-class-title-live-coding-in-laptop-performance-div.pdf)
+* [Automatic Miniature CNC Plotter Machine](https://ieeexplore.ieee.org/iel8/10624685/10624738/10625005.pdf)
+* [Programmable Analogue Drawing Machines, 1952–2023](https://muse.jhu.edu/article/929863)
+* [Playing the Print: MIDI-Based Fabrication Interfaces to Explore and Document Material Behavior](https://dl.acm.org/doi/pdf/10.1145/3613905.3650966)
 
 ## Keeping it old: backporting updates to legacy artworks
 
