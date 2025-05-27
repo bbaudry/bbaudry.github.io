@@ -65,3 +65,6 @@ pandoc $filebib -s --template=publications-template.html --metadata link-bibliog
 
 echo "Generate list of topics"
 pandoc -s --toc=true  --template=topics-template.html  topics.md -o topics.html
+
+echo "Generate list of outreach actions"
+pandoc -s  --toc=true  --template=outreach-template.html  outreach.md -o outreach.html
