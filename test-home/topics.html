@@ -49,9 +49,25 @@
                                         id="toc-airgapped-reproducible-builds">Airgapped
                                         reproducible builds</a></li>
                                         <li><a
-                                        href="#verifiable-maven-builds-with-ipfs"
-                                        id="toc-verifiable-maven-builds-with-ipfs">Verifiable
-                                        Maven builds with IPFS</a></li>
+                                        href="#hardening-transformations-for-rust"
+                                        id="toc-hardening-transformations-for-rust">Hardening
+                                        transformations for
+                                        Rust</a></li>
+                                        <li><a
+                                        href="#dependencies-diversification-in-java"
+                                        id="toc-dependencies-diversification-in-java">Dependencies
+                                        diversification in Java</a></li>
+                                        <li><a
+                                        href="#leveraging-the-diversity-of-bundlers-for-debloating-javascript-applications"
+                                        id="toc-leveraging-the-diversity-of-bundlers-for-debloating-javascript-applications">Leveraging
+                                        the diversity of bundlers for
+                                        debloating JavaScript
+                                        applications</a></li>
+                                        <li><a
+                                        href="#forging-test-results-to-tamper-with-open-source-projects"
+                                        id="toc-forging-test-results-to-tamper-with-open-source-projects">Forging
+                                        test results to tamper with
+                                        open-source projects</a></li>
                                         </ul></li>
                                         <li><a
                                         href="#software-technology-for-the-arts"
@@ -240,41 +256,162 @@
                                 Builds</a></li>
                                 </ul>
                                 <h2
-                                id="verifiable-maven-builds-with-ipfs">Verifiable
-                                Maven builds with IPFS</h2>
-                                <p>A key challenge for a robust software
-                                supply chain is to ensure the integrity
-                                of third-party dependencies. One
-                                solution to address this challenge
-                                consists in refering to dependencies
-                                with content-addressable, immutable URLs
-                                instead of mutable URLs as is the case
-                                today. We will investigate the
-                                Interplanetary File System (IPFS) to
-                                store Maven packages and improve the
-                                reproducibility and integrity of Maven
-                                builds.</p>
+                                id="hardening-transformations-for-rust">Hardening
+                                transformations for Rust</h2>
+                                <p>Rust is growing for systems
+                                programming and so is the necessity for
+                                safety and security in Rust. Source to
+                                source transformations have been used to
+                                harden programs through obfuscation,
+                                diversification and randomization.
+                                Tigress is the state of the art toolbox
+                                for source transformations in C. In this
+                                project we experiment with Tigress
+                                transformations in Rust, focusing on
+                                transformations that randomize Rust
+                                control or data flow at runtime.</p>
                                 <ul>
                                 <li><a
-                                href="https://ieeexplore.ieee.org/iel7/52/9713899/09403390.pdf">Reproducible
-                                builds: Increasing the integrity of
-                                software supply chains</a></li>
+                                href="https://dl.acm.org/doi/pdf/10.1145/3624738?casa_token=qvuoCJx8XbgAAAAA:8jua6WscYBUAE0mC7RxHSk_vqbGximwGCGCwH6pLEs2a7f6ZM17Aie2780JJzP6YJ-p6d6w2Zm13">A
+                                closer look at the security risks in the
+                                rust ecosystem</a></li>
                                 <li><a
-                                href="https://arxiv.org/pdf/1407.3561">Ipfs-content
-                                addressed, versioned, p2p file
-                                system</a></li>
+                                href="https://tigress.wtf/transformations.html">tigress</a></li>
                                 <li><a
-                                href="https://scholar.google.com/scholar?output=instlink&amp;q=info:kmZWQCZhzlkJ:scholar.google.com/&amp;hl=en&amp;as_sdt=0,5&amp;scillfp=5978299261416155234&amp;oi=lle">Towards
-                                build verifiability for java-based
-                                systems</a></li>
+                                href="https://dl.acm.org/doi/10.1145/3624309.3624320">Source-to-Source
+                                Code Transformation on Rust for
+                                High-Level Stream Parallelism</a></li>
                                 <li><a
-                                href="https://maven.apache.org/guides/mini/guide-reproducible-builds.html">Reproducible
-                                builds with Maven</a></li>
+                                href="https://lib.rs/crates/crusts">CRustS
+                                - Transpiling Unsafe C code to Safer
+                                Rust</a></li>
                                 <li><a
-                                href="https://ieeexplore.ieee.org/iel7/32/4359463/09465650.pdf">An
-                                Experience Report on Producing
-                                Verifiable Builds for Large-Scale
-                                Commercial Systems</a></li>
+                                href="https://www.usenix.org/system/files/sec22-schloegel.pdf">Loki:
+                                Hardening code obfuscation against
+                                automated attacks</a></li>
+                                <li><a
+                                href="https://github.com/google/rerast">https://github.com/google/rerast</a></li>
+                                </ul>
+                                <h2
+                                id="dependencies-diversification-in-java">Dependencies
+                                diversification in Java</h2>
+                                <p>Software projects integrate a large
+                                number of third-party libraries. While
+                                this massive reuse is beneficial for
+                                software development the reuse of a
+                                handful of libraries across millions of
+                                projects (e.g. Log4J) is a security and
+                                safety liability. One option to mitigate
+                                this riks consists in lifting software
+                                diversification at the level of
+                                dependencies. In this project we develop
+                                novel transformations for projects that
+                                reuse very popular libraries so that
+                                they can randomly switch to compatible
+                                alternative libraries, at build
+                                time.</p>
+                                <ul>
+                                <li><a
+                                href="https://ieeexplore.ieee.org/iel7/9700160/9700163/09700248.pdf">The
+                                behavioral diversity of java json
+                                libraries</a></li>
+                                <li><a
+                                href="https://core.ac.uk/download/pdf/195311860.pdf">Darwinian
+                                data structure selection</a></li>
+                                <li><a
+                                href="https://hehao98.github.io/files/2021-migration-empirical.pdf">A
+                                large-scale empirical study on Java
+                                library migrations: prevalence, trends,
+                                and rationales</a></li>
+                                <li><a
+                                href="http://www1.cs.columbia.edu/~locasto/projects/candidacy/papers/boyd2004sqlrand.pdf">SQLrand:
+                                Preventing SQL injection
+                                attacks</a></li>
+                                <li><a
+                                href="https://github.com/INRIA/spoon">https://github.com/INRIA/spoon</a></li>
+                                </ul>
+                                <h2
+                                id="leveraging-the-diversity-of-bundlers-for-debloating-javascript-applications">Leveraging
+                                the diversity of bundlers for debloating
+                                JavaScript applications</h2>
+                                <p>JavaScript is the most used
+                                programming language for the development
+                                of web applications. Once the web
+                                application grows, so does the bundle
+                                size, primarily due to all its
+                                third-party dependencies. A bundler is a
+                                tool that transforms all the JavaScript
+                                code and its dependencies into a new
+                                output file with everything merged
+                                (including other files such as HTML,
+                                CSS, and PNG). There are many
+                                production-ready JavaScript bundlers
+                                (e.g., Webpack, Rollup, Browserify,
+                                ESbuild, and Parcel). They can perform
+                                optimizations and minifications on the
+                                bundle, such as tree shaking, scope
+                                hoisting, bundle splitting, and
+                                minifying. However, the size reduction
+                                achieved by a bundler is limited by its
+                                own code minimization technique. The
+                                student will perform an experimental
+                                study to leverage the diversity of
+                                JavaScript bundlers in order to reduce
+                                the original code size of applications
+                                while keeping the functionality required
+                                to pass all test cases in their test
+                                suites.</p>
+                                <ul>
+                                <li><a
+                                href="https://www.sciencedirect.com/science/article/pii/S0950584918302210?casa_token=yJJKp5Ezg9cAAAAA:OLCG_6pEJ7Vr-gGfXlFwNH-XSXfshkQxNWTHzsi1iX6HZZa6NFy5o25hmQDg8XXtA0strbwa8g">Slimming
+                                JavaScript Applications: An Approach for
+                                Removing Unused Functions From
+                                JavaScript libraries</a></li>
+                                <li><a
+                                href="https://ieeexplore.ieee.org/iel7/32/9512528/08762190.pdf?casa_token=_XMIY-_AEq4AAAAA:JizmVj45cJN9ptyoBRLPyYGX-N-l5k2gerhJ9KTR5cyjdAcTwtxnZe65A56xyToehks7SNk-dSOP">Evolving
+                                JavaScript Code to Reduce Load
+                                Time</a></li>
+                                <li><a
+                                href="https://arxiv.org/pdf/2405.17939">Detecting
+                                and removing bloated dependencies in
+                                CommonJS packages</a></li>
+                                <li><a
+                                href="https://webpack.js.org/guides/tree-shaking/">https://webpack.js.org/guides/tree-shaking/</a></li>
+                                </ul>
+                                <h2
+                                id="forging-test-results-to-tamper-with-open-source-projects">Forging
+                                test results to tamper with open-source
+                                projects</h2>
+                                <p>The large open source software supply
+                                chains of many applications have turned
+                                open source repositories into targets of
+                                choice for the introduction of malicious
+                                code. As mature open source projects use
+                                continuous integration, stealthy code
+                                tampering should also ensure that the
+                                test suite passes. While the
+                                modification of the test suite might
+                                appear as red flag to the open source
+                                community, another solution consists in
+                                forging the test results. For example, a
+                                change in the continuous integration
+                                pipeline can turn some failing test
+                                cases into passing ones. In this work,
+                                we investigate different strategies to
+                                forge test suite results in order to
+                                mask ill-intended changes in the source
+                                code.</p>
+                                <ul>
+                                <li><a
+                                href="https://www.usenix.org/conference/usenixsecurity16/technical-sessions/presentation/torres-arias">On
+                                Omitting Commits and Committing
+                                Omissions: Preventing Git Metadata
+                                Tampering That (Re)introduces Software
+                                Vulnerabilities</a></li>
+                                <li><a
+                                href="https://www.usenix.org/system/files/sec19-torres-arias.pdf">in-toto:
+                                Providing farm-to-table guarantees for
+                                bits and bytes</a></li>
                                 </ul>
                                 <h1
                                 id="software-technology-for-the-arts">Software

@@ -48,17 +48,44 @@ In this project, we investigate the feasibility of building an environment that 
 * [Software development challenges with air-gap isolation](https://dl.acm.org/doi/pdf/10.1145/3236024.3275526)
 * [From Blueprint to Reality: Evaluating the Feasibility of Air-gapped Maven Builds](https://www.diva-portal.org/smash/get/diva2:1932196/FULLTEXT02)
 
-## Verifiable Maven builds with IPFS
+## Hardening transformations for Rust
 
-A key challenge for a robust software supply chain is to ensure the integrity of third-party dependencies.
-One solution to address this challenge consists in refering to dependencies with content-addressable, immutable URLs instead of mutable URLs as is the case today.
-We will investigate the Interplanetary File System (IPFS) to store Maven packages and improve the reproducibility and integrity of Maven builds.
+Rust is growing for systems programming and so is the necessity for safety and security in Rust. Source to source transformations have been used to harden programs through obfuscation, diversification and randomization. 
+Tigress is the state of the art toolbox for source transformations in C. In this project we experiment with Tigress transformations in Rust, focusing on transformations that randomize Rust control or data flow at runtime.
 
-* [Reproducible builds: Increasing the integrity of software supply chains](https://ieeexplore.ieee.org/iel7/52/9713899/09403390.pdf)
-* [Ipfs-content addressed, versioned, p2p file system](https://arxiv.org/pdf/1407.3561)
-* [Towards build verifiability for java-based systems](https://scholar.google.com/scholar?output=instlink&q=info:kmZWQCZhzlkJ:scholar.google.com/&hl=en&as_sdt=0,5&scillfp=5978299261416155234&oi=lle)
-* [Reproducible builds with Maven](https://maven.apache.org/guides/mini/guide-reproducible-builds.html)
-* [An Experience Report on Producing Verifiable Builds for Large-Scale Commercial Systems](https://ieeexplore.ieee.org/iel7/32/4359463/09465650.pdf)
+* [A closer look at the security risks in the rust ecosystem](https://dl.acm.org/doi/pdf/10.1145/3624738?casa_token=qvuoCJx8XbgAAAAA:8jua6WscYBUAE0mC7RxHSk_vqbGximwGCGCwH6pLEs2a7f6ZM17Aie2780JJzP6YJ-p6d6w2Zm13)
+* [tigress](https://tigress.wtf/transformations.html)
+* [Source-to-Source Code Transformation on Rust for High-Level Stream Parallelism](https://dl.acm.org/doi/10.1145/3624309.3624320)
+* [CRustS - Transpiling Unsafe C code to Safer Rust](https://lib.rs/crates/crusts)
+* [Loki: Hardening code obfuscation against automated attacks](https://www.usenix.org/system/files/sec22-schloegel.pdf)
+* [https://github.com/google/rerast](https://github.com/google/rerast)
+
+## Dependencies diversification in Java
+
+Software projects integrate a large number of third-party libraries. While this massive reuse is beneficial for software development the reuse of a handful of libraries across millions of projects (e.g. Log4J) is a security and safety liability. One option to mitigate this riks consists in lifting software diversification at the level of dependencies. In this project we develop novel transformations for projects that reuse very popular libraries so that they can randomly switch to compatible alternative libraries, at build time.
+
+* [The behavioral diversity of java json libraries](https://ieeexplore.ieee.org/iel7/9700160/9700163/09700248.pdf)
+* [Darwinian data structure selection](https://core.ac.uk/download/pdf/195311860.pdf)
+* [A large-scale empirical study on Java library migrations: prevalence, trends, and rationales](https://hehao98.github.io/files/2021-migration-empirical.pdf)
+* [SQLrand: Preventing SQL injection attacks](http://www1.cs.columbia.edu/~locasto/projects/candidacy/papers/boyd2004sqlrand.pdf)
+* [https://github.com/INRIA/spoon](https://github.com/INRIA/spoon)
+
+## Leveraging the diversity of bundlers for debloating JavaScript applications
+
+JavaScript is the most used programming language for the development of web applications. Once the web application grows, so does the bundle size, primarily due to all its third-party dependencies. A bundler is a tool that transforms all the JavaScript code and its dependencies into a new output file with everything merged (including other files such as HTML, CSS, and PNG). There are many production-ready JavaScript bundlers (e.g., Webpack, Rollup, Browserify, ESbuild, and Parcel). They can perform optimizations and minifications on the bundle, such as tree shaking, scope hoisting, bundle splitting, and minifying. However, the size reduction achieved by a bundler is limited by its own code minimization technique. The student will perform an experimental study to leverage the diversity of JavaScript bundlers in order to reduce the original code size of applications while keeping the functionality required to pass all test cases in their test suites.
+
+* [Slimming JavaScript Applications: An Approach for Removing Unused Functions From JavaScript libraries](https://www.sciencedirect.com/science/article/pii/S0950584918302210?casa_token=yJJKp5Ezg9cAAAAA:OLCG_6pEJ7Vr-gGfXlFwNH-XSXfshkQxNWTHzsi1iX6HZZa6NFy5o25hmQDg8XXtA0strbwa8g)
+* [Evolving JavaScript Code to Reduce Load Time](https://ieeexplore.ieee.org/iel7/32/9512528/08762190.pdf?casa_token=_XMIY-_AEq4AAAAA:JizmVj45cJN9ptyoBRLPyYGX-N-l5k2gerhJ9KTR5cyjdAcTwtxnZe65A56xyToehks7SNk-dSOP)
+* [Detecting and removing bloated dependencies in CommonJS packages](https://arxiv.org/pdf/2405.17939)
+* [https://webpack.js.org/guides/tree-shaking/](https://webpack.js.org/guides/tree-shaking/)
+
+## Forging test results to tamper with open-source projects
+
+The large open source software supply chains of many applications have turned open source repositories into targets of choice for the introduction of malicious code. As mature open source projects use continuous integration, stealthy code tampering should also ensure that the test suite passes. While the modification of the test suite might appear as red flag to the open source community, another solution consists in forging the test results. For example, a change in the continuous integration pipeline can turn some failing test cases into passing ones.
+In this work, we investigate different strategies to forge test suite results in order to mask ill-intended changes in the source code.
+
+* [On Omitting Commits and Committing Omissions: Preventing Git Metadata Tampering That (Re)introduces Software Vulnerabilities](https://www.usenix.org/conference/usenixsecurity16/technical-sessions/presentation/torres-arias)
+* [in-toto: Providing farm-to-table guarantees for bits and bytes](https://www.usenix.org/system/files/sec19-torres-arias.pdf)
 
 # Software technology for the arts
 
