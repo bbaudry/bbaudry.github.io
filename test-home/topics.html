@@ -41,9 +41,10 @@
                                         id="toc-adversarial-maven-builds">Adversarial
                                         Maven builds</a></li>
                                         <li><a
-                                        href="#diverse-double-java-builds"
-                                        id="toc-diverse-double-java-builds">Diverse
-                                        Double Java builds</a></li>
+                                        href="#software-diversity-in-build-pipelines"
+                                        id="toc-software-diversity-in-build-pipelines">Software
+                                        Diversity in Build
+                                        Pipelines</a></li>
                                         <li><a
                                         href="#airgapped-reproducible-builds"
                                         id="toc-airgapped-reproducible-builds">Airgapped
@@ -68,6 +69,10 @@
                                         id="toc-forging-test-results-to-tamper-with-open-source-projects">Forging
                                         test results to tamper with
                                         open-source projects</a></li>
+                                        <li><a
+                                        href="#dependencies-targeted-test-suite-augmentation"
+                                        id="toc-dependencies-targeted-test-suite-augmentation">Dependencies-targeted
+                                        test suite augmentation</a></li>
                                         </ul></li>
                                         <li><a
                                         href="#software-technology-for-the-arts"
@@ -93,6 +98,10 @@
                                         id="toc-energy-harvesting-for-portable-pen-plotter">Energy
                                         harvesting for portable pen
                                         plotter</a></li>
+                                        <li><a
+                                        href="#live-performance-with-code"
+                                        id="toc-live-performance-with-code">Live
+                                        performance with code</a></li>
                                         <li><a href="#live-pen-plotting"
                                         id="toc-live-pen-plotting">Live
                                         pen plotting</a></li>
@@ -179,22 +188,27 @@
                                 Artifacts</a></li>
                                 </ul>
                                 <h2
-                                id="diverse-double-java-builds">Diverse
-                                Double Java builds</h2>
-                                <p>Build systems are susceptible to
-                                supply chain attacks, and Maven is no
-                                exception. When Solarwinds’ build system
-                                was compromised, the company decided to
-                                to introduce software diversity at the
-                                core of their build pipelines in order
-                                to mitigate future hacks. In this work
-                                we investigate the feasibility of
-                                introducing diversity in builds for Java
-                                project. We study the automatic
-                                migration of Maven builds into Gradle
-                                builds and then compare the diversity it
-                                provides at each build step and what
-                                impact this has on the output
+                                id="software-diversity-in-build-pipelines">Software
+                                Diversity in Build Pipelines</h2>
+                                <p>Software build pipelines transform
+                                source code into deployable artifacts.
+                                Relying on a single set of tools or
+                                environments throughout the build
+                                process creates significant risks.
+                                Software diversity in build pipelines
+                                can provide enhanced security and
+                                reliability. When Solarwinds’ build
+                                system was compromised, the company
+                                decided to to introduce software
+                                diversity at the core of their build
+                                pipelines in order to mitigate future
+                                hacks. In this work we investigate the
+                                feasibility of introducing diversity in
+                                builds for Java projects. We study the
+                                automatic migration of Maven builds into
+                                Gradle builds and then compare the
+                                diversity it provides at each build step
+                                and what impact this has on the output
                                 artifact.</p>
                                 <ul>
                                 <li><a
@@ -413,6 +427,45 @@
                                 Providing farm-to-table guarantees for
                                 bits and bytes</a></li>
                                 </ul>
+                                <h2
+                                id="dependencies-targeted-test-suite-augmentation">Dependencies-targeted
+                                test suite augmentation</h2>
+                                <p>Software developers dedicate
+                                considerable efforts in implementing
+                                strong test suites that exercise and
+                                verify the behavior of their project.
+                                Yet, developer written tests usually
+                                perform poorly when considering the
+                                coverage of third-party dependencies.
+                                This is because the intention of these
+                                tests is not to verify the behavior of
+                                dependencies. In this work we explore
+                                novel test generation techniques that
+                                aim at increasing the coverage of a
+                                project’s software supply chain. This
+                                novel tests shall help in enhancing the
+                                dynamic transparency of the supply chain
+                                and in improving reachability
+                                analysis.</p>
+                                <ul>
+                                <li><a
+                                href="https://web.eecs.umich.edu/~movaghar/Automatic%20Test%20Generation%20Meta%202024.pdf">Automated
+                                unit test improvement using large
+                                language models at meta</a></li>
+                                <li><a
+                                href="https://arxiv.org/pdf/2012.01198">Production
+                                Monitoring to Improve Test
+                                Suites</a></li>
+                                <li><a
+                                href="https://lingming.cs.illinois.edu/publications/icse2020a.pdf">Taming
+                                behavioral backward incompatibilities
+                                via cross-project testing and
+                                analysis</a></li>
+                                <li><a
+                                href="https://arxiv.org/pdf/1705.10692">A
+                                Snowballing Literature Study on Test
+                                Amplification</a></li>
+                                </ul>
                                 <h1
                                 id="software-technology-for-the-arts">Software
                                 technology for the arts</h1>
@@ -560,6 +613,42 @@
                                 href="https://futajeet.ng/manager/papers/paper_18_1721307460.pdf">Design
                                 of an Arduino-Based Pen Plotter
                                 System</a></li>
+                                </ul>
+                                <h2 id="live-performance-with-code">Live
+                                performance with code</h2>
+                                <p>Digital art is a kind of performance.
+                                As long as software runs art is
+                                performed. Yet, generative artists
+                                approach this performative medium in
+                                different ways. Some artists craft the
+                                code in their studio and let the machine
+                                perform the artwork in a gallery, in a
+                                web browser or on the blockchain. Some
+                                other artists perform the act of coding
+                                itself. This practice is known as live
+                                coding. It can be an individual
+                                practice, as well as a group practice,
+                                from Seoul to Bogota. The code is
+                                written live, projected on screen as an
+                                overlay on top of generated images and
+                                sound. In this project, we study the
+                                programming paradigms and abstractions
+                                that live coders use, as well as the
+                                code sharing and communities that are
+                                involved in this artistic practice.</p>
+                                <ul>
+                                <li><a
+                                href="https://unframed.lacma.org/2024/11/13/digital-art-kind-performance-qa-casey-reas">Digital
+                                art is a kind of performance</a></li>
+                                <li><a
+                                href="https://blog.toplap.org/">the home
+                                of live coding</a></li>
+                                <li><a
+                                href="https://github.com/rethread-studio/algorithmic-art-course/issues/9">live
+                                coding libraries</a></li>
+                                <li><a
+                                href="https://www.cambridge.org/core/services/aop-cambridge-core/content/view/08F42B84BBCA427C345030481A3DDA0D/S135577180300030Xa.pdf/div-class-title-live-coding-in-laptop-performance-div.pdf">Live
+                                coding in laptop performance</a></li>
                                 </ul>
                                 <h2 id="live-pen-plotting">Live pen
                                 plotting</h2>

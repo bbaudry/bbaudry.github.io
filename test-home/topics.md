@@ -26,11 +26,10 @@ These strategies involve randomizing the order of dependencies in the configurat
 * [Reproducible central](https://github.com/jvm-repo-rebuild/reproducible-central)
 * [AROMA: Automatic Reproduction of Maven Artifacts](https://dl.acm.org/doi/abs/10.1145/3643764)
 
-## Diverse Double Java builds
+## Software Diversity in Build Pipelines
 
-Build systems are susceptible to supply chain attacks, and Maven is no exception.
-When Solarwinds' build system was compromised, the company decided to to introduce software diversity at the core of their build pipelines in order to mitigate future hacks.
-In this work we investigate the feasibility of introducing diversity in builds for Java project. We study the automatic migration of Maven builds into Gradle builds and then compare the diversity it provides at each build step and what impact this has on the output artifact.
+Software build pipelines transform source code into deployable artifacts. Relying on a single set of tools or environments throughout the build process creates significant risks. Software diversity in build pipelines can provide enhanced security and reliability. When Solarwinds' build system was compromised, the company decided to to introduce software diversity at the core of their build pipelines in order to mitigate future hacks.
+In this work we investigate the feasibility of introducing diversity in builds for Java projects. We study the automatic migration of Maven builds into Gradle builds and then compare the diversity it provides at each build step and what impact this has on the output artifact.
 
 * [AROMA: Automatic Reproduction of Maven Artifacts](https://dl.acm.org/doi/abs/10.1145/3643764)
 * [Reproducible Builds and Insights from an Independent Verifier for Arch Linux](https://dl.gi.de/bitstreams/f8685808-2e51-4a53-acc0-2b45fa240e3b/download)
@@ -87,6 +86,17 @@ In this work, we investigate different strategies to forge test suite results in
 * [On Omitting Commits and Committing Omissions: Preventing Git Metadata Tampering That (Re)introduces Software Vulnerabilities](https://www.usenix.org/conference/usenixsecurity16/technical-sessions/presentation/torres-arias)
 * [in-toto: Providing farm-to-table guarantees for bits and bytes](https://www.usenix.org/system/files/sec19-torres-arias.pdf)
 
+## Dependencies-targeted test suite augmentation
+
+Software developers dedicate considerable efforts in implementing strong test suites that exercise and verify the behavior of their project. Yet, developer written tests usually perform poorly when considering the coverage of third-party dependencies. This is because the intention of these tests is not to verify the behavior of dependencies. In this work we explore novel test generation techniques that aim at increasing the coverage of a project's software supply chain. This novel tests shall help in enhancing the dynamic transparency of the supply chain and in improving reachability analysis.
+
+* [Automated unit test improvement using large language models at meta](https://web.eecs.umich.edu/~movaghar/Automatic%20Test%20Generation%20Meta%202024.pdf)
+* [Production Monitoring to Improve Test Suites](https://arxiv.org/pdf/2012.01198)
+* [Taming behavioral backward incompatibilities via cross-project testing and analysis](https://lingming.cs.illinois.edu/publications/icse2020a.pdf)
+* [A Snowballing Literature Study on Test Amplification](https://arxiv.org/pdf/1705.10692)
+
+
+
 # Software technology for the arts
 
 ## Neuro-renovation of software-based artworks
@@ -132,6 +142,16 @@ Pen plotters are programmable machines that can draw and that are currently most
 * [Generate Power, Generate Art](https://kth.diva-portal.org/smash/get/diva2:1710475/FULLTEXT01.pdf)
 * [Automatic Miniature CNC Plotter Machine](https://ieeexplore.ieee.org/iel8/10624685/10624738/10625005.pdf)
 * [Design of an Arduino-Based Pen Plotter System](https://futajeet.ng/manager/papers/paper_18_1721307460.pdf)
+
+## Live performance with code
+
+Digital art is a kind of performance. As long as software runs art is performed. Yet, generative artists approach this performative medium in different ways. Some artists craft the code in their studio and let the machine perform the artwork in a gallery, in a web browser or on the blockchain. Some other artists perform the act of coding itself. This practice is known as live coding. It can be an individual practice, as well as a group practice, from Seoul to Bogota. The code is written live, projected on screen as an overlay on top of generated images and sound. 
+In this project, we study the programming paradigms and abstractions that live coders use, as well as the code sharing and communities that are involved in this artistic practice.
+
+* [Digital art is a kind of performance](https://unframed.lacma.org/2024/11/13/digital-art-kind-performance-qa-casey-reas)
+* [the home of live coding](https://blog.toplap.org/)
+* [live coding libraries](https://github.com/rethread-studio/algorithmic-art-course/issues/9)
+* [Live coding in laptop performance](https://www.cambridge.org/core/services/aop-cambridge-core/content/view/08F42B84BBCA427C345030481A3DDA0D/S135577180300030Xa.pdf/div-class-title-live-coding-in-laptop-performance-div.pdf)
 
 ## Live pen plotting
 
