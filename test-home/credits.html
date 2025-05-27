@@ -15,6 +15,13 @@
         <div class="split-left" , id="left-side">
         </div>
         <div class="split-right">
+            <div class="navbar">
+                <a href="./index.html">trench</a>
+                <a href="./crew.html">crew</a>
+                <a href="./research.html">research</a>
+                <a href="./teaching.html">teaching</a>
+                <a href="./contact.html">contact</a>
+            </div>
             <div class="main">
                 <div class="emphasis">
                     <p style="text-align: center;">
@@ -49,16 +56,16 @@
             draw();
         });
         document.getElementById('hover-link-f').addEventListener('mouseenter', function () {
-            draw();
+            randomlist();
         });
         document.getElementById('hover-link-j').addEventListener('mouseenter', function () {
             randomlist();
         });
         document.getElementById('hover-link-s').addEventListener('mouseenter', function () {
-            randomlist();
+            draw();
         });
         document.getElementById('hover-link-p5').addEventListener('mouseenter', function () {
-            randomlist();
+            draw();
         });
         function randomlist(){
         var ul = document.querySelector('ul');
