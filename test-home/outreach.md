@@ -102,3 +102,10 @@ title: 'Outreach'
 -   [Radio et Télévision Suisse](http://www.rts.ch/play/radio/on-en-parle/audio/tous-identifiables-sur-internet-meme-en-bloquant-les-cookies?id=8009298). Interview about browser fingerprinting, 2016.
 -   [MISC magazine](https://connect.ed-diamond.com/MISC/MISC-081/Le-fingerprinting-une-nouvelle-technique-de-tracage). A popular science article about browser fingerprinting, 2015.
 -   [Clubic](http://pro.clubic.com/webmarketing/publicite-en-ligne/actualite-742853-fingerprinting-cookies.html).     Features our work about [amiunique.org](https://amiunique.org/) and browser fingerprinting, 2015.
+
+## Software and art
+
+- [Algorithmic art course](github.com/bbaudry/algorithmic-art-course/)
+- [re|thread](https://rethread.art/)
+- [Generative art](https://linktr.ee/almyre)
+- [Publications about art](artpublications.html)
