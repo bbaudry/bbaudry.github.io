@@ -69,13 +69,13 @@ body {
   }
 /* Links inside the navbar */
 .navbar a {
-    font-size: 17pt;
+    font-size: 21pt;
     font-family: monospace;
     float: left;
     display: block;
     color: #f2f2f2;
     text-align: center;
-    padding: 21px 42px;/*first param is height of the navbar, second is padding between anchor elements*/
+    padding: 21px 29px;/*first param is height of the navbar, second is padding between anchor elements*/
     text-decoration: none;
     &:hover, &:active { color: orangered; };
   }
@@ -150,8 +150,8 @@ h3 a:visited{
 }
 
 p {
-    line-height: 17pt;
-    font-size:xx-large;
+    line-height: 21pt;
+    font-size:15pt;
     font-family: monospace;
     margin-left: 5%;
     margin-right: 5%;
@@ -160,8 +160,8 @@ p {
 }
 
 li {
-    line-height: 17pt;
-    font-size:xx-large;
+    line-height: 21pt;
+    font-size:15pt;
     font-family: monospace;
     margin-left: 5%;
     margin-right: 5%;
