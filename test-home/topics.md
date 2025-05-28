@@ -26,7 +26,7 @@ These strategies involve randomizing the order of dependencies in the configurat
 * [Reproducible central](https://github.com/jvm-repo-rebuild/reproducible-central)
 * [AROMA: Automatic Reproduction of Maven Artifacts](https://dl.acm.org/doi/abs/10.1145/3643764)
 
-## Software Diversity in Build Pipelines
+## Build integrity with Diverse Build Pipelines
 
 Software build pipelines transform source code into deployable artifacts. Relying on a single set of tools or environments throughout the build process creates significant risks. Software diversity in build pipelines can provide enhanced security and reliability. When Solarwinds' build system was compromised, the company decided to to introduce software diversity at the core of their build pipelines in order to mitigate future hacks.
 In this work we investigate the feasibility of introducing diversity in builds for Java projects. We study the automatic migration of Maven builds into Gradle builds and then compare the diversity it provides at each build step and what impact this has on the output artifact.
@@ -46,6 +46,25 @@ In this project, we investigate the feasibility of building an environment that 
 * [Auditing the CI/CD Platform: Reproducible Builds vs. Hardware-Attested Build Environments, Which is Right for You?](https://dl.acm.org/doi/abs/10.1145/3689944.3696351)
 * [Software development challenges with air-gap isolation](https://dl.acm.org/doi/pdf/10.1145/3236024.3275526)
 * [From Blueprint to Reality: Evaluating the Feasibility of Air-gapped Maven Builds](https://www.diva-portal.org/smash/get/diva2:1932196/FULLTEXT02)
+
+## Steering environment diversity with infrastructure as code
+
+Infrastructure as code is about provisioning execution resources through executable configuration files. In this context, the execution of program provisions a whole environment to execute an application. A variation of the same program will provision a different environment to run the same application. In this project the student will explore transformations for infrastructure as code with the intention of creating a moving target at the environment level. We consider using Modus to define the infrastructure.
+
+- [What is Infrastructure as Code (IaC)?](https://www.redhat.com/en/topics/automation/what-is-infrastructure-as-code-iac)
+- [Finding focus in the blur of moving-target techniques](https://ieeexplore.ieee.org/document/6673500)
+- [https://github.com/modus-continens/modus](https://github.com/modus-continens/modus)
+
+##  Diversifying a package registry
+
+
+Dependency confusion is a growing threat for software supply chains. This attack consists in uploading malicious packages on public repositories, which will eventually be packaged in applications, through dependency resolution mechanisms. In this work, we will explore the automatic randomization of instructions in private npm registries to mitigate dependency confusion. The student will deploy a local npm registry and a instruction randomization scheme, along with the adaptation of the javascript engine to correctly execute the randomized packages.
+
+- [Dependency Confusion: Another Supply-Chain Vulnerability](https://www.schneier.com/blog/archives/2021/02/dependency-confusion-another-supply-chain-vulnerability.html)
+- [Polyscripting to mitigate dependency confusion](https://web.archive.org/web/20220125055207/https://polyverse.com/blog/npm-node-js-code-injection-attack/)
+- [Countering code-injection attacks with instruction-set randomization](http://www.sis.pitt.edu/jjoshi/courses/IS2620/Spring09/Kc.pdf)
+- [Internal interface diversification with multiple fake interfaces](https://dl.acm.org/doi/abs/10.1145/3136825.3136900)
+
 
 ## Hardening transformations for Rust
 
@@ -85,6 +104,25 @@ In this work, we investigate different strategies to forge test suite results in
 
 * [On Omitting Commits and Committing Omissions: Preventing Git Metadata Tampering That (Re)introduces Software Vulnerabilities](https://www.usenix.org/conference/usenixsecurity16/technical-sessions/presentation/torres-arias)
 * [in-toto: Providing farm-to-table guarantees for bits and bytes](https://www.usenix.org/system/files/sec19-torres-arias.pdf)
+
+## Learning-based software substitutability
+
+Software substitutability is a property which measures how readily a
+software component can be replaced by a different but equivalent component.
+In software supply chains it is critical for faulty or vulnerable
+components to be replaced as quickly as possible. However, software
+substitutes might not be immediately available.
+Generative AI tools may be used to efficiently produce
+software substitutes in diverse programming languages/paradigms.
+In this work, we assess the feasibility of using generative AI tools to
+enhance substitutablity of components in software supply chains.
+
+- [Better Together? An Evaluation of AI-Supported Code Translation](https://dl.acm.org/doi/pdf/10.1145/3490099.3511157?casa_token=kooTF59aoC4AAAAA:0MjgRH-Rpzd6_ni7ceJt6lf9G5Vgo5KraSvULJPiCvfs6FbTidRGe3PbbX3mAuH1chnXIBj0zmEj)
+- [Formalization of Component Substitutability](https://www.sciencedirect.com/science/article/pii/S1571066108003654/pdf?md5=d22148de7199440a6cd845666b696f7b&pid=1-s2.0-S1571066108003654-main.pdf)
+- [Galapagos: Automated N-Version Programming with LLMs](https://arxiv.org/pdf/2408.09536)
+
+
+
 
 ## Dependencies-targeted test suite augmentation
 
@@ -143,14 +181,14 @@ Pen plotters are programmable machines that can draw and that are currently most
 * [Automatic Miniature CNC Plotter Machine](https://ieeexplore.ieee.org/iel8/10624685/10624738/10625005.pdf)
 * [Design of an Arduino-Based Pen Plotter System](https://futajeet.ng/manager/papers/paper_18_1721307460.pdf)
 
-## Live performance with code
+## The diversity of live coding practices
 
 Digital art is a kind of performance. As long as software runs art is performed. Yet, generative artists approach this performative medium in different ways. Some artists craft the code in their studio and let the machine perform the artwork in a gallery, in a web browser or on the blockchain. Some other artists perform the act of coding itself. This practice is known as live coding. It can be an individual practice, as well as a group practice, from Seoul to Bogota. The code is written live, projected on screen as an overlay on top of generated images and sound. 
 In this project, we study the programming paradigms and abstractions that live coders use, as well as the code sharing and communities that are involved in this artistic practice.
 
 * [Digital art is a kind of performance](https://unframed.lacma.org/2024/11/13/digital-art-kind-performance-qa-casey-reas)
-* [the home of live coding](https://blog.toplap.org/)
-* [live coding libraries](https://github.com/rethread-studio/algorithmic-art-course/issues/9)
+* [Diverse live coding communities](https://blog.toplap.org/nodes/)
+* [Diverse live coding libraries](https://github.com/rethread-studio/algorithmic-art-course/issues/9)
 * [Live coding in laptop performance](https://www.cambridge.org/core/services/aop-cambridge-core/content/view/08F42B84BBCA427C345030481A3DDA0D/S135577180300030Xa.pdf/div-class-title-live-coding-in-laptop-performance-div.pdf)
 
 ## Live pen plotting
@@ -172,3 +210,13 @@ Digital art is made to perform in an environment that evolves: OS patches, drive
 * [Recommending code changes for automatic backporting of Linux device drivers](https://inria.hal.science/hal-01355859/file/icsme_hal.pdf)
 * [Transforming C++11 Code to C++03 to Support Legacy Compilation Environments](https://core.ac.uk/download/pdf/84774749.pdf)
 
+# 
+
+## Automatic generation of 1 Million libc
+
+libc is at the core of most software stacks, but it is fragile, prone to critical vulnerabilities [1]. In this work we explore a combination of techniques to generate large amounts of diverse implementations of libc [2]. The student will combine the abundant combinations of flags of C compilers [3], with state of the art code transformation and obfuscation techniques [4] to generate many libs variants.
+
+- [The C standard library]()
+- [Building diverse computer systems](https://forrest.biodesign.asu.edu/data/publications/1997-hotos-diversity.pdf)
+- [gcc flags](https://www.spec.org/cpu2017/flags/gcc.html)
+- [Tigress](https://tigress.wtf/transformations.html)
