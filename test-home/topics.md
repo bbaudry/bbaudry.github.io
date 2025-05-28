@@ -47,7 +47,7 @@ In this project, we investigate the feasibility of building an environment that 
 * [Software development challenges with air-gap isolation](https://dl.acm.org/doi/pdf/10.1145/3236024.3275526)
 * [From Blueprint to Reality: Evaluating the Feasibility of Air-gapped Maven Builds](https://www.diva-portal.org/smash/get/diva2:1932196/FULLTEXT02)
 
-## Steering environment diversity with infrastructure as code
+## Environment diversity as code
 
 Infrastructure as code is about provisioning execution resources through executable configuration files. In this context, the execution of program provisions a whole environment to execute an application. A variation of the same program will provision a different environment to run the same application. In this project the student will explore transformations for infrastructure as code with the intention of creating a moving target at the environment level. We consider using Modus to define the infrastructure.
 
@@ -88,7 +88,7 @@ Software projects integrate a large number of third-party libraries. While this 
 * [SQLrand: Preventing SQL injection attacks](http://www1.cs.columbia.edu/~locasto/projects/candidacy/papers/boyd2004sqlrand.pdf)
 * [https://github.com/INRIA/spoon](https://github.com/INRIA/spoon)
 
-## Leveraging the diversity of bundlers for debloating JavaScript applications
+## Bundler diversity for debloating JavaScript
 
 JavaScript is the most used programming language for the development of web applications. Once the web application grows, so does the bundle size, primarily due to all its third-party dependencies. A bundler is a tool that transforms all the JavaScript code and its dependencies into a new output file with everything merged (including other files such as HTML, CSS, and PNG). There are many production-ready JavaScript bundlers (e.g., Webpack, Rollup, Browserify, ESbuild, and Parcel). They can perform optimizations and minifications on the bundle, such as tree shaking, scope hoisting, bundle splitting, and minifying. However, the size reduction achieved by a bundler is limited by its own code minimization technique. The student will perform an experimental study to leverage the diversity of JavaScript bundlers in order to reduce the original code size of applications while keeping the functionality required to pass all test cases in their test suites.
 
@@ -97,7 +97,7 @@ JavaScript is the most used programming language for the development of web appl
 * [Detecting and removing bloated dependencies in CommonJS packages](https://arxiv.org/pdf/2405.17939)
 * [https://webpack.js.org/guides/tree-shaking/](https://webpack.js.org/guides/tree-shaking/)
 
-## Forging test results to tamper with open-source projects
+## Tampersing with test results 
 
 The large open source software supply chains of many applications have turned open source repositories into targets of choice for the introduction of malicious code. As mature open source projects use continuous integration, stealthy code tampering should also ensure that the test suite passes. While the modification of the test suite might appear as red flag to the open source community, another solution consists in forging the test results. For example, a change in the continuous integration pipeline can turn some failing test cases into passing ones.
 In this work, we investigate different strategies to forge test suite results in order to mask ill-intended changes in the source code.
