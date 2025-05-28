@@ -157,7 +157,8 @@ In this project, we study the programming paradigms and abstractions that live c
 
 The practice of generative art is performative: an artist develops a program, and only when the program executes, i.e., performs, the artwork exists. Consequently, the artwork never exists on a physical memory and one instance can never be seen again. 
 In the current practice of penplotting and generative art, it is usually necessary to save the generated image on disk before it is passed to the pen plotter. This storage of the performed artwork is not elegant in the realm of generative art.
-In this project, we design and build a system where an image that is performed as part of a generative artwork is streamed live to the plotter, avoiding the generation of the image file and preserving the performing mindset of generative art.
+In this project, we design and build a system where an image that is performed as part of a generative artwork is streamed live to the plotter, avoiding the generation of the image file and preserving the performing mindset of generative art. 
+Eventually, the technology can recreate the [DiceGL](https://www.v3ga.net/dicegl/) setup.
 
 * [Live coding in laptop performance](https://www.cambridge.org/core/services/aop-cambridge-core/content/view/08F42B84BBCA427C345030481A3DDA0D/S135577180300030Xa.pdf/div-class-title-live-coding-in-laptop-performance-div.pdf)
 * [Automatic Miniature CNC Plotter Machine](https://ieeexplore.ieee.org/iel8/10624685/10624738/10625005.pdf)

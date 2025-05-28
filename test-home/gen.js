@@ -3,8 +3,8 @@
 var cnv, w, h
 
 function setup() {
-    w=42
-    h=42
+    w = 42
+    h = 42
     cnv = createCanvas(w, h);
     cnv.parent("left-side");
     setCanvasSize()
@@ -27,12 +27,13 @@ function draw() {
     // add 1% chance hommage a vera molnar: randomly positioned squares in different shades of red
     // add 1% chance hommage a lillian schwartz
     // add 1% chance hommage a ryoji ikeda: a grid, cell randomly filled with white or white particles bursting from center on black background or black particles bursting from center on white background 
-    if (random() < 0.042) {
+    ryojiikeda()
+    /*    if (random() < 0.042) {
         lillianschwartz()
     }
     else {
         SEorART()
-    }
+    }*/
     noLoop()
 }
 
@@ -54,6 +55,48 @@ function vera() {
             w * 0.5 - hsize + random(-off, off), h * 0.5 + hsize + random(-off, off))
         hsize -= size * 0.05
     }
+}
+
+function ryojiikeda() {
+    var x, y, res, cellw, cellh, left, style, c, colorie
+    background(0, 0, 0)
+    res = random([3,5,7])
+    cellw = w / res
+    cellh = h / res
+    //t=à draw art else draw se
+    style = random([0, 1, 2, 3, 4])
+    colorie = false
+    for (var i = 0; i < res; i++) {
+        y = i * cellh
+        for (var j = 0; j < res; j++) {
+            x = j * cellw
+            c = Math.floor(random(4))
+            switch (c) {
+                case 0:
+                    fill(0,0,100);stroke(0,0,100)
+                    quad(cellw*i,cellh*j,cellw*(i+1),cellh*j,cellw*(i+1),cellh*(j+1),cellw*i,cellh*(j+1))
+                    break;
+                case 1:
+                    fill(0,0,100);stroke(0,0,100)
+                    quad(cellw*i,cellh*j,cellw*(i+1),cellh*j,cellw*(i+1),cellh*(j+1),cellw*i,cellh*(j+1))
+                    fill(0,0,0);stroke(0,0,0)
+                    particles()
+                    break;
+                case 2:
+                    fill(0,0,0);stroke(0,0,0)
+                    quad(cellw*i,cellh*j,cellw*(i+1),cellh*j,cellw*(i+1),cellh*(j+1),cellw*i,cellh*(j+1))
+                    break;
+                case 3:
+                    fill(0,0,0);stroke(0,0,0)
+                    quad(cellw*i,cellh*j,cellw*(i+1),cellh*j,cellw*(i+1),cellh*(j+1),cellw*i,cellh*(j+1))
+                    break;
+            }
+        }
+    }
+}
+
+function particles(){
+    
 }
 
 function SEorART() {
