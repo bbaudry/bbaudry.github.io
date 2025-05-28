@@ -69,7 +69,7 @@ body {
   }
 /* Links inside the navbar */
 .navbar a {
-    font-size: 21pt;
+    font-size: 17pt;
     font-family: monospace;
     float: left;
     display: block;
@@ -102,7 +102,7 @@ body {
 h1 {
     font-family: sans-serif;
     text-align: center;
-    font-size: 42pt;
+    font-size: 31pt;
     font-weight: bold;
     padding-top: 42pt;
     padding-bottom: 2pt;
@@ -115,7 +115,7 @@ h1:hover{
 h2 {
     font-family: sans-serif;
     text-align: center;
-    font-size: 33pt;
+    font-size: 25pt;
     font-weight: bold;
     cursor: default
 }
@@ -135,7 +135,7 @@ h3 {
     margin-left: 10%;
 
     line-height: 1pt;
-    font-size: 27pt;
+    font-size: 21pt;
     font-weight: bold;
     cursor: default
 }
@@ -150,7 +150,7 @@ h3 a:visited{
 }
 
 p {
-    line-height: 21pt;
+    line-height: 17pt;
     font-size:xx-large;
     font-family: monospace;
     margin-left: 5%;
@@ -160,7 +160,7 @@ p {
 }
 
 li {
-    line-height: 21pt;
+    line-height: 17pt;
     font-size:xx-large;
     font-family: monospace;
     margin-left: 5%;
@@ -195,7 +195,6 @@ li a{
     &:hover, &:active { color: orangered; };
 }
 li a:visited{
-    color: black;
     &:hover, &:active { color: orangered; };
 }
 .emphasis {
@@ -221,7 +220,6 @@ li a:visited{
     &:hover, &:active { color: orangered; };
 }
 .csl-entry a:visited{
-    color: black;
     &:hover, &:active { color: orangered; };
 }
 .csl-right-inline span{

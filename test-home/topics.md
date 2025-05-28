@@ -97,7 +97,7 @@ JavaScript is the most used programming language for the development of web appl
 * [Detecting and removing bloated dependencies in CommonJS packages](https://arxiv.org/pdf/2405.17939)
 * [https://webpack.js.org/guides/tree-shaking/](https://webpack.js.org/guides/tree-shaking/)
 
-## Tampersing with test results 
+## Tampering with test results 
 
 The large open source software supply chains of many applications have turned open source repositories into targets of choice for the introduction of malicious code. As mature open source projects use continuous integration, stealthy code tampering should also ensure that the test suite passes. While the modification of the test suite might appear as red flag to the open source community, another solution consists in forging the test results. For example, a change in the continuous integration pipeline can turn some failing test cases into passing ones.
 In this work, we investigate different strategies to forge test suite results in order to mask ill-intended changes in the source code.
@@ -160,7 +160,7 @@ Many generative artists distribute their work online, as NFTs. [fx(hash)](https:
 * [Do NFTs’ Owners Really Possess their Assets? A First Look at the NFT-to-Asset Connection Fragility](https://dl.acm.org/doi/pdf/10.1145/3543507.3583281?casa_token=KaKXxXGRw50AAAAA:L88EzZbNI2UpC-yi4quVvAgQNDlPC-u6SHQMKPbBMyw8cwHTPe-uY-2whVoYKe02o6bj3MftRQgC)
 
 
-## Code as cool on online platforms
+## Code as cool, shareable medium
 
 Generative artists write code, run code, tweak code in order to generate artworks. Many artists share the artworks on online platforms, such as instagram or bandcamp. Sometimes, artists also share the code. Sharing code can have mutliple meanings: cool medium, transparency, sharing, traceability. In this project, we explore the code that is shared on these platforms as well as the different motivations of artists for sharing code.
 
@@ -169,7 +169,15 @@ Generative artists write code, run code, tweak code in order to generate artwork
 * [live code on insta](https://www.instagram.com/p/DI9QDIaRxUH/?img_index=4&igsh=MTZhdXFxdmNydjlucQ==)
 * [live coding on bandcamp](https://www.instagram.com/p/DI9QDIaRxUH/?img_index=4&igsh=MTZhdXFxdmNydjlucQ==)
 
+## Automatic documentation of generative artworks
 
+Many algorithmic works rely on third-party libraries (e.g. p5.js), system level interfaces (e.g. GLSL), low-level drivers to connect to diverse hardware devices or online APIs (e.g. translation of geolocation). These rich assemblies of various software packages support setting up interactive, immersive artworks.
+Using advanced software observability and runtime monitoring, we investigate how to instrument live artworks and to produce precise digital documentation. This documentation will capture intricate parametric design workflows, hardware interactions, and dynamic environmental responses, ensuring detailed preservation of algorithmic methods—not merely their final outputs.
+
+- [Reading between the lines: Source code documentation as a conservation strategy for software-based art](https://www.tandfonline.com/doi/pdf/10.1179/2047058413Y.0000000115)
+- [Production monitoring to improve test suites](https://arxiv.org/pdf/2012.01198)
+- [Preservation of software-based art at Tate](https://mediarep.org/bitstream/doc/14111/1/Digital_Art_Looking_Glass_271-287_Preservation_of_Software-based_Art.pdf)
+- [Low-level I/O Monitoring for Scientific Workflows](https://arxiv.org/pdf/2408.00411)
 
 ## Energy harvesting for portable pen plotter
 
