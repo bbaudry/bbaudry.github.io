@@ -41,14 +41,23 @@
                                         id="toc-adversarial-maven-builds">Adversarial
                                         Maven builds</a></li>
                                         <li><a
-                                        href="#software-diversity-in-build-pipelines"
-                                        id="toc-software-diversity-in-build-pipelines">Software
-                                        Diversity in Build
+                                        href="#build-integrity-with-diverse-build-pipelines"
+                                        id="toc-build-integrity-with-diverse-build-pipelines">Build
+                                        integrity with Diverse Build
                                         Pipelines</a></li>
                                         <li><a
                                         href="#airgapped-reproducible-builds"
                                         id="toc-airgapped-reproducible-builds">Airgapped
                                         reproducible builds</a></li>
+                                        <li><a
+                                        href="#steering-environment-diversity-with-infrastructure-as-code"
+                                        id="toc-steering-environment-diversity-with-infrastructure-as-code">Steering
+                                        environment diversity with
+                                        infrastructure as code</a></li>
+                                        <li><a
+                                        href="#diversifying-a-package-registry"
+                                        id="toc-diversifying-a-package-registry">Diversifying
+                                        a package registry</a></li>
                                         <li><a
                                         href="#hardening-transformations-for-rust"
                                         id="toc-hardening-transformations-for-rust">Hardening
@@ -69,6 +78,11 @@
                                         id="toc-forging-test-results-to-tamper-with-open-source-projects">Forging
                                         test results to tamper with
                                         open-source projects</a></li>
+                                        <li><a
+                                        href="#learning-based-software-substitutability"
+                                        id="toc-learning-based-software-substitutability">Learning-based
+                                        software
+                                        substitutability</a></li>
                                         <li><a
                                         href="#dependencies-targeted-test-suite-augmentation"
                                         id="toc-dependencies-targeted-test-suite-augmentation">Dependencies-targeted
@@ -99,9 +113,10 @@
                                         harvesting for portable pen
                                         plotter</a></li>
                                         <li><a
-                                        href="#live-performance-with-code"
-                                        id="toc-live-performance-with-code">Live
-                                        performance with code</a></li>
+                                        href="#the-diversity-of-live-coding-practices"
+                                        id="toc-the-diversity-of-live-coding-practices">The
+                                        diversity of live coding
+                                        practices</a></li>
                                         <li><a href="#live-pen-plotting"
                                         id="toc-live-pen-plotting">Live
                                         pen plotting</a></li>
@@ -110,6 +125,15 @@
                                         id="toc-keeping-it-old-backporting-updates-to-legacy-artworks">Keeping
                                         it old: backporting updates to
                                         legacy artworks</a></li>
+                                        </ul></li>
+                                        <li><a href="#section"
+                                        id="toc-section"></a>
+                                        <ul>
+                                        <li><a
+                                        href="#automatic-generation-of-1-million-libc"
+                                        id="toc-automatic-generation-of-1-million-libc">Automatic
+                                        generation of 1 Million
+                                        libc</a></li>
                                         </ul></li>
                                         </ul>
                 </nav>
@@ -188,8 +212,9 @@
                                 Artifacts</a></li>
                                 </ul>
                                 <h2
-                                id="software-diversity-in-build-pipelines">Software
-                                Diversity in Build Pipelines</h2>
+                                id="build-integrity-with-diverse-build-pipelines">Build
+                                integrity with Diverse Build
+                                Pipelines</h2>
                                 <p>Software build pipelines transform
                                 source code into deployable artifacts.
                                 Relying on a single set of tools or
@@ -268,6 +293,73 @@
                                 Blueprint to Reality: Evaluating the
                                 Feasibility of Air-gapped Maven
                                 Builds</a></li>
+                                </ul>
+                                <h2
+                                id="steering-environment-diversity-with-infrastructure-as-code">Steering
+                                environment diversity with
+                                infrastructure as code</h2>
+                                <p>Infrastructure as code is about
+                                provisioning execution resources through
+                                executable configuration files. In this
+                                context, the execution of program
+                                provisions a whole environment to
+                                execute an application. A variation of
+                                the same program will provision a
+                                different environment to run the same
+                                application. In this project the student
+                                will explore transformations for
+                                infrastructure as code with the
+                                intention of creating a moving target at
+                                the environment level. We consider using
+                                Modus to define the infrastructure.</p>
+                                <ul>
+                                <li><a
+                                href="https://www.redhat.com/en/topics/automation/what-is-infrastructure-as-code-iac">What
+                                is Infrastructure as Code
+                                (IaC)?</a></li>
+                                <li><a
+                                href="https://ieeexplore.ieee.org/document/6673500">Finding
+                                focus in the blur of moving-target
+                                techniques</a></li>
+                                <li><a
+                                href="https://github.com/modus-continens/modus">https://github.com/modus-continens/modus</a></li>
+                                </ul>
+                                <h2
+                                id="diversifying-a-package-registry">Diversifying
+                                a package registry</h2>
+                                <p>Dependency confusion is a growing
+                                threat for software supply chains. This
+                                attack consists in uploading malicious
+                                packages on public repositories, which
+                                will eventually be packaged in
+                                applications, through dependency
+                                resolution mechanisms. In this work, we
+                                will explore the automatic randomization
+                                of instructions in private npm
+                                registries to mitigate dependency
+                                confusion. The student will deploy a
+                                local npm registry and a instruction
+                                randomization scheme, along with the
+                                adaptation of the javascript engine to
+                                correctly execute the randomized
+                                packages.</p>
+                                <ul>
+                                <li><a
+                                href="https://www.schneier.com/blog/archives/2021/02/dependency-confusion-another-supply-chain-vulnerability.html">Dependency
+                                Confusion: Another Supply-Chain
+                                Vulnerability</a></li>
+                                <li><a
+                                href="https://web.archive.org/web/20220125055207/https://polyverse.com/blog/npm-node-js-code-injection-attack/">Polyscripting
+                                to mitigate dependency
+                                confusion</a></li>
+                                <li><a
+                                href="http://www.sis.pitt.edu/jjoshi/courses/IS2620/Spring09/Kc.pdf">Countering
+                                code-injection attacks with
+                                instruction-set randomization</a></li>
+                                <li><a
+                                href="https://dl.acm.org/doi/abs/10.1145/3136825.3136900">Internal
+                                interface diversification with multiple
+                                fake interfaces</a></li>
                                 </ul>
                                 <h2
                                 id="hardening-transformations-for-rust">Hardening
@@ -426,6 +518,38 @@
                                 href="https://www.usenix.org/system/files/sec19-torres-arias.pdf">in-toto:
                                 Providing farm-to-table guarantees for
                                 bits and bytes</a></li>
+                                </ul>
+                                <h2
+                                id="learning-based-software-substitutability">Learning-based
+                                software substitutability</h2>
+                                <p>Software substitutability is a
+                                property which measures how readily a
+                                software component can be replaced by a
+                                different but equivalent component. In
+                                software supply chains it is critical
+                                for faulty or vulnerable components to
+                                be replaced as quickly as possible.
+                                However, software substitutes might not
+                                be immediately available. Generative AI
+                                tools may be used to efficiently produce
+                                software substitutes in diverse
+                                programming languages/paradigms. In this
+                                work, we assess the feasibility of using
+                                generative AI tools to enhance
+                                substitutablity of components in
+                                software supply chains.</p>
+                                <ul>
+                                <li><a
+                                href="https://dl.acm.org/doi/pdf/10.1145/3490099.3511157?casa_token=kooTF59aoC4AAAAA:0MjgRH-Rpzd6_ni7ceJt6lf9G5Vgo5KraSvULJPiCvfs6FbTidRGe3PbbX3mAuH1chnXIBj0zmEj">Better
+                                Together? An Evaluation of AI-Supported
+                                Code Translation</a></li>
+                                <li><a
+                                href="https://www.sciencedirect.com/science/article/pii/S1571066108003654/pdf?md5=d22148de7199440a6cd845666b696f7b&amp;pid=1-s2.0-S1571066108003654-main.pdf">Formalization
+                                of Component Substitutability</a></li>
+                                <li><a
+                                href="https://arxiv.org/pdf/2408.09536">Galapagos:
+                                Automated N-Version Programming with
+                                LLMs</a></li>
                                 </ul>
                                 <h2
                                 id="dependencies-targeted-test-suite-augmentation">Dependencies-targeted
@@ -614,8 +738,9 @@
                                 of an Arduino-Based Pen Plotter
                                 System</a></li>
                                 </ul>
-                                <h2 id="live-performance-with-code">Live
-                                performance with code</h2>
+                                <h2
+                                id="the-diversity-of-live-coding-practices">The
+                                diversity of live coding practices</h2>
                                 <p>Digital art is a kind of performance.
                                 As long as software runs art is
                                 performed. Yet, generative artists
@@ -641,11 +766,11 @@
                                 href="https://unframed.lacma.org/2024/11/13/digital-art-kind-performance-qa-casey-reas">Digital
                                 art is a kind of performance</a></li>
                                 <li><a
-                                href="https://blog.toplap.org/">the home
-                                of live coding</a></li>
+                                href="https://blog.toplap.org/nodes/">Diverse
+                                live coding communities</a></li>
                                 <li><a
-                                href="https://github.com/rethread-studio/algorithmic-art-course/issues/9">live
-                                coding libraries</a></li>
+                                href="https://github.com/rethread-studio/algorithmic-art-course/issues/9">Diverse
+                                live coding libraries</a></li>
                                 <li><a
                                 href="https://www.cambridge.org/core/services/aop-cambridge-core/content/view/08F42B84BBCA427C345030481A3DDA0D/S135577180300030Xa.pdf/div-class-title-live-coding-in-laptop-performance-div.pdf">Live
                                 coding in laptop performance</a></li>
@@ -671,7 +796,10 @@
                                 artwork is streamed live to the plotter,
                                 avoiding the generation of the image
                                 file and preserving the performing
-                                mindset of generative art.</p>
+                                mindset of generative art. Eventually,
+                                the technology can recreate the <a
+                                href="https://www.v3ga.net/dicegl/">DiceGL</a>
+                                setup.</p>
                                 <ul>
                                 <li><a
                                 href="https://www.cambridge.org/core/services/aop-cambridge-core/content/view/08F42B84BBCA427C345030481A3DDA0D/S135577180300030Xa.pdf/div-class-title-live-coding-in-laptop-performance-div.pdf">Live
@@ -717,6 +845,35 @@
                                 href="https://core.ac.uk/download/pdf/84774749.pdf">Transforming
                                 C++11 Code to C++03 to Support Legacy
                                 Compilation Environments</a></li>
+                                </ul>
+                                <h1 id="section"></h1>
+                                <h2
+                                id="automatic-generation-of-1-million-libc">Automatic
+                                generation of 1 Million libc</h2>
+                                <p>libc is at the core of most software
+                                stacks, but it is fragile, prone to
+                                critical vulnerabilities [1]. In this
+                                work we explore a combination of
+                                techniques to generate large amounts of
+                                diverse implementations of libc [2]. The
+                                student will combine the abundant
+                                combinations of flags of C compilers
+                                [3], with state of the art code
+                                transformation and obfuscation
+                                techniques [4] to generate many libs
+                                variants.</p>
+                                <ul>
+                                <li><a
+                                href="https://en.wikipedia.org/wiki/C_standard_library">The
+                                C standard library</a></li>
+                                <li><a
+                                href="https://forrest.biodesign.asu.edu/data/publications/1997-hotos-diversity.pdf">Building
+                                diverse computer systems</a></li>
+                                <li><a
+                                href="https://www.spec.org/cpu2017/flags/gcc.html">gcc
+                                flags</a></li>
+                                <li><a
+                                href="https://tigress.wtf/transformations.html">Tigress</a></li>
                                 </ul>
             </div>
         </div>

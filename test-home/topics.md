@@ -216,7 +216,7 @@ Digital art is made to perform in an environment that evolves: OS patches, drive
 
 libc is at the core of most software stacks, but it is fragile, prone to critical vulnerabilities [1]. In this work we explore a combination of techniques to generate large amounts of diverse implementations of libc [2]. The student will combine the abundant combinations of flags of C compilers [3], with state of the art code transformation and obfuscation techniques [4] to generate many libs variants.
 
-- [The C standard library]()
+- [The C standard library](https://en.wikipedia.org/wiki/C_standard_library)
 - [Building diverse computer systems](https://forrest.biodesign.asu.edu/data/publications/1997-hotos-diversity.pdf)
 - [gcc flags](https://www.spec.org/cpu2017/flags/gcc.html)
 - [Tigress](https://tigress.wtf/transformations.html)
