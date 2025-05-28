@@ -135,7 +135,7 @@ Software developers dedicate considerable efforts in implementing strong test su
 
 
 
-# Software technology for the arts
+# Software for the arts
 
 ## Neuro-renovation of software-based artworks
 
@@ -210,7 +210,21 @@ Digital art is made to perform in an environment that evolves: OS patches, drive
 * [Recommending code changes for automatic backporting of Linux device drivers](https://inria.hal.science/hal-01355859/file/icsme_hal.pdf)
 * [Transforming C++11 Code to C++03 to Support Legacy Compilation Environments](https://core.ac.uk/download/pdf/84774749.pdf)
 
-# 
+## The software supply chain of generative art
+
+Artists use advanced software technology to produce, distribute and generate artworks. Such software technology includes libraries for sound synthesis, visual art, augmented reality, as well as platforms to distribute artworks. In this work, we dive deep in this software ecosystem to draw a systematic landscape of the software supply chain for generative art. Our goal is to reveal the open source software foundations of this artistic practice, credit the key contributors and recognize the specificities of open source communities in the arts.
+
+- [Supercollider](https://supercollider.github.io/)
+- [OpenFrameworks](https://openframeworks.cc/)
+- [Processing](https://processing.org/)
+- [fxhash](https://www.fxhash.xyz/)
+- [The Evolution of Project Inter-dependencies in a Software Ecosystem: The Case of Apache](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.715.455&rep=rep1&type=pdf)
+- [Myriad People Open Source Software for New Media Arts](https://arxiv.org/pdf/2501.13644)
+
+
+
+
+# Software journeys
 
 ## Automatic generation of 1 Million libc
 
@@ -220,3 +234,40 @@ libc is at the core of most software stacks, but it is fragile, prone to critica
 - [Building diverse computer systems](https://forrest.biodesign.asu.edu/data/publications/1997-hotos-diversity.pdf)
 - [gcc flags](https://www.spec.org/cpu2017/flags/gcc.html)
 - [Tigress](https://tigress.wtf/transformations.html)
+
+##  Superdiversifying SHA256
+
+Software diversity increases the robustness of software systems [1]. Through various transformations and randomization, it is possible to automatically generate variants of a program. These variants should have minimal impact on convenience, usability, and efficiency. Meanwhile, each variant should not be sensible to the same bug or vulnerability.
+In this project, we explore the large-scale diversification of SHA256 [2]. This family of hashing functions is essential for cryptography, and hence a critical feature for security. The student will investigate superdiversification [3] and the composition of multiple diversification techniques, in order to synthesize large amounts of variants for an implementation of SHA256.
+
+- [Building diverse computer systems](https://forrest.biodesign.asu.edu/data/publications/1997-hotos-diversity.pdf)
+- [On the Secure Hash Algorithm family](https://web.archive.org/web/20160330153520/http://www.staff.science.uu.nl/~werkh108/docs/study/Y5_07_08/infocry/project/Cryp08.pdf)
+- [The superdiversifier: - Peephole individualization for software protection](ftp://nozdr.ru/biblio/kolxoz/Cs/CsLn/Advances%20in%20Information%20and%20Computer%20Security,%203%20conf.,%20IWSEC%202008(LNCS5312,%20Springer,%202008)(ISBN%209783540895978)(308s).pdf#page=110)
+
+## Github repositories with literary references
+
+Github repositories are rich sources of code, documentation and discussions. They also contain amazing resources such as images, sound snippets, texts or references. A recent study has analyzed the presence of links to academic papers in Github repositories. This study reveals the critical importance of linking code, data and publications to improve replication in computational science. In this work we wish to explore literary references in Github. For example, references to Bob Dylan cited in C code or novel quotes in comments, ```perl -le’$_=`perldoc -T perlfaq4`,s/^.*N;(.*?)E.*$/$1/s,print’ ```.
+
+The study seeks to unveil the deep connection of Github with culture and society and to analyze the role of literature on software development.
+
+- [GitHub Repositories with Links to Academic Papers: Open Access, Traceability, and Evolution](https://arxiv.org/pdf/2004.00199)
+- [This AI researcher is trying to ward off a reproducibility crisis](https://www.nature.com/articles/d41586-019-03895-5)
+
+##  Easter egg VM flag
+
+Easter eggs, sometimes called the final frontier of software development [10]. (Except that of course you can’t have a final frontier, because there’d be nothing for it to be a frontier to, but as frontiers go, it’s pretty penultimate . . .) [269696]. And against the wash of continuous integration a commit hangs, bloated and poetic, one single, cool contribution, gleaming like the madness of gods. Nearly unreal. Reality is not digital, an on-off state, but analog. Easter eggs are for lovers and for the mind. Not enterprise, nor a resurrection, they cherish enchantment and freedom. In the quest for technology and Mastery, you will add an extra mile to the frontier with a new Easter flag for an extraordinary virtual machine [42].
+
+[42] java -XX:+UnlockDiagnosticVMOptions -XX:+PrintFlagsFinal -version
+[10] [Curated list of all the easter eggs and hidden jokes in Python](https://github.com/OrkoHunter/python-easter-eggs)
+[0] [Long Live Software Easter Eggs!](http://rethread.art/easter-eggs.pdf)
+[269696] Moving Pictures. T. Pratchett. 1990, on Monday afternoon, just before tea.
+
+##  Paint Splatters & Perl Programs (remix)
+
+In 2019, Colin Mc Millen and Tim Toady ran an experiment to answer one question: is it possible to smear paint on the wall without creating valid Perl? This is an essential question at the forefront of art / computing frontier.
+In this project, we will reproduce Mc Millen’s experiment, starting with the curated dataset provided by the authors. We will then elaborate on the findings with original splatters and an exploration of Perl’s diverse ecosystem. We eventually thoroughly settle the question of whether coffee stains are better Perl programs than paint splatters.
+
+- [93% of Paint Splatters are Valid Perl Programs](https://www.mcmillen.dev/sigbovik/2019.pdf)
+- [100 paint splatter images](https://www.mcmillen.dev/sigbovik/splatters.tar.gz)
+- [the Perl ecosystem](https://www.activestate.com/blog/introduction-to-perl-ecosystem/)
+- [coffestains](https://ctan.org/pkg/coffeestains)
