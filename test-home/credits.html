@@ -23,26 +23,35 @@
                 <a href="./contact.html">contact</a>
             </div>
             <div class="main">
+                                <p>
+                    The calligraphic generative art is a tribute to <a href="http://www.veramolnar.com/">Vera
+                        Molnar</a>'s latest work <a
+                        href="https://news.artnet.com/market/vera-molnar-themes-and-variations-sothebys-gen-art-2328987">Themes
+                        and Variations</a>.
+                    The rare artwork is a tribute to <a href="https://en.wikipedia.org/wiki/Lillian_Schwartz">Lillian
+                        Schwartz</a>.
+                </p>
+
                 <div class="emphasis">
                     <p style="text-align: center;">
                         this site is made with code <br>
-                        <ul style="list-style-type: none;">
+                    <ul style="list-style-type: none;">
                         <li><a id="hover-link-h" href="https://html.spec.whatwg.org/multipage/">html</a></li>
                         <li><a id="hover-link-c" href="https://w3.org/TR/CSS/#css">css</a></li>
                         <li><a id="hover-link-p" href="https://pandoc.org/">pandoc</a> </li>
                         <li><a id="hover-link-b" href="https://github.com/ge-ne/bibtool">bibtool</a> </li>
-                        <li><a id="hover-link-f" href="https://github.com/opensourcedesign/fonts/blob/master/gnu-freefont_freemono/FreeMono.ttf">FreeMono.ttf</a> </li>
-                        <li><a id="hover-link-j" href="https://ecma-international.org/publications-and-standards/standards/ecma-262/">javascript</a> </li>
+                        <li><a id="hover-link-f"
+                                href="https://github.com/opensourcedesign/fonts/blob/master/gnu-freefont_freemono/FreeMono.ttf">FreeMono.ttf</a>
+                        </li>
+                        <li><a id="hover-link-j"
+                                href="https://ecma-international.org/publications-and-standards/standards/ecma-262/">javascript</a>
+                        </li>
                         <li><a id="hover-link-s" href="http://www.gnu.org/software/bash/">bash</a> </li>
                         <li><a id="hover-link-p5" href="https://p5js.org/">p5.js</a></li>
                         <li><a href="https://youtu.be/dQw4w9WgXcQ?si=JOEDWE1ahn2F387q">vibe</a></li>
-                        </ul>
+                    </ul>
                     </p>
                 </div>
-                    <p>
-                        The calligraphic generative art is a tribute to <a href="http://www.veramolnar.com/">Vera Molnar</a>'s latest work <a href="https://news.artnet.com/market/vera-molnar-themes-and-variations-sothebys-gen-art-2328987">Themes and Variations</a>. 
-                        The rare artwork is a tribute to <a href="https://en.wikipedia.org/wiki/Lillian_Schwartz">Lillian Schwartz</a>.
-                    </p>
             </div>
         </div>
     </div>
@@ -71,11 +80,11 @@
         document.getElementById('hover-link-p5').addEventListener('mouseenter', function () {
             draw();
         });
-        function randomlist(){
-        var ul = document.querySelector('ul');
-        for (var i = ul.children.length; i >= 0; i--) {
-            ul.appendChild(ul.children[Math.random() * i | 0]);
-        }
+        function randomlist() {
+            var ul = document.querySelector('ul');
+            for (var i = ul.children.length; i >= 0; i--) {
+                ul.appendChild(ul.children[Math.random() * i | 0]);
+            }
         }
 
 

@@ -199,7 +199,7 @@ li a:visited{
     &:hover, &:active { color: orangered; };
 }
 .emphasis {
-  height: 100%;
+  height: 80%;
   width: 50%;
   display: flex;
   align-items: center;
