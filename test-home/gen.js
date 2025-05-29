@@ -24,12 +24,8 @@ async function setCanvasSize() {
 }
 
 function draw() {
-    // add 1% chance hommage a vera molnar: randomly positioned squares in different shades of red
-    // add 1% chance hommage a lillian schwartz
-    // add 1% chance hommage a ryoji ikeda: a grid, cell randomly filled with white or white particles bursting from center on black background or black particles bursting from center on white background 
-    //ryojiikeda()
     if (random() < 0.042) {
-        lillianschwartz()
+        (random() < 0.5) ? lillianschwartz() : ryojiikeda()
     }
     else {
         SEorART()
@@ -58,57 +54,29 @@ function vera() {
 }
 
 function ryojiikeda() {
-    var x, y, res, cellw, cellh, left, style, c, colorie
-    background(0, 0, 0)
-    res = random([3,5,7])
-    cellw = w / res
-    cellh = h / res
-    //t=à draw art else draw se
-    style = random([0, 1, 2, 3, 4])
-    colorie = false
-    for (var i = 0; i < res; i++) {
-        y = i * cellh
-        for (var j = 0; j < res; j++) {
-            x = j * cellw
-            c = Math.floor(random(4))
-            switch (c) {
-                case 0:
-                    fill(0,0,100);stroke(0,0,100)
-                    quad(cellw*i,cellh*j,cellw*(i+1),cellh*j,cellw*(i+1),cellh*(j+1),cellw*i,cellh*(j+1))
-                    break;
-                case 1:
-                    fill(0,0,100);stroke(0,0,100)
-                    quad(cellw*i,cellh*j,cellw*(i+1),cellh*j,cellw*(i+1),cellh*(j+1),cellw*i,cellh*(j+1))
-                    fill(0,0,0);stroke(0,0,0)
-                    particles(cellw*i,cellh*j,cellw,cellh)
-                    break;
-                case 2:
-                    fill(0,0,0);stroke(0,0,0)
-                    quad(cellw*i,cellh*j,cellw*(i+1),cellh*j,cellw*(i+1),cellh*(j+1),cellw*i,cellh*(j+1))
-                    break;
-                case 3:
-                    fill(0,0,0);stroke(0,0,0)
-                    quad(cellw*i,cellh*j,cellw*(i+1),cellh*j,cellw*(i+1),cellh*(j+1),cellw*i,cellh*(j+1))
-                    fill(0,0,100);stroke(0,0,100)
-                    particles(cellw*i,cellh*j,cellw,cellh)
-                    break;
-            }
-        }
-    }
+    background(0, 0, 100)
+    noStroke()
+    half(0)
+    half(w*0.5)
 }
 
-function particles(x,y,cellw,cellh){
-    var r,cx,cy,a,px,py,pr,xoff
-    cx=x+cellw*0.5
-    cy=y+cellh*0.5
-    pr=2
-    xoff=0.0
-    for(i=0;i<420;i++){
-        r=(1+cos(noise(xoff)*PI*0.5+PI))*cellw*0.5; console.log(r);xoff+=0.01
-        a=radians(random()*360)
-        px=cx+r*cos(a)
-        py=cy+r*sin(a)
-        ellipse(px,py,pr,pr)
+function half(x){
+    var y, cellw, cellh, black, maxh, xoff, xinc
+    cellw = w*0.5
+    maxh = 84
+    xoff = 0.0
+    xinc = random(0.6,1)
+    y=0
+    //1+cos(random(PI,PI*1.5) is between 0 and 1, with a bias towards smaller values 
+    //1+...*maxh is to a random value that's >1 and <maxh
+    cellh=Math.floor(1+(1+cos(random(PI,PI*1.5)))*maxh)
+    black=false 
+    while(y+cellh<h){
+        black ? fill(0,0,0) : fill(0,0,100)
+        rect(x,y,cellw,cellh)
+        black=!black
+        y+=cellh
+        cellh=Math.floor(1+(1+cos(random(PI,PI*1.5)))*maxh)
     }
 }
 
