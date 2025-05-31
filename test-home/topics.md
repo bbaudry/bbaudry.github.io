@@ -198,6 +198,7 @@ In this project, we study the programming paradigms and abstractions that live c
 * [Diverse live coding communities](https://blog.toplap.org/nodes/)
 * [Diverse live coding libraries](https://github.com/rethread-studio/algorithmic-art-course/issues/9)
 * [Live coding in laptop performance](https://www.cambridge.org/core/services/aop-cambridge-core/content/view/08F42B84BBCA427C345030481A3DDA0D/S135577180300030Xa.pdf/div-class-title-live-coding-in-laptop-performance-div.pdf)
+* [The real value of NFTs](https://www.rightclicksave.com/article/the-real-value-of-nfts)
 
 ## Live pen plotting
 
