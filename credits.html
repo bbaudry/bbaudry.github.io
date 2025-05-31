@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="aerial.css">
+    <title>credits</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.3/p5.min.js"></script>
+    <script src="gen.js"></script>
+</head>
+
+<body>
+    <div class="split-container">
+        <div class="split-left" , id="left-side">
+        </div>
+        <div class="split-right">
+            <div class="navbar">
+                <a href="./index.html">trench</a>
+                <a href="./crew.html">crew</a>
+                <a href="./research.html">research</a>
+                <a href="./teaching.html">teaching</a>
+                <a href="./contact.html">contact</a>
+            </div>
+            <div class="main">
+                                <p>
+                    The calligraphic generative art is a tribute to <a href="http://www.veramolnar.com/">Vera
+                        Molnar</a>'s latest work <a
+                        href="https://news.artnet.com/market/vera-molnar-themes-and-variations-sothebys-gen-art-2328987">Themes
+                        and Variations</a>.
+                    The rare artworks are tributes to <a href="https://en.wikipedia.org/wiki/Lillian_Schwartz">Lillian
+                        Schwartz</a> and <a href="https://www.ryojiikeda.com/">Ryoji Ikeda</a>.
+                </p>
+
+                <div class="emphasis">
+                    <p style="text-align: center;">
+                        this site is made with code <br>
+                    <ul style="list-style-type: none;">
+                        <li><a id="hover-link-h" href="https://html.spec.whatwg.org/multipage/">html</a></li>
+                        <li><a id="hover-link-c" href="https://w3.org/TR/CSS/#css">css</a></li>
+                        <li><a id="hover-link-p" href="https://pandoc.org/">pandoc</a> </li>
+                        <li><a id="hover-link-b" href="https://github.com/ge-ne/bibtool">bibtool</a> </li>
+                        <li><a id="hover-link-f"
+                                href="https://github.com/opensourcedesign/fonts/blob/master/gnu-freefont_freemono/FreeMono.ttf">FreeMono.ttf</a>
+                        </li>
+                        <li><a id="hover-link-j"
+                                href="https://ecma-international.org/publications-and-standards/standards/ecma-262/">javascript</a>
+                        </li>
+                        <li><a id="hover-link-s" href="http://www.gnu.org/software/bash/">bash</a> </li>
+                        <li><a id="hover-link-p5" href="https://p5js.org/">p5.js</a></li>
+                        <li><a href="https://youtu.be/dQw4w9WgXcQ?si=JOEDWE1ahn2F387q">vibe</a></li>
+                    </ul>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById('hover-link-h').addEventListener('mouseenter', function () {
+            draw();
+        });
+        document.getElementById('hover-link-c').addEventListener('mouseenter', function () {
+            draw();
+        });
+        document.getElementById('hover-link-p').addEventListener('mouseenter', function () {
+            draw();
+        });
+        document.getElementById('hover-link-b').addEventListener('mouseenter', function () {
+            draw();
+        });
+        document.getElementById('hover-link-f').addEventListener('mouseenter', function () {
+            randomlist();
+        });
+        document.getElementById('hover-link-j').addEventListener('mouseenter', function () {
+            randomlist();
+        });
+        document.getElementById('hover-link-s').addEventListener('mouseenter', function () {
+            draw();
+        });
+        document.getElementById('hover-link-p5').addEventListener('mouseenter', function () {
+            draw();
+        });
+        function randomlist() {
+            var ul = document.querySelector('ul');
+            for (var i = ul.children.length; i >= 0; i--) {
+                ul.appendChild(ul.children[Math.random() * i | 0]);
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

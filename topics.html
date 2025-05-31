@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="aerial.css">
+    <title>Research topics</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.3/p5.min.js"></script>
+    <script src="gen.js"></script>
+</head>
+
+<body>
+    <div class="split-container">
+        <div class="split-left" , id="left-side">
+        </div>
+        <div class="split-right">
+            <div class="navbar">
+                <a href="./index.html">trench</a>
+                <a href="./crew.html">crew</a>
+                <a href="./research.html">research</a>
+                <a href="./teaching.html">teaching</a>
+                <a href="./contact.html">contact</a>
+            </div>
+            <div class="main">
+                <h1 id='top-title'>Research topics</h1>
+                                <nav id="TOC" role="doc-toc">
+                                        <ul>
+                                        <li><a
+                                        href="#software-supply-chain"
+                                        id="toc-software-supply-chain">Software
+                                        supply chain</a>
+                                        <ul>
+                                        <li><a
+                                        href="#one-shot-runners-for-continuous-integration"
+                                        id="toc-one-shot-runners-for-continuous-integration">One-shot
+                                        runners for continuous
+                                        integration</a></li>
+                                        <li><a
+                                        href="#adversarial-maven-builds"
+                                        id="toc-adversarial-maven-builds">Adversarial
+                                        Maven builds</a></li>
+                                        <li><a
+                                        href="#build-integrity-with-diverse-build-pipelines"
+                                        id="toc-build-integrity-with-diverse-build-pipelines">Build
+                                        integrity with Diverse Build
+                                        Pipelines</a></li>
+                                        <li><a
+                                        href="#airgapped-reproducible-builds"
+                                        id="toc-airgapped-reproducible-builds">Airgapped
+                                        reproducible builds</a></li>
+                                        <li><a
+                                        href="#environment-diversity-as-code"
+                                        id="toc-environment-diversity-as-code">Environment
+                                        diversity as code</a></li>
+                                        <li><a
+                                        href="#diversifying-a-package-registry"
+                                        id="toc-diversifying-a-package-registry">Diversifying
+                                        a package registry</a></li>
+                                        <li><a
+                                        href="#hardening-transformations-for-rust"
+                                        id="toc-hardening-transformations-for-rust">Hardening
+                                        transformations for
+                                        Rust</a></li>
+                                        <li><a
+                                        href="#dependencies-diversification-in-java"
+                                        id="toc-dependencies-diversification-in-java">Dependencies
+                                        diversification in Java</a></li>
+                                        <li><a
+                                        href="#bundler-diversity-for-debloating-javascript"
+                                        id="toc-bundler-diversity-for-debloating-javascript">Bundler
+                                        diversity for debloating
+                                        JavaScript</a></li>
+                                        <li><a
+                                        href="#tampering-with-test-results"
+                                        id="toc-tampering-with-test-results">Tampering
+                                        with test results</a></li>
+                                        <li><a
+                                        href="#learning-based-software-substitutability"
+                                        id="toc-learning-based-software-substitutability">Learning-based
+                                        software
+                                        substitutability</a></li>
+                                        <li><a
+                                        href="#dependencies-targeted-test-suite-augmentation"
+                                        id="toc-dependencies-targeted-test-suite-augmentation">Dependencies-targeted
+                                        test suite augmentation</a></li>
+                                        </ul></li>
+                                        <li><a
+                                        href="#software-for-the-arts"
+                                        id="toc-software-for-the-arts">Software
+                                        for the arts</a>
+                                        <ul>
+                                        <li><a
+                                        href="#neuro-renovation-of-software-based-artworks"
+                                        id="toc-neuro-renovation-of-software-based-artworks">Neuro-renovation
+                                        of software-based
+                                        artworks</a></li>
+                                        <li><a
+                                        href="#reproducibility-of-fxhash-artworks"
+                                        id="toc-reproducibility-of-fxhash-artworks">Reproducibility
+                                        of fx(hash) artworks</a></li>
+                                        <li><a
+                                        href="#code-as-cool-shareable-medium"
+                                        id="toc-code-as-cool-shareable-medium">Code
+                                        as cool, shareable
+                                        medium</a></li>
+                                        <li><a
+                                        href="#automatic-documentation-of-generative-artworks"
+                                        id="toc-automatic-documentation-of-generative-artworks">Automatic
+                                        documentation of generative
+                                        artworks</a></li>
+                                        <li><a
+                                        href="#energy-harvesting-for-portable-pen-plotter"
+                                        id="toc-energy-harvesting-for-portable-pen-plotter">Energy
+                                        harvesting for portable pen
+                                        plotter</a></li>
+                                        <li><a
+                                        href="#the-diversity-of-live-coding-practices"
+                                        id="toc-the-diversity-of-live-coding-practices">The
+                                        diversity of live coding
+                                        practices</a></li>
+                                        <li><a href="#live-pen-plotting"
+                                        id="toc-live-pen-plotting">Live
+                                        pen plotting</a></li>
+                                        <li><a
+                                        href="#keeping-it-old-backporting-updates-to-legacy-artworks"
+                                        id="toc-keeping-it-old-backporting-updates-to-legacy-artworks">Keeping
+                                        it old: backporting updates to
+                                        legacy artworks</a></li>
+                                        <li><a
+                                        href="#the-software-supply-chain-of-generative-art"
+                                        id="toc-the-software-supply-chain-of-generative-art">The
+                                        software supply chain of
+                                        generative art</a></li>
+                                        </ul></li>
+                                        <li><a href="#software-journeys"
+                                        id="toc-software-journeys">Software
+                                        journeys</a>
+                                        <ul>
+                                        <li><a
+                                        href="#automatic-generation-of-1-million-libc"
+                                        id="toc-automatic-generation-of-1-million-libc">Automatic
+                                        generation of 1 Million
+                                        libc</a></li>
+                                        <li><a
+                                        href="#superdiversifying-sha256"
+                                        id="toc-superdiversifying-sha256">Superdiversifying
+                                        SHA256</a></li>
+                                        <li><a
+                                        href="#github-repositories-with-literary-references"
+                                        id="toc-github-repositories-with-literary-references">Github
+                                        repositories with literary
+                                        references</a></li>
+                                        <li><a
+                                        href="#easter-egg-vm-flag"
+                                        id="toc-easter-egg-vm-flag">Easter
+                                        egg VM flag</a></li>
+                                        <li><a
+                                        href="#paint-splatters-perl-programs-remix"
+                                        id="toc-paint-splatters-perl-programs-remix">Paint
+                                        Splatters &amp; Perl Programs
+                                        (remix)</a></li>
+                                        </ul></li>
+                                        </ul>
+                </nav>
+                                <h1 id="software-supply-chain">Software
+                                supply chain</h1>
+                                <h2
+                                id="one-shot-runners-for-continuous-integration">One-shot
+                                runners for continuous integration</h2>
+                                <p>Continuous integration consists in
+                                setting up a specific environment to
+                                build and test an application. For
+                                example, Github actions will spawn a
+                                container to run the continuous
+                                integration. Github has recently
+                                introduced just-in-time runners to
+                                mitigate software supply chain attacks
+                                on CI [1].</p>
+                                <p>In this work, we explore the
+                                combination of automatic software
+                                diversity [2] and just-in-time runners,
+                                to build one-shot unique versions of
+                                runners for CI. We will first look at
+                                the opportunity of reusing the natural
+                                diversity of containers [3], then we
+                                will investigate transformations to
+                                automatically increase the diversity of
+                                runners. The student will explore both
+                                github actions and Nix [4] for automatic
+                                build.</p>
+                                <ul>
+                                <li><a
+                                href="https://docs.github.com/en/actions/security-guides/security-hardening-for-github-actions#using-just-in-time-runners">Using
+                                just-in-time runners</a></li>
+                                <li><a
+                                href="https://citeseerx.ist.psu.edu/document?repid=rep1&amp;type=pdf&amp;doi=2f53c44ba52ebd8c3083a485a48b72c8fdc8e79d">Building
+                                diverse computer systems</a></li>
+                                <li><a
+                                href="https://link.springer.com/content/pdf/10.1007/s10664-020-09873-0.pdf">Too
+                                many images on DockerHub! How different
+                                are images for the same system?</a></li>
+                                <li><a
+                                href="https://www.usenix.org/event/lisa04/tech/full_papers/dolstra/dolstra_html/">Nix:
+                                A Safe and Policy-Free System for
+                                Software Deployment</a></li>
+                                </ul>
+                                <h2
+                                id="adversarial-maven-builds">Adversarial
+                                Maven builds</h2>
+                                <p>Reprocible builds are essential to
+                                build trust in the integrity of packaged
+                                artifacts. The Java and Maven
+                                communities address this challenge and
+                                maintain a list of packages which
+                                reproducibility has been verified
+                                through independent builds. In this
+                                work, we design several strategies to
+                                perturb the build to determine the
+                                actual robustness of these reproducible
+                                builds. These strategies involve
+                                randomizing the order of dependencies in
+                                the configuration file and perturbing
+                                the build environment, such as setting
+                                time in the future or changing the
+                                system’s language or host name.</p>
+                                <ul>
+                                <li><a
+                                href="https://ieeexplore.ieee.org/iel7/52/9713899/09403390.pdf">Reproducible
+                                builds: Increasing the integrity of
+                                software supply chains</a></li>
+                                <li><a
+                                href="https://github.com/jvm-repo-rebuild/reproducible-central">Reproducible
+                                central</a></li>
+                                <li><a
+                                href="https://dl.acm.org/doi/abs/10.1145/3643764">AROMA:
+                                Automatic Reproduction of Maven
+                                Artifacts</a></li>
+                                </ul>
+                                <h2
+                                id="build-integrity-with-diverse-build-pipelines">Build
+                                integrity with Diverse Build
+                                Pipelines</h2>
+                                <p>Software build pipelines transform
+                                source code into deployable artifacts.
+                                Relying on a single set of tools or
+                                environments throughout the build
+                                process creates significant risks.
+                                Software diversity in build pipelines
+                                can provide enhanced security and
+                                reliability. When Solarwinds’ build
+                                system was compromised, the company
+                                decided to to introduce software
+                                diversity at the core of their build
+                                pipelines in order to mitigate future
+                                hacks. In this work we investigate the
+                                feasibility of introducing diversity in
+                                builds for Java projects. We study the
+                                automatic migration of Maven builds into
+                                Gradle builds and then compare the
+                                diversity it provides at each build step
+                                and what impact this has on the output
+                                artifact.</p>
+                                <ul>
+                                <li><a
+                                href="https://dl.acm.org/doi/abs/10.1145/3643764">AROMA:
+                                Automatic Reproduction of Maven
+                                Artifacts</a></li>
+                                <li><a
+                                href="https://dl.gi.de/bitstreams/f8685808-2e51-4a53-acc0-2b45fa240e3b/download">Reproducible
+                                Builds and Insights from an Independent
+                                Verifier for Arch Linux</a></li>
+                                <li><a
+                                href="https://ieeexplore.ieee.org/iel7/8169617/8169971/08170083.pdf">Automatic
+                                building of java projects in software
+                                repositories: A study on feasibility and
+                                challenges</a></li>
+                                <li><a
+                                href="https://apps.dtic.mil/sti/trecms/pdf/AD1148956.pdf">Beyong
+                                Solarwinds: Principles for Securing
+                                Software Supply Chains</a></li>
+                                </ul>
+                                <h2
+                                id="airgapped-reproducible-builds">Airgapped
+                                reproducible builds</h2>
+                                <p>An air-gapped computer is one that is
+                                not connected to any outside networks.
+                                This is used as security measure to
+                                protect sensitive data or machines. With
+                                the growth of software supply chains,
+                                third-party dependencies and continuous
+                                integration workflows have become the
+                                targets of malicious actors. In this
+                                project, we investigate the feasibility
+                                of building an environment that supports
+                                airgap software builds. In particular,
+                                we study to what extent current
+                                lockfiles support airgap builds and
+                                propose novel solutions to enhance
+                                package managers towards better support
+                                for airgap security.</p>
+                                <ul>
+                                <li><a
+                                href="https://ieeexplore.ieee.org/iel7/52/9713899/09403390.pdf">Reproducible
+                                builds: Increasing the integrity of
+                                software supply chains</a></li>
+                                <li><a
+                                href="https://dl.acm.org/doi/abs/10.1145/3689944.3696351">Auditing
+                                the CI/CD Platform: Reproducible Builds
+                                vs. Hardware-Attested Build
+                                Environments, Which is Right for
+                                You?</a></li>
+                                <li><a
+                                href="https://dl.acm.org/doi/pdf/10.1145/3236024.3275526">Software
+                                development challenges with air-gap
+                                isolation</a></li>
+                                <li><a
+                                href="https://www.diva-portal.org/smash/get/diva2:1932196/FULLTEXT02">From
+                                Blueprint to Reality: Evaluating the
+                                Feasibility of Air-gapped Maven
+                                Builds</a></li>
+                                </ul>
+                                <h2
+                                id="environment-diversity-as-code">Environment
+                                diversity as code</h2>
+                                <p>Infrastructure as code is about
+                                provisioning execution resources through
+                                executable configuration files. In this
+                                context, the execution of program
+                                provisions a whole environment to
+                                execute an application. A variation of
+                                the same program will provision a
+                                different environment to run the same
+                                application. In this project the student
+                                will explore transformations for
+                                infrastructure as code with the
+                                intention of creating a moving target at
+                                the environment level. We consider using
+                                Modus to define the infrastructure.</p>
+                                <ul>
+                                <li><a
+                                href="https://www.redhat.com/en/topics/automation/what-is-infrastructure-as-code-iac">What
+                                is Infrastructure as Code
+                                (IaC)?</a></li>
+                                <li><a
+                                href="https://ieeexplore.ieee.org/document/6673500">Finding
+                                focus in the blur of moving-target
+                                techniques</a></li>
+                                <li><a
+                                href="https://github.com/modus-continens/modus">https://github.com/modus-continens/modus</a></li>
+                                </ul>
+                                <h2
+                                id="diversifying-a-package-registry">Diversifying
+                                a package registry</h2>
+                                <p>Dependency confusion is a growing
+                                threat for software supply chains. This
+                                attack consists in uploading malicious
+                                packages on public repositories, which
+                                will eventually be packaged in
+                                applications, through dependency
+                                resolution mechanisms. In this work, we
+                                will explore the automatic randomization
+                                of instructions in private npm
+                                registries to mitigate dependency
+                                confusion. The student will deploy a
+                                local npm registry and a instruction
+                                randomization scheme, along with the
+                                adaptation of the javascript engine to
+                                correctly execute the randomized
+                                packages.</p>
+                                <ul>
+                                <li><a
+                                href="https://www.schneier.com/blog/archives/2021/02/dependency-confusion-another-supply-chain-vulnerability.html">Dependency
+                                Confusion: Another Supply-Chain
+                                Vulnerability</a></li>
+                                <li><a
+                                href="https://web.archive.org/web/20220125055207/https://polyverse.com/blog/npm-node-js-code-injection-attack/">Polyscripting
+                                to mitigate dependency
+                                confusion</a></li>
+                                <li><a
+                                href="http://www.sis.pitt.edu/jjoshi/courses/IS2620/Spring09/Kc.pdf">Countering
+                                code-injection attacks with
+                                instruction-set randomization</a></li>
+                                <li><a
+                                href="https://dl.acm.org/doi/abs/10.1145/3136825.3136900">Internal
+                                interface diversification with multiple
+                                fake interfaces</a></li>
+                                </ul>
+                                <h2
+                                id="hardening-transformations-for-rust">Hardening
+                                transformations for Rust</h2>
+                                <p>Rust is growing for systems
+                                programming and so is the necessity for
+                                safety and security in Rust. Source to
+                                source transformations have been used to
+                                harden programs through obfuscation,
+                                diversification and randomization.
+                                Tigress is the state of the art toolbox
+                                for source transformations in C. In this
+                                project we experiment with Tigress
+                                transformations in Rust, focusing on
+                                transformations that randomize Rust
+                                control or data flow at runtime.</p>
+                                <ul>
+                                <li><a
+                                href="https://dl.acm.org/doi/pdf/10.1145/3624738?casa_token=qvuoCJx8XbgAAAAA:8jua6WscYBUAE0mC7RxHSk_vqbGximwGCGCwH6pLEs2a7f6ZM17Aie2780JJzP6YJ-p6d6w2Zm13">A
+                                closer look at the security risks in the
+                                rust ecosystem</a></li>
+                                <li><a
+                                href="https://tigress.wtf/transformations.html">tigress</a></li>
+                                <li><a
+                                href="https://dl.acm.org/doi/10.1145/3624309.3624320">Source-to-Source
+                                Code Transformation on Rust for
+                                High-Level Stream Parallelism</a></li>
+                                <li><a
+                                href="https://lib.rs/crates/crusts">CRustS
+                                - Transpiling Unsafe C code to Safer
+                                Rust</a></li>
+                                <li><a
+                                href="https://www.usenix.org/system/files/sec22-schloegel.pdf">Loki:
+                                Hardening code obfuscation against
+                                automated attacks</a></li>
+                                <li><a
+                                href="https://github.com/google/rerast">https://github.com/google/rerast</a></li>
+                                </ul>
+                                <h2
+                                id="dependencies-diversification-in-java">Dependencies
+                                diversification in Java</h2>
+                                <p>Software projects integrate a large
+                                number of third-party libraries. While
+                                this massive reuse is beneficial for
+                                software development the reuse of a
+                                handful of libraries across millions of
+                                projects (e.g. Log4J) is a security and
+                                safety liability. One option to mitigate
+                                this riks consists in lifting software
+                                diversification at the level of
+                                dependencies. In this project we develop
+                                novel transformations for projects that
+                                reuse very popular libraries so that
+                                they can randomly switch to compatible
+                                alternative libraries, at build
+                                time.</p>
+                                <ul>
+                                <li><a
+                                href="https://ieeexplore.ieee.org/iel7/9700160/9700163/09700248.pdf">The
+                                behavioral diversity of java json
+                                libraries</a></li>
+                                <li><a
+                                href="https://core.ac.uk/download/pdf/195311860.pdf">Darwinian
+                                data structure selection</a></li>
+                                <li><a
+                                href="https://hehao98.github.io/files/2021-migration-empirical.pdf">A
+                                large-scale empirical study on Java
+                                library migrations: prevalence, trends,
+                                and rationales</a></li>
+                                <li><a
+                                href="http://www1.cs.columbia.edu/~locasto/projects/candidacy/papers/boyd2004sqlrand.pdf">SQLrand:
+                                Preventing SQL injection
+                                attacks</a></li>
+                                <li><a
+                                href="https://github.com/INRIA/spoon">https://github.com/INRIA/spoon</a></li>
+                                </ul>
+                                <h2
+                                id="bundler-diversity-for-debloating-javascript">Bundler
+                                diversity for debloating JavaScript</h2>
+                                <p>JavaScript is the most used
+                                programming language for the development
+                                of web applications. Once the web
+                                application grows, so does the bundle
+                                size, primarily due to all its
+                                third-party dependencies. A bundler is a
+                                tool that transforms all the JavaScript
+                                code and its dependencies into a new
+                                output file with everything merged
+                                (including other files such as HTML,
+                                CSS, and PNG). There are many
+                                production-ready JavaScript bundlers
+                                (e.g., Webpack, Rollup, Browserify,
+                                ESbuild, and Parcel). They can perform
+                                optimizations and minifications on the
+                                bundle, such as tree shaking, scope
+                                hoisting, bundle splitting, and
+                                minifying. However, the size reduction
+                                achieved by a bundler is limited by its
+                                own code minimization technique. The
+                                student will perform an experimental
+                                study to leverage the diversity of
+                                JavaScript bundlers in order to reduce
+                                the original code size of applications
+                                while keeping the functionality required
+                                to pass all test cases in their test
+                                suites.</p>
+                                <ul>
+                                <li><a
+                                href="https://www.sciencedirect.com/science/article/pii/S0950584918302210?casa_token=yJJKp5Ezg9cAAAAA:OLCG_6pEJ7Vr-gGfXlFwNH-XSXfshkQxNWTHzsi1iX6HZZa6NFy5o25hmQDg8XXtA0strbwa8g">Slimming
+                                JavaScript Applications: An Approach for
+                                Removing Unused Functions From
+                                JavaScript libraries</a></li>
+                                <li><a
+                                href="https://ieeexplore.ieee.org/iel7/32/9512528/08762190.pdf?casa_token=_XMIY-_AEq4AAAAA:JizmVj45cJN9ptyoBRLPyYGX-N-l5k2gerhJ9KTR5cyjdAcTwtxnZe65A56xyToehks7SNk-dSOP">Evolving
+                                JavaScript Code to Reduce Load
+                                Time</a></li>
+                                <li><a
+                                href="https://arxiv.org/pdf/2405.17939">Detecting
+                                and removing bloated dependencies in
+                                CommonJS packages</a></li>
+                                <li><a
+                                href="https://webpack.js.org/guides/tree-shaking/">https://webpack.js.org/guides/tree-shaking/</a></li>
+                                </ul>
+                                <h2
+                                id="tampering-with-test-results">Tampering
+                                with test results</h2>
+                                <p>The large open source software supply
+                                chains of many applications have turned
+                                open source repositories into targets of
+                                choice for the introduction of malicious
+                                code. As mature open source projects use
+                                continuous integration, stealthy code
+                                tampering should also ensure that the
+                                test suite passes. While the
+                                modification of the test suite might
+                                appear as red flag to the open source
+                                community, another solution consists in
+                                forging the test results. For example, a
+                                change in the continuous integration
+                                pipeline can turn some failing test
+                                cases into passing ones. In this work,
+                                we investigate different strategies to
+                                forge test suite results in order to
+                                mask ill-intended changes in the source
+                                code.</p>
+                                <ul>
+                                <li><a
+                                href="https://www.usenix.org/conference/usenixsecurity16/technical-sessions/presentation/torres-arias">On
+                                Omitting Commits and Committing
+                                Omissions: Preventing Git Metadata
+                                Tampering That (Re)introduces Software
+                                Vulnerabilities</a></li>
+                                <li><a
+                                href="https://www.usenix.org/system/files/sec19-torres-arias.pdf">in-toto:
+                                Providing farm-to-table guarantees for
+                                bits and bytes</a></li>
+                                </ul>
+                                <h2
+                                id="learning-based-software-substitutability">Learning-based
+                                software substitutability</h2>
+                                <p>Software substitutability is a
+                                property which measures how readily a
+                                software component can be replaced by a
+                                different but equivalent component. In
+                                software supply chains it is critical
+                                for faulty or vulnerable components to
+                                be replaced as quickly as possible.
+                                However, software substitutes might not
+                                be immediately available. Generative AI
+                                tools may be used to efficiently produce
+                                software substitutes in diverse
+                                programming languages/paradigms. In this
+                                work, we assess the feasibility of using
+                                generative AI tools to enhance
+                                substitutablity of components in
+                                software supply chains.</p>
+                                <ul>
+                                <li><a
+                                href="https://dl.acm.org/doi/pdf/10.1145/3490099.3511157?casa_token=kooTF59aoC4AAAAA:0MjgRH-Rpzd6_ni7ceJt6lf9G5Vgo5KraSvULJPiCvfs6FbTidRGe3PbbX3mAuH1chnXIBj0zmEj">Better
+                                Together? An Evaluation of AI-Supported
+                                Code Translation</a></li>
+                                <li><a
+                                href="https://www.sciencedirect.com/science/article/pii/S1571066108003654/pdf?md5=d22148de7199440a6cd845666b696f7b&amp;pid=1-s2.0-S1571066108003654-main.pdf">Formalization
+                                of Component Substitutability</a></li>
+                                <li><a
+                                href="https://arxiv.org/pdf/2408.09536">Galapagos:
+                                Automated N-Version Programming with
+                                LLMs</a></li>
+                                </ul>
+                                <h2
+                                id="dependencies-targeted-test-suite-augmentation">Dependencies-targeted
+                                test suite augmentation</h2>
+                                <p>Software developers dedicate
+                                considerable efforts in implementing
+                                strong test suites that exercise and
+                                verify the behavior of their project.
+                                Yet, developer written tests usually
+                                perform poorly when considering the
+                                coverage of third-party dependencies.
+                                This is because the intention of these
+                                tests is not to verify the behavior of
+                                dependencies. In this work we explore
+                                novel test generation techniques that
+                                aim at increasing the coverage of a
+                                project’s software supply chain. This
+                                novel tests shall help in enhancing the
+                                dynamic transparency of the supply chain
+                                and in improving reachability
+                                analysis.</p>
+                                <ul>
+                                <li><a
+                                href="https://web.eecs.umich.edu/~movaghar/Automatic%20Test%20Generation%20Meta%202024.pdf">Automated
+                                unit test improvement using large
+                                language models at meta</a></li>
+                                <li><a
+                                href="https://arxiv.org/pdf/2012.01198">Production
+                                Monitoring to Improve Test
+                                Suites</a></li>
+                                <li><a
+                                href="https://lingming.cs.illinois.edu/publications/icse2020a.pdf">Taming
+                                behavioral backward incompatibilities
+                                via cross-project testing and
+                                analysis</a></li>
+                                <li><a
+                                href="https://arxiv.org/pdf/1705.10692">A
+                                Snowballing Literature Study on Test
+                                Amplification</a></li>
+                                </ul>
+                                <h1 id="software-for-the-arts">Software
+                                for the arts</h1>
+                                <h2
+                                id="neuro-renovation-of-software-based-artworks">Neuro-renovation
+                                of software-based artworks</h2>
+                                <p>Software-based artworks are
+                                performative: the tangible elements of
+                                such works are created on the fly when
+                                code executes. If the runtime
+                                environments of the artwork evolves or
+                                even stops being maintained, then the
+                                artwork disappears. For example, many
+                                artworks from the 2000’s relied on Java
+                                applets as a runtime, and now need to be
+                                ported to a new environment. The Whitney
+                                museum ported its CODeDOC artworks from
+                                applets to p5.js. In this work, we
+                                explore the ability of Large Language
+                                Models at renovating software-based
+                                artworks, starting with Java applets
+                                artworks to be renovated into pieces
+                                that can perform in modern web
+                                browsers.</p>
+                                <ul>
+                                <li><a
+                                href="https://resources.culturalheritage.org/emg-review/volume-5-2017-2018/ensom/">Revealing
+                                Hidden Processes: Instrumentation and
+                                Reverse Engineering in the Conservation
+                                of Software-based Art</a></li>
+                                <li><a
+                                href="https://arxiv.org/pdf/2404.14646">Exploring
+                                and Unleashing the Power of Large
+                                Language Models in Automated Code
+                                Translation</a></li>
+                                <li><a href="">dataset of CODeDOC
+                                artworks ported to p5</a>;</li>
+                                <li><a
+                                href="https://whitney.org/exhibitions/codedoc">codedoc</a></li>
+                                <li><a
+                                href="https://microsoftedge.microsoft.com/addons/detail/cheerpj-applet-runner/ebfcpaoldmijengghefpohddmfpndmic?url=hot.copypasteads.com%2Fgirls">CheerpJ</a></li>
+                                </ul>
+                                <h2
+                                id="reproducibility-of-fxhash-artworks">Reproducibility
+                                of fx(hash) artworks</h2>
+                                <p>Many generative artists distribute
+                                their work online, as NFTs. <a
+                                href="https://www.fxhash.xyz">fx(hash)</a>
+                                is a large platform where artists can
+                                publish their NFTs, either on Tezos or
+                                Ethereum. To do so, they publish the
+                                source code as well as various metadata
+                                for their artwork. The source code is
+                                stored on IPFS and is executed each time
+                                someone wants to view the piece. When a
+                                buyer acquires one specific instance of
+                                the pieces all the parameters to rerun
+                                this exact instance are stored on chain.
+                                This software architecture is prone to
+                                different risks: the link between
+                                onchain data and IPFS can be lost, the
+                                javascript environment of the buyer can
+                                evolve. In this project, we investigate
+                                different techniques to mitigate these
+                                risks and improve the reproducibility
+                                and preservation of artworks.</p>
+                                <ul>
+                                <li><a
+                                href="https://www.tandfonline.com/doi/pdf/10.1179/2047058413Y.0000000115">Reading
+                                between the lines: Source code
+                                documentation as a conservation strategy
+                                for software-based art</a></li>
+                                <li><a
+                                href="https://dl.acm.org/doi/pdf/10.1145/3543507.3583281?casa_token=KaKXxXGRw50AAAAA:L88EzZbNI2UpC-yi4quVvAgQNDlPC-u6SHQMKPbBMyw8cwHTPe-uY-2whVoYKe02o6bj3MftRQgC">Do
+                                NFTs’ Owners Really Possess their
+                                Assets? A First Look at the NFT-to-Asset
+                                Connection Fragility</a></li>
+                                </ul>
+                                <h2
+                                id="code-as-cool-shareable-medium">Code
+                                as cool, shareable medium</h2>
+                                <p>Generative artists write code, run
+                                code, tweak code in order to generate
+                                artworks. Many artists share the
+                                artworks on online platforms, such as
+                                instagram or bandcamp. Sometimes,
+                                artists also share the code. Sharing
+                                code can have mutliple meanings: cool
+                                medium, transparency, sharing,
+                                traceability. In this project, we
+                                explore the code that is shared on these
+                                platforms as well as the different
+                                motivations of artists for sharing
+                                code.</p>
+                                <ul>
+                                <li><a
+                                href="https://spectrum.library.concordia.ca/id/eprint/992759/1/Thow_MA_F2023.pdf">Bandcamp,
+                                SoundCloud, and the Digital Underground:
+                                Exploring Curatorial Practice Across
+                                Independent Music Platforms</a></li>
+                                <li><a
+                                href="https://www.instagram.com/p/DI9QDIaRxUH/?img_index=4&amp;igsh=MTZhdXFxdmNydjlucQ==">open
+                                source software alternatives for art
+                                &amp; design</a></li>
+                                <li><a
+                                href="https://www.instagram.com/p/DI9QDIaRxUH/?img_index=4&amp;igsh=MTZhdXFxdmNydjlucQ==">live
+                                code on insta</a></li>
+                                <li><a
+                                href="https://www.instagram.com/p/DI9QDIaRxUH/?img_index=4&amp;igsh=MTZhdXFxdmNydjlucQ==">live
+                                coding on bandcamp</a></li>
+                                </ul>
+                                <h2
+                                id="automatic-documentation-of-generative-artworks">Automatic
+                                documentation of generative
+                                artworks</h2>
+                                <p>Many algorithmic works rely on
+                                third-party libraries (e.g. p5.js),
+                                system level interfaces (e.g. GLSL),
+                                low-level drivers to connect to diverse
+                                hardware devices or online APIs
+                                (e.g. translation of geolocation). These
+                                rich assemblies of various software
+                                packages support setting up interactive,
+                                immersive artworks. Using advanced
+                                software observability and runtime
+                                monitoring, we investigate how to
+                                instrument live artworks and to produce
+                                precise digital documentation. This
+                                documentation will capture intricate
+                                parametric design workflows, hardware
+                                interactions, and dynamic environmental
+                                responses, ensuring detailed
+                                preservation of algorithmic methods—not
+                                merely their final outputs.</p>
+                                <ul>
+                                <li><a
+                                href="https://www.tandfonline.com/doi/pdf/10.1179/2047058413Y.0000000115">Reading
+                                between the lines: Source code
+                                documentation as a conservation strategy
+                                for software-based art</a></li>
+                                <li><a
+                                href="https://arxiv.org/pdf/2012.01198">Production
+                                monitoring to improve test
+                                suites</a></li>
+                                <li><a
+                                href="https://mediarep.org/bitstream/doc/14111/1/Digital_Art_Looking_Glass_271-287_Preservation_of_Software-based_Art.pdf">Preservation
+                                of software-based art at Tate</a></li>
+                                <li><a
+                                href="https://arxiv.org/pdf/2408.00411">Low-level
+                                I/O Monitoring for Scientific
+                                Workflows</a></li>
+                                </ul>
+                                <h2
+                                id="energy-harvesting-for-portable-pen-plotter">Energy
+                                harvesting for portable pen plotter</h2>
+                                <p>Pen plotters are programmable
+                                machines that can draw and that are
+                                currently mostly used by artists who use
+                                code as a medium. Plotters are usually
+                                used in an artist studio where a
+                                computer sends instructions to the
+                                machine to draw and where power is
+                                readily availabe. For field artists who
+                                like to practice and perform in outdoors
+                                environment, we wish to build a portable
+                                pen plotter. In order to offer the best
+                                portability experience, should not need
+                                to carry batteries for the plotter or
+                                the controller. This is why we also
+                                explore energy haresting technology to
+                                power the portable pen plotter.</p>
+                                <ul>
+                                <li><a
+                                href="https://ieeexplore.ieee.org/document/10574501">Programming
+                                Art With Drawing Machines</a></li>
+                                <li><a
+                                href="https://link.springer.com/content/pdf/10.1007/978-1-4419-7566-9.pdf">Energy
+                                harvesting systems</a></li>
+                                <li><a
+                                href="https://kth.diva-portal.org/smash/get/diva2:1710475/FULLTEXT01.pdf">Generate
+                                Power, Generate Art</a></li>
+                                <li><a
+                                href="https://ieeexplore.ieee.org/iel8/10624685/10624738/10625005.pdf">Automatic
+                                Miniature CNC Plotter Machine</a></li>
+                                <li><a
+                                href="https://futajeet.ng/manager/papers/paper_18_1721307460.pdf">Design
+                                of an Arduino-Based Pen Plotter
+                                System</a></li>
+                                </ul>
+                                <h2
+                                id="the-diversity-of-live-coding-practices">The
+                                diversity of live coding practices</h2>
+                                <p>Digital art is a kind of performance.
+                                As long as software runs art is
+                                performed. Yet, generative artists
+                                approach this performative medium in
+                                different ways. Some artists craft the
+                                code in their studio and let the machine
+                                perform the artwork in a gallery, in a
+                                web browser or on the blockchain. Some
+                                other artists perform the act of coding
+                                itself. This practice is known as live
+                                coding. It can be an individual
+                                practice, as well as a group practice,
+                                from Seoul to Bogota. The code is
+                                written live, projected on screen as an
+                                overlay on top of generated images and
+                                sound. In this project, we study the
+                                programming paradigms and abstractions
+                                that live coders use, as well as the
+                                code sharing and communities that are
+                                involved in this artistic practice.</p>
+                                <ul>
+                                <li><a
+                                href="https://unframed.lacma.org/2024/11/13/digital-art-kind-performance-qa-casey-reas">Digital
+                                art is a kind of performance</a></li>
+                                <li><a
+                                href="https://blog.toplap.org/nodes/">Diverse
+                                live coding communities</a></li>
+                                <li><a
+                                href="https://github.com/rethread-studio/algorithmic-art-course/issues/9">Diverse
+                                live coding libraries</a></li>
+                                <li><a
+                                href="https://www.cambridge.org/core/services/aop-cambridge-core/content/view/08F42B84BBCA427C345030481A3DDA0D/S135577180300030Xa.pdf/div-class-title-live-coding-in-laptop-performance-div.pdf">Live
+                                coding in laptop performance</a></li>
+                                </ul>
+                                <h2 id="live-pen-plotting">Live pen
+                                plotting</h2>
+                                <p>The practice of generative art is
+                                performative: an artist develops a
+                                program, and only when the program
+                                executes, i.e., performs, the artwork
+                                exists. Consequently, the artwork never
+                                exists on a physical memory and one
+                                instance can never be seen again. In the
+                                current practice of penplotting and
+                                generative art, it is usually necessary
+                                to save the generated image on disk
+                                before it is passed to the pen plotter.
+                                This storage of the performed artwork is
+                                not elegant in the realm of generative
+                                art. In this project, we design and
+                                build a system where an image that is
+                                performed as part of a generative
+                                artwork is streamed live to the plotter,
+                                avoiding the generation of the image
+                                file and preserving the performing
+                                mindset of generative art. Eventually,
+                                the technology can recreate the <a
+                                href="https://www.v3ga.net/dicegl/">DiceGL</a>
+                                setup.</p>
+                                <ul>
+                                <li><a
+                                href="https://www.cambridge.org/core/services/aop-cambridge-core/content/view/08F42B84BBCA427C345030481A3DDA0D/S135577180300030Xa.pdf/div-class-title-live-coding-in-laptop-performance-div.pdf">Live
+                                coding in laptop performance</a></li>
+                                <li><a
+                                href="https://ieeexplore.ieee.org/iel8/10624685/10624738/10625005.pdf">Automatic
+                                Miniature CNC Plotter Machine</a></li>
+                                <li><a
+                                href="https://muse.jhu.edu/article/929863">Programmable
+                                Analogue Drawing Machines,
+                                1952–2023</a></li>
+                                <li><a
+                                href="https://dl.acm.org/doi/pdf/10.1145/3613905.3650966">Playing
+                                the Print: MIDI-Based Fabrication
+                                Interfaces to Explore and Document
+                                Material Behavior</a></li>
+                                </ul>
+                                <h2
+                                id="keeping-it-old-backporting-updates-to-legacy-artworks">Keeping
+                                it old: backporting updates to legacy
+                                artworks</h2>
+                                <p>Digital art is made to perform in an
+                                environment that evolves: OS patches,
+                                drivers for interaction, libraries that
+                                evolve or even disappear, etc. It is not
+                                always possible to update this
+                                environment as some elements such as
+                                screen resolution, hardware
+                                architecture, I/O might not be
+                                compatible with latest versions. In
+                                order for the artwork to benefit from
+                                the latest software patches, they need
+                                to be backported to the legacy project.
+                                In this project, we explore backporting
+                                practices in the specific context of
+                                legacy interactive artworks.</p>
+                                <ul>
+                                <li><a
+                                href="https://inria.hal.science/hal-01355859/file/icsme_hal.pdf">Recommending
+                                code changes for automatic backporting
+                                of Linux device drivers</a></li>
+                                <li><a
+                                href="https://core.ac.uk/download/pdf/84774749.pdf">Transforming
+                                C++11 Code to C++03 to Support Legacy
+                                Compilation Environments</a></li>
+                                </ul>
+                                <h2
+                                id="the-software-supply-chain-of-generative-art">The
+                                software supply chain of generative
+                                art</h2>
+                                <p>Artists use advanced software
+                                technology to produce, distribute and
+                                generate artworks. Such software
+                                technology includes libraries for sound
+                                synthesis, visual art, augmented
+                                reality, as well as platforms to
+                                distribute artworks. In this work, we
+                                dive deep in this software ecosystem to
+                                draw a systematic landscape of the
+                                software supply chain for generative
+                                art. Our goal is to reveal the open
+                                source software foundations of this
+                                artistic practice, credit the key
+                                contributors and recognize the
+                                specificities of open source communities
+                                in the arts.</p>
+                                <ul>
+                                <li><a
+                                href="https://supercollider.github.io/">Supercollider</a></li>
+                                <li><a
+                                href="https://openframeworks.cc/">OpenFrameworks</a></li>
+                                <li><a
+                                href="https://processing.org/">Processing</a></li>
+                                <li><a
+                                href="https://www.fxhash.xyz/">fxhash</a></li>
+                                <li><a
+                                href="https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.715.455&amp;rep=rep1&amp;type=pdf">The
+                                Evolution of Project Inter-dependencies
+                                in a Software Ecosystem: The Case of
+                                Apache</a></li>
+                                <li><a
+                                href="https://arxiv.org/pdf/2501.13644">Myriad
+                                People Open Source Software for New
+                                Media Arts</a></li>
+                                </ul>
+                                <h1 id="software-journeys">Software
+                                journeys</h1>
+                                <h2
+                                id="automatic-generation-of-1-million-libc">Automatic
+                                generation of 1 Million libc</h2>
+                                <p>libc is at the core of most software
+                                stacks, but it is fragile, prone to
+                                critical vulnerabilities [1]. In this
+                                work we explore a combination of
+                                techniques to generate large amounts of
+                                diverse implementations of libc [2]. The
+                                student will combine the abundant
+                                combinations of flags of C compilers
+                                [3], with state of the art code
+                                transformation and obfuscation
+                                techniques [4] to generate many libs
+                                variants.</p>
+                                <ul>
+                                <li><a
+                                href="https://en.wikipedia.org/wiki/C_standard_library">The
+                                C standard library</a></li>
+                                <li><a
+                                href="https://forrest.biodesign.asu.edu/data/publications/1997-hotos-diversity.pdf">Building
+                                diverse computer systems</a></li>
+                                <li><a
+                                href="https://www.spec.org/cpu2017/flags/gcc.html">gcc
+                                flags</a></li>
+                                <li><a
+                                href="https://tigress.wtf/transformations.html">Tigress</a></li>
+                                </ul>
+                                <h2
+                                id="superdiversifying-sha256">Superdiversifying
+                                SHA256</h2>
+                                <p>Software diversity increases the
+                                robustness of software systems [1].
+                                Through various transformations and
+                                randomization, it is possible to
+                                automatically generate variants of a
+                                program. These variants should have
+                                minimal impact on convenience,
+                                usability, and efficiency. Meanwhile,
+                                each variant should not be sensible to
+                                the same bug or vulnerability. In this
+                                project, we explore the large-scale
+                                diversification of SHA256 [2]. This
+                                family of hashing functions is essential
+                                for cryptography, and hence a critical
+                                feature for security. The student will
+                                investigate superdiversification [3] and
+                                the composition of multiple
+                                diversification techniques, in order to
+                                synthesize large amounts of variants for
+                                an implementation of SHA256.</p>
+                                <ul>
+                                <li><a
+                                href="https://forrest.biodesign.asu.edu/data/publications/1997-hotos-diversity.pdf">Building
+                                diverse computer systems</a></li>
+                                <li><a
+                                href="https://web.archive.org/web/20160330153520/http://www.staff.science.uu.nl/~werkh108/docs/study/Y5_07_08/infocry/project/Cryp08.pdf">On
+                                the Secure Hash Algorithm
+                                family</a></li>
+                                <li><a
+                                href="ftp://nozdr.ru/biblio/kolxoz/Cs/CsLn/Advances%20in%20Information%20and%20Computer%20Security,%203%20conf.,%20IWSEC%202008(LNCS5312,%20Springer,%202008)(ISBN%209783540895978)(308s).pdf#page=110">The
+                                superdiversifier: - Peephole
+                                individualization for software
+                                protection</a></li>
+                                </ul>
+                                <h2
+                                id="github-repositories-with-literary-references">Github
+                                repositories with literary
+                                references</h2>
+                                <p>Github repositories are rich sources
+                                of code, documentation and discussions.
+                                They also contain amazing resources such
+                                as images, sound snippets, texts or
+                                references. A recent study has analyzed
+                                the presence of links to academic papers
+                                in Github repositories. This study
+                                reveals the critical importance of
+                                linking code, data and publications to
+                                improve replication in computational
+                                science. In this work we wish to explore
+                                literary references in Github. For
+                                example, references to Bob Dylan cited
+                                in C code or novel quotes in comments,
+                                <code>perl -le’$_=`perldoc -T perlfaq4`,s/^.*N;(.*?)E.*$/$1/s,print’</code>.</p>
+                                <p>The study seeks to unveil the deep
+                                connection of Github with culture and
+                                society and to analyze the role of
+                                literature on software development.</p>
+                                <ul>
+                                <li><a
+                                href="https://arxiv.org/pdf/2004.00199">GitHub
+                                Repositories with Links to Academic
+                                Papers: Open Access, Traceability, and
+                                Evolution</a></li>
+                                <li><a
+                                href="https://www.nature.com/articles/d41586-019-03895-5">This
+                                AI researcher is trying to ward off a
+                                reproducibility crisis</a></li>
+                                </ul>
+                                <h2 id="easter-egg-vm-flag">Easter egg
+                                VM flag</h2>
+                                <p>Easter eggs, sometimes called the
+                                final frontier of software development
+                                [10]. (Except that of course you can’t
+                                have a final frontier, because there’d
+                                be nothing for it to be a frontier to,
+                                but as frontiers go, it’s pretty
+                                penultimate . . .) [269696]. And against
+                                the wash of continuous integration a
+                                commit hangs, bloated and poetic, one
+                                single, cool contribution, gleaming like
+                                the madness of gods. Nearly unreal.
+                                Reality is not digital, an on-off state,
+                                but analog. Easter eggs are for lovers
+                                and for the mind. Not enterprise, nor a
+                                resurrection, they cherish enchantment
+                                and freedom. In the quest for technology
+                                and Mastery, you will add an extra mile
+                                to the frontier with a new Easter flag
+                                for an extraordinary virtual machine
+                                [42].</p>
+                                <p>[42] java
+                                -XX:+UnlockDiagnosticVMOptions
+                                -XX:+PrintFlagsFinal -version [10] <a
+                                href="https://github.com/OrkoHunter/python-easter-eggs">Curated
+                                list of all the easter eggs and hidden
+                                jokes in Python</a> [0] <a
+                                href="http://rethread.art/easter-eggs.pdf">Long
+                                Live Software Easter Eggs!</a> [269696]
+                                Moving Pictures. T. Pratchett. 1990, on
+                                Monday afternoon, just before tea.</p>
+                                <h2
+                                id="paint-splatters-perl-programs-remix">Paint
+                                Splatters &amp; Perl Programs
+                                (remix)</h2>
+                                <p>In 2019, Colin Mc Millen and Tim
+                                Toady ran an experiment to answer one
+                                question: is it possible to smear paint
+                                on the wall without creating valid Perl?
+                                This is an essential question at the
+                                forefront of art / computing frontier.
+                                In this project, we will reproduce Mc
+                                Millen’s experiment, starting with the
+                                curated dataset provided by the authors.
+                                We will then elaborate on the findings
+                                with original splatters and an
+                                exploration of Perl’s diverse ecosystem.
+                                We eventually thoroughly settle the
+                                question of whether coffee stains are
+                                better Perl programs than paint
+                                splatters.</p>
+                                <ul>
+                                <li><a
+                                href="https://www.mcmillen.dev/sigbovik/2019.pdf">93%
+                                of Paint Splatters are Valid Perl
+                                Programs</a></li>
+                                <li><a
+                                href="https://www.mcmillen.dev/sigbovik/splatters.tar.gz">100
+                                paint splatter images</a></li>
+                                <li><a
+                                href="https://www.activestate.com/blog/introduction-to-perl-ecosystem/">the
+                                Perl ecosystem</a></li>
+                                <li><a
+                                href="https://ctan.org/pkg/coffeestains">coffestains</a></li>
+                                </ul>
+            </div>
+        </div>
+    </div>
+        <script>
+        document.getElementById('top-title').addEventListener('mouseenter', function() {
+    draw();
+});
+        document.getElementById('toc-software-supply-chain').addEventListener('mouseenter', function() {
+    draw();
+});
+        document.getElementById('toc-software-technology-for-the-arts').addEventListener('mouseenter', function() {
+    draw();
+});
+
+    </script>
+</body>

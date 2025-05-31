@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="aerial.css">
+    <title>Crew</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.3/p5.min.js"></script>
+    <script src="gen.js"></script>
+</head>
+
+<body>
+    <div class="split-container">
+        <div class="split-left" , id="left-side">
+        </div>
+        <div class="split-right">
+            <div class="navbar">
+                <a href="./index.html">trench</a>
+                <a href="./crew.html">crew</a>
+                <a href="./research.html">research</a>
+                <a href="./teaching.html">teaching</a>
+                <a href="./contact.html">contact</a>
+            </div>
+            <div class="main">
+                <h1>Teaching</h1>
+                <p>
+                    Since joining <a  id="hover-link-u" href="https://www.umontreal.ca/">Université de Montréal</a>, I teach a graduate course in winter and a bachelor course in the fall.
+                </p>
+                <ul>
+                    <li>
+                        Winter 2025: IFT6251. <a href="https://github.com/rethread-studio/algorithmic-art-course/tree/2025">Art algorithmique</a>
+                    </li>
+                    <li>
+                        Fall 2024: IFT391. <a href="https://github.com/umontreal-diro/IFT3913">Métriques et qualité logicielle</a>
+                    </li>
+                    <li>
+                        Winter 2024: IFT6251. <a href="https://github.com/rethread-studio/algorithmic-art-course/tree/2024">Art algorithmique</a>
+                    </li>
+                </ul>
+                <p>
+                    At <a  id="hover-link-k" href="https://www.kth.se/">KTH</a> I have been teaching the <a href="https://github.com/KTH/devops-course/">DevOps</a> course and the first edition of the <a href="https://github.com/KTH/programmable-society/">Programmable society</a> course.
+                </p>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById('hover-link-u').addEventListener('mouseenter', function () {
+            draw();
+        });
+        document.getElementById('hover-link-k').addEventListener('mouseenter', function () {
+            draw();
+        });
+    </script>
+</body>
