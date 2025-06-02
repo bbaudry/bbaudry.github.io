@@ -5,11 +5,6 @@ resources used to design this site:
 - for a potential easter egg: use the emoji cursor for a few seconds: https://codepen.io/tholman/pen/rxJpdQ
 - fixed top nav bar: https://www.w3schools.com/howto/howto_css_fixed_menu.asp
 - div inside div: https://stackoverflow.com/questions/17620355/how-to-position-divs-within-another-div
-
-- current bugs / glitches
-  - h3 a does tunr orange on hover
-  - changing font style and size has no effect in navbar:a
-  - with a narrow browser window, the height of the right column does not adjust to with a scroll bar, even with height:auto in split-right
 */
 
 body {
