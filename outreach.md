@@ -4,7 +4,7 @@ title: 'Outreach'
 
 ## Invited Talks
 
--   [Amplifying Diversity in Code and Execution](https://github.com/bbaudry/zkm-software-diversity). Invited talk in the [Conversations on Art and Media](https://hfg-karlsruhe.de/aktuelles/conversations-on-art-and-media-266-2000-hfg-lichtbruecke-benoit-baudry-kth-stockholm-software-diversity/) series at ZKM, 2025.
+-   [Amplifying Diversity in Code and Execution](https://github.com/bbaudry/zkm-software-diversity). Invited talk in the [Conversations on Art and Media](https://hfg-karlsruhe.de/aktuelles/conversations-on-art-and-media-266-2000-hfg-lichtbruecke-benoit-baudry-kth-stockholm-software-diversity/) series at the[HfG Karlsruhe University of Arts and Design](https://hfg-karlsruhe.de/), 2025.
 -   [Code that Generates Visual Art](https://conf.researchr.org/details/scam-2024/SCAM-2024-research-track/27/SCAM-VISSOFT-Keynote-Code-that-Generates-Visual-Art). Keynote at [SCAM + VISSOFT](https://conf.researchr.org/info/scam-2024/keynotes), 2024
 -   La chaîne d'approvisionnement logicielle. Keynote at [addiroum](https://www.addiroum.org/civicrm/event/info?reset=1&id=23), 2024
 -   Le renforcement de la chaîne d'approvisionnement logicielle. Keynote at [IMC2](https://www.eventbrite.ca/e/billets-benoit-baudry-le-renforcement-de-la-chaine-dapprovisionnement-logicielle-1005463547537?aff=oddtdtcreator), 2024
