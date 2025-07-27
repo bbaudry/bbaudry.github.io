@@ -68,3 +68,6 @@ pandoc -s --toc=true  --template=topics-template.html  topics.md -o topics.html
 
 echo "Generate list of outreach actions"
 pandoc -s  --toc=true  --template=outreach-template.html  outreach.md -o outreach.html
+
+echo "Generate list of grants"
+pandoc -s  --toc=true  --template=grants-template.html  grants.md -o grants.html
