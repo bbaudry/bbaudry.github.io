@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="aerial.css">
-    <title>Crew</title>
+    <title>Research</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.3/p5.min.js"></script>
     <script src="gen.js"></script>
 </head>
@@ -23,20 +23,28 @@
                 <a href="./contact.html">contact</a>
             </div>
             <div class="main">
-                <h1 id="hover-link-h">Research</h1>
-                <p>
-                    I do research in <a id="hover-link-t" href="testpublications.html">software testing</a>, 
-                    <a href="diversitypublications.html">software diversification</a>, 
-                    <a href="supplychainpublications.html">software supply chain</a> and 
-                    <a href="artpublications.html">generative art</a> 
-                    I publish in <a id="hover-link-j" href="journalpublications.html">journals</a> 
-                    and in <a id="hover-link-c" href="conferencepublications.html">conference proceedings</a>. 
-                    You can browse a list of <a id="hover-link-s" href="selectedpublications.html">selected publications</a> or the 
-                    <a href="awardpublications.html">awarded publications</a>
-                </p>
-                <p>
-                    I disseminate my results beyond academic publications through <a href="outreachpublications.html">magazine papers</a>, as well as throug <a href="outreach.html">invited talks, in the press or through art</a>.                    
-                </p> 
+                <div class="research">
+                    <h1 id="hover-link-h">Research</h1>
+                    <p>
+                        I do research in <a id="hover-link-t" href="testpublications.html">software testing</a>,
+                        <a href="diversitypublications.html">software diversification</a>,
+                        <a href="supplychainpublications.html">software supply chain</a> and
+                        <a href="artpublications.html">generative art</a>
+                        I publish in <a id="hover-link-j" href="journalpublications.html">journals</a>
+                        and in <a id="hover-link-c" href="conferencepublications.html">conference proceedings</a>.
+                        You can browse a list of <a id="hover-link-s" href="selectedpublications.html">selected
+                            publications</a> or the
+                        <a href="awardpublications.html">awarded publications</a>
+                    </p>
+                    <p>
+                        I disseminate my results beyond academic publications through <a
+                            href="outreachpublications.html">magazine papers</a>, as well as throug <a
+                            href="outreach.html">invited talks, in the press or through art</a>.
+                    </p>
+                </div>
+                <div class="cover" id="coverdiv">
+
+                </div>
             </div>
         </div>
     </div>
@@ -57,5 +65,9 @@
         for (var i = ul.children.length; i >= 0; i--) {
             ul.appendChild(ul.children[Math.random() * i | 0]);
         }
+        const cover1 = document.createElement("div")
+        cover1.className = "research-album"
+        cover1.textContent = "humour"
+        document.querySelector('.cover').appendChild(cover1)
     </script>
 </body>
