@@ -231,7 +231,14 @@ Artists use advanced software technology to produce, distribute and generate art
 - [Myriad People Open Source Software for New Media Arts](https://arxiv.org/pdf/2501.13644)
 
 
+## Esoteric Programming Languages as artistic medium
 
+An esoteric programming language is a programming language designed to test the boundaries of computer programming language design, as a proof of concept, as software art, as a hacking interface to another language, or as a joke. In this project, we explore the different esoteric languages that have been designed for art or as part of an art installation.
+
+- [Language without code: intentionally unusable, uncomputable, or conceptual programming languages](https://journals.ucp.pt/index.php/jsta/article/download/7297/7297)
+- The [Piet](https://esolangs.org/wiki/Piet) language fuels esolang creativity https://github.com/topics/piet
+- Light Pattern, programming through photographs http://lightpattern.info/
+- The INTERCAL Programming Language Reference Manual (1973) http://mail.3e8.org/pub/intercal.pdf
 
 # Software journeys
 
