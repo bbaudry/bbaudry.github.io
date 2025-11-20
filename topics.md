@@ -167,7 +167,7 @@ Generative artists write code, run code, tweak code in order to generate artwork
 * [Bandcamp, SoundCloud, and the Digital Underground: Exploring Curatorial Practice Across Independent Music Platforms](https://spectrum.library.concordia.ca/id/eprint/992759/1/Thow_MA_F2023.pdf)
 * [open source software alternatives for art & design](https://www.instagram.com/p/DI9QDIaRxUH/?img_index=4&igsh=MTZhdXFxdmNydjlucQ==)
 * [live code on insta](https://www.instagram.com/p/DI9QDIaRxUH/?img_index=4&igsh=MTZhdXFxdmNydjlucQ==)
-* [live coding on bandcamp](https://www.instagram.com/p/DI9QDIaRxUH/?img_index=4&igsh=MTZhdXFxdmNydjlucQ==)
+* [GitHub on bandcamp](https://www.google.com/search?client=firefox-b-d&q=%22github.com%22+site%3Abandcamp.com)
 
 ## Automatic documentation of generative artworks
 
