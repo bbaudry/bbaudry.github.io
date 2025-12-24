@@ -22,7 +22,7 @@ function setup() {
     iphrasekdo1 = 0
     phrasekdo2 = "d'acigné le 31 décembre à 12.30"
     iphrasekdo2 = 0
-    phrasekdo3 = "bon appétit !!!!"
+    phrasekdo3 = "#==bon appétit==#"
     iphrasekdo3 = 0
 }
 
@@ -55,6 +55,7 @@ function draw() {
                     iphrasekdo2++
                 }
                 else {
+                    textFont(font4)
                     fSize = Math.floor((w-margin*2) / phrasekdo3.length)
                     textSize(fSize)
                     if (iphrasekdo3 < phrasekdo3.length) {
