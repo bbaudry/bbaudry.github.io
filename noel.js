@@ -12,7 +12,7 @@ function setup() {
     h = document.documentElement.clientHeight;
     cnv = createCanvas(w, h)
     colorMode(HSB, 360, 100, 100, 250);
-    hues = [100, 330]
+    hues = [100, 320]
     counter = 0
     onelettertime = 10
     margin = w*0.02
