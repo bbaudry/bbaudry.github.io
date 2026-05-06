@@ -36,14 +36,13 @@ function setslider(){
         console.log("Final Value:", slider.value());
         hal()
     });
-    label = createSpan("Value: color randomness");
-    var x = (windowWidth - w) / 2 - 200;
+    var x = (windowWidth - w) *0.2;
     var y = h * 0.6
     slider.position(x, y)
 }
 function generatebutton() {
     genbtn = createButton("generate new");
-    var x = (windowWidth - w) / 2 - 200;
+    var x = (windowWidth - w) *0.2;
     var y = h * 0.5
     genbtn.position(x, y)
     genbtn.mouseClicked(hal);
@@ -51,7 +50,7 @@ function generatebutton() {
 function getsvg() {
     cnv = createCanvas(w, h, SVG);
     imgbtn = createButton("save svg");
-    var x = (windowWidth - w) / 2 - 200;
+    var x = (windowWidth - w) *0.2;
     var y = h * 0.4
     imgbtn.position(x, y)
     imgbtn.mouseClicked(savesvg);
@@ -59,7 +58,7 @@ function getsvg() {
 function getpng() {
     cnv = createCanvas(w, h);
     imgbtn = createButton("save png");
-    var x = (windowWidth - w) / 2 - 100;
+    var x = (windowWidth - w) *0.2;
     var y = h * 0.4
     imgbtn.position(x, y)
     imgbtn.mouseClicked(savepng);
