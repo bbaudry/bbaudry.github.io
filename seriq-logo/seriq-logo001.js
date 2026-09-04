@@ -5,10 +5,9 @@ var leftmargin, rightmargin, topmargin, bottommargin, actualheight, actualwidth,
 var sourcecode
 var font
 var fSize = 17
-var artname = "savaryle006"
+var logoname = "seriq-logo001"
 
 function preload() {
-        sourcecode = loadStrings(artname+'-core.js');
         font = loadFont("./fonts/ChunkFive-Regular.otf");
 //        font = loadFont("../fonts/FreeMono.otf");
 }
@@ -56,13 +55,14 @@ function draw() {
     noFill()
     stroke(0,0,0)
     hal()
-        stroke(0, 0, 100)
-        fill(0,0,100)
-noStroke()
-    strokeWeight(11)
+    fill(0,0,100)
     textSize(320)
     textFont(font)
-    text("seriq",w*0.17,h*0.45)
+    let x=w*0.17
+    let t="seri"
+    text("seri",x,h*0.45)
+    fill(220,100,100)
+    text("q",x+textWidth(t),h*0.45)
 
     noLoop()
 }
