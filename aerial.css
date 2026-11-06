@@ -13,8 +13,17 @@ body {
     display: flex;
     height: 100vh;
 }
-
-
+div.csl-entry {
+  display: flex;
+  gap: 0.75em;
+  margin-bottom: 0.5em;
+}
+div.csl-left-margin {
+  flex: 0 0 2.5em;   /* fixed-width column for "[1]", "[10]" etc. */
+}
+div.csl-right-inline {
+  flex: 1;           /* reference text takes the remaining width */
+}
 .split-container {
     display: flex;
     width: 100%;
