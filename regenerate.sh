@@ -64,10 +64,10 @@ bibtool -- 'select{keywords "art"}' publis.bib -o $filebib
 pandoc $filebib -s --template=publications-template.html --metadata link-bibliography --metadata title="Art publications" --csl ieee.csl --citeproc -o $filehtm
 
 echo "Generate list of topics"
-pandoc -s --toc=true  --template=topics-template.html  topics.md -o topics.html
+pandoc -s --toc  --template=topics-template.html  topics.md -o topics.html
 
 echo "Generate list of outreach actions"
-pandoc -s  --toc=true  --template=outreach-template.html  outreach.md -o outreach.html
+pandoc -s  --toc --template=./outreach-template.html  outreach.md -o outreach.html
 
 echo "Generate list of grants"
-pandoc -s  --toc=true  --template=grants-template.html  grants.md -o grants.html
+pandoc -s  --toc  --template=grants-template.html  grants.md -o grants.html
