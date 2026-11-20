@@ -1,8 +1,24 @@
-let w, h, cnv, font, x, y1, y2, songs
+let w, h, cnv, font,fontsize, x, y1, y2, songs
 
 function preload() {
     font = loadFont("../fonts/officecodepro-regular.otf");
-    
+    songs = []
+    loadTable('./50songs.csv', ',','header', (table) => {
+    // Build an array of [artist, song] pairs
+    for (let row of table.getRows()) {
+      songs.push([row.getString('artist'), row.getString('song')]);
+    }
+
+    // Fisher-Yates shuffle
+    for (let i = songs.length - 1; i > 0; i--) {
+      let j = floor(random(i + 1));
+      [songs[i], songs[j]] = [songs[j], songs[i]];
+    }
+  });
+}
+
+function prep(data){
+    console.log(data.getRowCount())
 }
 
 async function setup(){
@@ -10,22 +26,44 @@ async function setup(){
     h = document.documentElement.clientHeight;
     cnv = createCanvas(w, h)
     colorMode(HSB, 360, 100, 100, 250);
-    songs=await loadTable('./50songs.csv', ',');
+    //songs=await loadTable('./50songs.csv', ',','header');
+    shuffle(songs,true)
     x=0
     y1=0
     y2=h
-}
-
-function initsongs(){
-
+    fontsize=21
+    textSize(fontsize)
+    textFont(font)
 }
 
 function draw(){
-    console.log(songs.getRow(0).getString(1))
-background(0,0,0)
+    background(0,0,0)
+    writesongs()
     x<w?x++:x=0
     stroke(0,100,100)
     line(x,y1,x,y2)
+}
+
+function writesongs(){
+    let artist, song, artsitw,songw,cx,artistx,songx,pad,y
+    fill(0,0,100)
+    stroke(0,0,100)
+    pad=7
+    cx=w*0.5
+    y=fontsize
+    for(let i=0;i<songs.length;i++){
+    artist=songs[i][0]+" "
+    song=songs[i][1]
+    artistw=textWidth(artist)
+    songw=textWidth(song)
+    artistx=cx-pad-artistw
+    songx=cx+pad
+    text(artist,artistx,y)
+    text(song,songx,y)
+    y+=fontsize
+    }
+
+
 }
 
 function windowResized() {
