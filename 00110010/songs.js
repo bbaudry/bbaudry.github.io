@@ -39,7 +39,7 @@ async function setup() {
 function draw() {
     background(0, 0, 0)
     writesongs()
-    x < w ? x++ : x = 0
+    if(x < w){x++}else{x = 0;shuffle(songs,true)}
     stroke(0, 100, 100)
     line(x, y1, x, y2)
 }
@@ -50,7 +50,13 @@ function writesongs() {
     noStroke()
     pad = 7
     cx = w * 0.5
-    y = fontsize*2
+    let maxtextheight = songs.length*fontsize
+    if(h>maxtextheight){
+        y=(h-maxtextheight)/2
+    }
+    else{
+        y=fontsize
+    }
     for (let i = 0; i < songs.length; i++) {
         artist = songs[i][0] + " "
         song = songs[i][1]
