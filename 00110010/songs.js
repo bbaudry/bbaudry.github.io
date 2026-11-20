@@ -50,7 +50,7 @@ function writesongs() {
     noStroke()
     pad = 7
     cx = w * 0.5
-    y = fontsize
+    y = fontsize*2
     for (let i = 0; i < songs.length; i++) {
         artist = songs[i][0] + " "
         song = songs[i][1]
