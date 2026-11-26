@@ -71,9 +71,6 @@ title: 'Outreach'
 
 ## Technical posts
 
--   [Ctrl + Art](https://nouvelles.umontreal.ca/article/2025/04/23/ctrl-art/), udemnouvelles 2025.
--   [Rickrolling: From Internet Prank to Academic Curiosity](https://suchscience.net/rickrolling-from-internet-prank-to-academic-curiosity/), SuchScience 2024
--   [Hidden humour, the software developer’s secret weapon](https://nouvelles.umontreal.ca/en/article/2024/06/20/hidden-humour-the-software-developer-s-secret-weapon/), udemnouvelles 2024.
 -   [Generative Generative Art](https://www.nft-magazine.com/article/generative-generative-art), NFT magazine, 2023.
 -   [Confluence of generative AI and generative ART in “Emergent Dichotomy](https://www.nft-magazine.com/features/confluence-of-generative-ai-and-generative-art-in-emergent-dichotomy-perpetual-motion), NFT magazine, 2023.
 -   [Highly Available Ethereum Nodes using N-Version Design](https://etherworld.co/2023/05/03/highly-available-ethereum-nodes-using-n-version-design/), etherworld, 2023.
@@ -89,7 +86,13 @@ title: 'Outreach'
 -   [Short circuiting method executions to assess test quality](https://medium.com/@almyre/short-circuiting-method-executions-to-assess-test-quality-2d3fda45bc7f), Medium 2018.
 
 ## Presence in the press and blogs
+-   [Art you can read: preserving fx(hash) after its closure](https://www.softwareheritage.org/2026/11/26/art-you-can-read-preserving-fxhash-after-its-closure/) on the [Software Heritage](https://www.softwareheritage.org/) blog 2026
+-   [Et si le code était aussi une matière artistique?](https://nouvelles.umontreal.ca/article/2026/10/14/et-si-le-code-etait-aussi-une-matiere-artistique), udemnouvelles 2026.
+-   [Un nouveau centre pour structurer la recherche en génie logiciel au Québec](https://nouvelles.umontreal.ca/article/2026/10/06/un-nouveau-centre-pour-structurer-la-recherche-en-genie-logiciel-au-quebec), udemnouvelles 2026.
+-   [Ctrl + Art](https://nouvelles.umontreal.ca/article/2025/04/23/ctrl-art/), udemnouvelles 2025.
+-   [Rickrolling: From Internet Prank to Academic Curiosity](https://suchscience.net/rickrolling-from-internet-prank-to-academic-curiosity/), SuchScience 2024
 -   [L'humour caché dans les codes informatiques](https://ici.radio-canada.ca/ohdio/premiere/emissions/la-croisee/episodes/859637/rattrapage-vendredi-5-juillet-2024), Radio Canada (FR) 2024
+-   [Hidden humour, the software developer’s secret weapon](https://nouvelles.umontreal.ca/en/article/2024/06/20/hidden-humour-the-software-developer-s-secret-weapon/), udemnouvelles 2024.
 -   [Les codes cachés de l’humour](https://www.lapresse.ca/affaires/techno/2024-07-03/vie-numerique/les-codes-caches-de-l-humour.php), La Presse (FR) 2024
 -   [Humor in code](https://www.deutschlandfunk.de/computer-und-kommunikation-4-5-2024-komplette-sendung-dlf-16492b03-100.html), Computer und Kommunikation deutschlandfunk (DE) 2024
 -   [Versteckte Botschaften – Easter Eggs in wissenschaftlichen Fachpublikationen](https://www.deutschlandfunkkultur.de/versteckte-botschaften-easter-eggs-in-wissenschaftlichen-fachpublikationen-dlf-kultur-16a63755-100.html),     [Deutschlandfunk Kultur](https://www.deutschlandfunkkultur.de/)  2023.
